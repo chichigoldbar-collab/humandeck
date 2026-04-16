@@ -931,6 +931,14 @@ button {
   line-height: 1.6;
 }
 
+.footer-business {
+  display: grid;
+  gap: 4px;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 .footer-links {
   display: flex;
   gap: 16px;
