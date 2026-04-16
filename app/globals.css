@@ -105,10 +105,10 @@ button {
 .hero-copy h1 {
   margin: 10px 0 12px;
   font-family: var(--font-display);
-  font-size: clamp(2.55rem, 4vw, 4.4rem);
+  font-size: clamp(2.25rem, 3.7vw, 3.95rem);
   font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
 }
 
 .hero-inline-copy {
@@ -227,7 +227,7 @@ button {
   border: 1px solid rgba(39, 56, 86, 0.08);
   color: var(--text);
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 .hero-copy p,
@@ -295,10 +295,10 @@ button {
 .panel-header h2 {
   margin: 12px 0 0;
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-size: clamp(1.55rem, 2.7vw, 2.35rem);
   font-weight: 850;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
 }
 
 .stack {
@@ -349,8 +349,8 @@ button {
 .feature-card strong {
   display: block;
   margin-bottom: 10px;
-  font-size: 1.14rem;
-  line-height: 1.4;
+  font-size: 1.08rem;
+  line-height: 1.5;
 }
 
 .feature-card p,
@@ -372,9 +372,10 @@ button {
 }
 
 .reaction-card p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text);
+  line-height: 1.55;
 }
 
 .reaction-card.accent {
@@ -406,10 +407,10 @@ button {
 .final-cta-copy h2 {
   margin: 14px 0 10px;
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.65rem, 2.8vw, 2.45rem);
   font-weight: 900;
-  line-height: 1.04;
-  letter-spacing: -0.03em;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .primary-button.large {
@@ -526,6 +527,26 @@ button {
   color: var(--muted);
 }
 
+.ad-unit-shell {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(39, 56, 86, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.ad-unit-label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .result-hero {
   padding: 24px;
   border-radius: 26px;
@@ -619,7 +640,8 @@ button {
 .result-card h3 {
   margin: 0 0 10px;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.22rem;
+  letter-spacing: -0.015em;
 }
 
 .keyword-row {
@@ -867,6 +889,12 @@ button {
   align-items: center;
 }
 
+.reward-actions {
+  width: min(320px, 100%);
+  display: grid;
+  gap: 12px;
+}
+
 .detail-card ul {
   margin: 0;
   padding-left: 18px;
@@ -918,8 +946,8 @@ button {
   }
 
   .hero-copy h1 {
-    font-size: 2.9rem;
-    line-height: 0.94;
+    font-size: 2.55rem;
+    line-height: 1;
   }
 
   .hero-inline-copy {

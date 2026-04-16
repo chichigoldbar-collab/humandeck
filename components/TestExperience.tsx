@@ -8,6 +8,7 @@ import {
   type ResultKeys,
 } from "@/lib/scoring";
 import { questions } from "@/lib/questions";
+import { AdSlot } from "@/components/AdSlot";
 
 type Stage = "landing" | "questions" | "preResultAd" | "result";
 
@@ -144,8 +145,8 @@ export function TestExperience() {
             왜 자꾸 같은 패턴에 끌리는지 한 번에 보여줍니다.
           </p>
           <div className="hero-inline-copy">
-            <span>친구랑 같이 하면 더 재밌음</span>
-            <span>결과 저장 욕구 강함</span>
+            <span>친구와 함께 보면 더 재밌어요</span>
+            <span>결과를 오래 남기고 싶은 테스트</span>
           </div>
           <div className="hero-actions">
             <button className="primary-button" onClick={moveToQuestions}>
@@ -176,7 +177,7 @@ export function TestExperience() {
           <section className="panel landing-panel">
             <div className="panel-header">
               <span>이 테스트가 재밌는 이유</span>
-              <h2>그냥 성격 테스트가 아니라, 내 패턴을 캐릭터로 박아줍니다</h2>
+              <h2>그냥 성격 테스트가 아니라, 내 패턴을 캐릭터로 선명하게 보여줍니다</h2>
             </div>
             <div className="landing-feature-grid">
               <article className="feature-card">
@@ -197,7 +198,7 @@ export function TestExperience() {
           <section className="panel social-proof-panel">
             <div className="panel-header">
               <span>이런 반응이 자주 나옵니다</span>
-              <h2>웃기려고 눌렀다가 저장하게 되는 테스트</h2>
+              <h2>가볍게 시작했다가, 생각보다 오래 남는 테스트</h2>
             </div>
             <div className="social-proof-grid">
               <article className="reaction-card">
@@ -264,8 +265,7 @@ export function TestExperience() {
             <h2>당신 결과를 정리하는 중입니다</h2>
           </div>
           <div className="ad-slot">
-            <p>친구들이 왜 너는 늘 똑같냐고 했는지, 곧 나옵니다.</p>
-            <small>잠깐만 기다리면 캐릭터 세트가 바로 열립니다.</small>
+            <AdSlot slot="5302993836" label="sponsored" />
           </div>
           <button className="primary-button" onClick={() => setStage("result")}>
             결과 공개하기
@@ -333,9 +333,12 @@ export function TestExperience() {
                 <h3>이 캐릭터가 왜 생겼는지 열어보기</h3>
                 <p>겉으로 보이는 패턴 말고, 어디서 흔들리고 왜 반복되는지까지 보여드립니다.</p>
               </div>
-              <button className="primary-button" onClick={() => setDetailUnlocked(true)}>
-                상세 해설 열기
-              </button>
+              <div className="reward-actions">
+                <AdSlot slot="7737585483" label="sponsored" />
+                <button className="primary-button" onClick={() => setDetailUnlocked(true)}>
+                  상세 해설 열기
+                </button>
+              </div>
             </div>
           ) : (
             <div className="detail-grid">
