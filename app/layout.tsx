@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "휴먼덱 | 내 인간 캐릭터 테스트",
   description:
     "연애, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 보는 인간 캐릭터 테스트",
+  other: {
+    "google-adsense-account": "ca-pub-7928504805613676",
+  },
   metadataBase: new URL(siteUrl),
   openGraph: {
     title: "휴먼덱 | 내 인간 캐릭터 테스트",
