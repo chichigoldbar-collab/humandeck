@@ -907,6 +907,92 @@ button {
   padding-left: 18px;
 }
 
+.site-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 8px 0;
+  color: var(--muted);
+}
+
+.footer-brand strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.footer-brand p {
+  margin: 0;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.policy-shell {
+  min-height: 100vh;
+  padding: 32px 16px 64px;
+}
+
+.policy-card {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 30px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.policy-card h1 {
+  margin: 14px 0 14px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.policy-card > p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.policy-section + .policy-section {
+  margin-top: 22px;
+}
+
+.policy-section h2 {
+  margin: 0 0 8px;
+  font-size: 1.06rem;
+}
+
+.policy-section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .hero-card,
 .panel,
 .result-card,
@@ -997,6 +1083,11 @@ button {
   .final-cta-panel {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    padding-top: 20px;
   }
 
   .reward-panel {
