@@ -26,6 +26,7 @@ export function TestExperience() {
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [detailUnlocked, setDetailUnlocked] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<ResultKeys | null>(null);
+  const [preResultCountdown, setPreResultCountdown] = useState(5);
 
   const result = useMemo(
     () => (sharedResultKeys ? buildResult(sharedResultKeys) : calculateResult(answers)),
@@ -126,6 +127,17 @@ export function TestExperience() {
       setStage("result");
     }
   }, []);
+
+  useEffect(() => {
+    if (stage !== "preResultAd") return;
+    if (preResultCountdown <= 0) return;
+
+    const timer = window.setTimeout(() => {
+      setPreResultCountdown((prev) => prev - 1);
+    }, 1000);
+
+    return () => window.clearTimeout(timer);
+  }, [stage, preResultCountdown]);
 
   return (
     <main className="shell">
@@ -267,8 +279,14 @@ export function TestExperience() {
           <div className="ad-slot">
             <AdSlot slot="5302993836" label="sponsored" />
           </div>
-          <button className="primary-button" onClick={() => setStage("result")}>
-            결과 공개하기
+          <button
+            className="primary-button"
+            onClick={() => setStage("result")}
+            disabled={preResultCountdown > 0}
+          >
+            {preResultCountdown > 0
+              ? `${preResultCountdown}초 후 결과 공개`
+              : "결과 공개하기"}
           </button>
         </section>
       )}
