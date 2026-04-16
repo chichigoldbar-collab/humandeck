@@ -27,6 +27,7 @@ export function TestExperience() {
   const [detailUnlocked, setDetailUnlocked] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<ResultKeys | null>(null);
   const [preResultCountdown, setPreResultCountdown] = useState(5);
+  const [detailCountdown, setDetailCountdown] = useState(5);
 
   const result = useMemo(
     () => (sharedResultKeys ? buildResult(sharedResultKeys) : calculateResult(answers)),
@@ -85,6 +86,8 @@ export function TestExperience() {
     setStage("landing");
     setDetailUnlocked(false);
     setSharedResultKeys(null);
+    setPreResultCountdown(5);
+    setDetailCountdown(5);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", window.location.pathname);
@@ -94,6 +97,9 @@ export function TestExperience() {
   function moveToQuestions() {
     setStage("questions");
     setSharedResultKeys(null);
+    setDetailUnlocked(false);
+    setPreResultCountdown(5);
+    setDetailCountdown(5);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", window.location.pathname);
@@ -138,6 +144,17 @@ export function TestExperience() {
 
     return () => window.clearTimeout(timer);
   }, [stage, preResultCountdown]);
+
+  useEffect(() => {
+    if (stage !== "result" || detailUnlocked) return;
+    if (detailCountdown <= 0) return;
+
+    const timer = window.setTimeout(() => {
+      setDetailCountdown((prev) => prev - 1);
+    }, 1000);
+
+    return () => window.clearTimeout(timer);
+  }, [stage, detailUnlocked, detailCountdown]);
 
   return (
     <main className="shell">
@@ -353,8 +370,14 @@ export function TestExperience() {
               </div>
               <div className="reward-actions">
                 <AdSlot slot="7737585483" label="sponsored" />
-                <button className="primary-button" onClick={() => setDetailUnlocked(true)}>
-                  상세 해설 열기
+                <button
+                  className="primary-button"
+                  onClick={() => setDetailUnlocked(true)}
+                  disabled={detailCountdown > 0}
+                >
+                  {detailCountdown > 0
+                    ? `${detailCountdown}초 후 상세 해설 열기`
+                    : "상세 해설 열기"}
                 </button>
               </div>
             </div>
