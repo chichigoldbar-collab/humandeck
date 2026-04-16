@@ -69,7 +69,7 @@ export default function OpenGraphImage() {
         </div>
 
         <div style={{ display: "flex", gap: 16 }}>
-          {["15문항", "결과 5개", "친구랑 하면 더 재밌음"].map((item) => (
+          {["15문항", "결과 5개", "친구와 함께 보면 더 재밌어요"].map((item) => (
             <div
               key={item}
               style={{
