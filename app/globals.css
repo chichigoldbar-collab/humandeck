@@ -1029,6 +1029,37 @@ button {
   margin-top: 18px;
 }
 
+.home-intro-panel {
+  margin-top: 18px;
+}
+
+.home-intro-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.home-intro-card {
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(39, 56, 86, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.home-intro-card strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.home-intro-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .home-test-grid {
   display: grid;
   gap: 16px;
@@ -1296,6 +1327,7 @@ button {
   .landing-feature-grid,
   .social-proof-grid,
   .bullet-grid,
+  .home-intro-grid,
   .home-test-grid,
   .result-grid,
   .detail-grid,

@@ -8,15 +8,17 @@ const tests: {
   summary: string;
   meta: string;
   reaction: string;
+  pickFor: string;
   accent: string;
 }[] = [
   {
     href: "/character",
     badge: "인기 테스트",
     title: "내 인간 캐릭터 테스트",
-    summary: "관계, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 보는 휴먼덱 대표 테스트",
+    summary: "관계, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 읽어내는 휴먼덱 대표 테스트",
     meta: "15문항 · 결과 5개",
-    reaction: "친구랑 같이 돌려보면 더 재밌는 타입",
+    reaction: "친구랑 같이 비교해보면 더 재밌는 타입",
+    pickFor: "내 패턴을 넓게 보고 싶을 때",
     accent: "home-card-character",
   },
   {
@@ -25,7 +27,8 @@ const tests: {
     title: "내 판단은 얼마나 틀렸을까?",
     summary: "확증편향부터 선택 과부하까지, 내 판단 습관이 어디서 흔들리는지 보여주는 테스트",
     meta: "12문항 · 메인 편향 + 서브 성향",
-    reaction: "웃으면서 시작했다가 조금 뜨끔해지는 타입",
+    reaction: "웃으면서 시작했다가 은근 뜨끔해지는 타입",
+    pickFor: "내 선택 습관을 찔러보고 싶을 때",
     accent: "home-card-judgment",
   },
 ];
@@ -35,23 +38,26 @@ export function HomeExperience() {
     <main className="shell">
       <section className="hero-card home-hero-card">
         <div className="hero-copy">
-          <span className="eyebrow">가볍게 시작해도, 결과는 은근 오래 남습니다</span>
+          <span className="eyebrow">가볍게 눌렀는데 생각보다 오래 남는 테스트</span>
           <h1>
-            휴먼덱
+            지금의 나를
             <br />
-            테스트 홈
+            조금 더 선명하게
+            <br />
+            보는 방법
           </h1>
-          <p>
-            지금은 두 가지 테스트가 열려 있습니다.
-            <br />
-            내 인간관계 패턴을 볼 수도 있고,
-            <br />
-            내 판단 습관이 얼마나 흔들리는지도 볼 수 있어요.
-          </p>
           <div className="hero-inline-copy">
-            <span>모바일 우선</span>
-            <span>공유하기 좋은 결과 카드</span>
-            <span>광고 흐름 포함</span>
+            <span>3분 안에 끝나는 테스트</span>
+            <span>공유하고 싶은 결과 카드</span>
+            <span>친구랑 비교하면 더 재밌음</span>
+          </div>
+          <div className="hero-actions">
+            <Link className="primary-button" href="/character">
+              인기 테스트 시작하기
+            </Link>
+            <Link className="ghost-button" href="/judgment">
+              새 테스트 보러가기
+            </Link>
           </div>
         </div>
 
@@ -61,14 +67,35 @@ export function HomeExperience() {
           <article className="preview-card primary">
             <span className="preview-label">대표 테스트</span>
             <strong>내 인간 캐릭터 테스트</strong>
-            <p>내 관계 패턴과 자극 성향을 캐릭터처럼 읽어내는 테스트</p>
+            <p>왜 늘 비슷한 관계 패턴이 반복되는지 캐릭터처럼 읽어내는 테스트</p>
           </article>
           <article className="preview-card secondary">
             <strong>내 판단은 얼마나 틀렸을까?</strong>
             <p>확신, 첫인상, 손해 회피가 판단을 어떻게 흔드는지 보는 테스트</p>
           </article>
           <article className="preview-quote">
-            <p>"가볍게 눌렀는데 생각보다 나를 잘 안다."</p>
+            <p>"재밌게 했는데, 결과가 너무 나 같아서 저장하게 된다."</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="panel home-intro-panel">
+        <div className="panel-header">
+          <span>이렇게 시작해보세요</span>
+          <h2>지금 보고 싶은 게 무엇인지에 따라 고르면 됩니다</h2>
+        </div>
+        <div className="home-intro-grid">
+          <article className="home-intro-card">
+            <strong>내 성향을 넓게 보고 싶다면</strong>
+            <p>관계, 자극, 생각 습관까지 한 번에 묶어서 보는 인간 캐릭터 테스트가 더 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>내 판단 습관을 찔러보고 싶다면</strong>
+            <p>확증편향, 과잉확신, 선택 과부하처럼 선택의 흔들림을 보는 판단 테스트가 더 재밌어요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>둘 다 해도 결과 결이 다릅니다</strong>
+            <p>하나는 내가 어떤 사람인지, 다른 하나는 내가 어떻게 판단하는지를 보여줍니다.</p>
           </article>
         </div>
       </section>
@@ -76,7 +103,7 @@ export function HomeExperience() {
       <section className="panel home-panel">
         <div className="panel-header">
           <span>지금 열려 있는 테스트</span>
-          <h2>원하는 방향부터 바로 들어가세요</h2>
+          <h2>오늘은 어떤 쪽부터 볼까요?</h2>
         </div>
 
         <div className="home-test-grid">
@@ -87,25 +114,14 @@ export function HomeExperience() {
               <p>{test.summary}</p>
               <div className="home-test-meta">
                 <strong>{test.meta}</strong>
+                <span>{test.pickFor}</span>
                 <span>{test.reaction}</span>
               </div>
               <Link className="primary-button home-test-link" href={test.href}>
-                테스트 보러가기
+                이 테스트 시작하기
               </Link>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="panel final-cta-panel home-bottom-panel">
-        <div className="final-cta-copy">
-          <span>계속 추가될 예정</span>
-          <h2>하나씩 늘려가는 휴먼덱 테스트 컬렉션</h2>
-          <p>
-            지금은 캐릭터와 판단 테스트가 먼저 열려 있습니다.
-            <br />
-            다음엔 연애, 소비, 일 스타일 같은 흐름도 같은 구조로 붙일 수 있어요.
-          </p>
         </div>
       </section>
 
