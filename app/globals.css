@@ -1268,6 +1268,26 @@ button {
   transform-origin: center;
 }
 
+.judgment-image-pixfox {
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+.judgment-image-grabocto {
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+.judgment-image-blazecheetah {
+  transform: scale(1.12);
+  transform-origin: center;
+}
+
+.judgment-image-halopeacock {
+  transform: scale(1.16);
+  transform-origin: center;
+}
+
 .judgment-image-fallback,
 .judgment-sub-image-fallback {
   display: none;
