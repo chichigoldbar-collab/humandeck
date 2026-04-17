@@ -61,7 +61,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 8px 14px 8px 10px;
   border-radius: 18px;
   text-decoration: none;
   border: 1px solid rgba(39, 56, 86, 0.08);
@@ -69,17 +69,15 @@ a {
   box-shadow: 0 8px 20px rgba(64, 94, 140, 0.06);
 }
 
-.site-logo-mark {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 34px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent) 0%, #8dd5ff 100%);
-  color: white;
-  font-size: 0.86rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
+.site-logo-image {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(39, 56, 86, 0.08);
+  box-shadow: 0 8px 20px rgba(64, 94, 140, 0.1);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .site-logo-copy {

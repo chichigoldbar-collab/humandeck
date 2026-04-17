@@ -169,9 +169,9 @@ export function StimulationExperience() {
         <div className="hero-copy">
           <span className="eyebrow">스크롤, 충동구매, 집중력 붕괴가 낯설지 않을 때</span>
           <h1>
-            나는 얼마나
+            내 도파민은
             <br />
-            자극에 약할까?
+            얼마나 흔들릴까?
           </h1>
           <p>
             몇 가지 선택만으로
@@ -254,7 +254,7 @@ export function StimulationExperience() {
           <section className="panel final-cta-panel">
             <div className="final-cta-copy">
               <span>생각보다 금방 끝납니다</span>
-              <h2>몇 가지 선택만으로 당신의 자극 반응 패턴이 드러납니다</h2>
+              <h2>몇 가지 선택만으로 당신의 도파민 반응 패턴이 드러납니다</h2>
               <p>
                 도파민이라는 단어는 어려워도,
                 <br />
@@ -308,7 +308,7 @@ export function StimulationExperience() {
         <section className="panel ad-panel">
           <div className="panel-header">
             <span>거의 다 왔어요</span>
-            <h2>당신의 자극 반응 패턴을 정리하는 중입니다</h2>
+            <h2>당신의 도파민 반응 패턴을 정리하는 중입니다</h2>
           </div>
           <div className="ad-slot">
             <AdSlot slot="5302993836" label="sponsored" />
@@ -328,7 +328,7 @@ export function StimulationExperience() {
       {stage === "result" && (
         <section className="panel result-panel">
           <div className="result-hero stimulation-result-hero">
-            <p>당신의 메인 자극 성향</p>
+            <p>당신의 메인 도파민 성향</p>
             <strong>
               {result.mainCharacter.emblem} {result.mainCharacter.name}
             </strong>
