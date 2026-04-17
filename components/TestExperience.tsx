@@ -29,7 +29,7 @@ export function TestExperience() {
   const [detailAdStarted, setDetailAdStarted] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<ResultKeys | null>(null);
   const [preResultCountdown, setPreResultCountdown] = useState(5);
-  const [detailCountdown, setDetailCountdown] = useState(5);
+  const [detailCountdown, setDetailCountdown] = useState(0);
 
   const result = useMemo(
     () => (sharedResultKeys ? buildResult(sharedResultKeys) : calculateResult(answers)),
@@ -100,7 +100,7 @@ export function TestExperience() {
     setDetailAdStarted(false);
     setSharedResultKeys(null);
     setPreResultCountdown(5);
-    setDetailCountdown(5);
+    setDetailCountdown(0);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", window.location.pathname);
@@ -113,7 +113,7 @@ export function TestExperience() {
     setDetailUnlocked(false);
     setDetailAdStarted(false);
     setPreResultCountdown(5);
-    setDetailCountdown(5);
+    setDetailCountdown(0);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", window.location.pathname);

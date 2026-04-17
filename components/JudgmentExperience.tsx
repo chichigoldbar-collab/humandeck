@@ -25,7 +25,7 @@ export function JudgmentExperience() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<JudgmentAnswerMap>({});
   const [preResultCountdown, setPreResultCountdown] = useState(5);
-  const [detailCountdown, setDetailCountdown] = useState(5);
+  const [detailCountdown, setDetailCountdown] = useState(0);
   const [detailUnlocked, setDetailUnlocked] = useState(false);
   const [detailAdStarted, setDetailAdStarted] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<{
@@ -51,7 +51,7 @@ export function JudgmentExperience() {
     setDetailUnlocked(false);
     setDetailAdStarted(false);
     setPreResultCountdown(5);
-    setDetailCountdown(5);
+    setDetailCountdown(0);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", "/judgment");
@@ -101,7 +101,7 @@ export function JudgmentExperience() {
     setCurrentIndex(0);
     setStage("landing");
     setPreResultCountdown(5);
-    setDetailCountdown(5);
+    setDetailCountdown(0);
     setDetailUnlocked(false);
     setDetailAdStarted(false);
     setSharedResultKeys(null);
