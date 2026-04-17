@@ -341,7 +341,7 @@ export function JudgmentExperience() {
                     if (fallback) fallback.style.display = "grid";
                   }}
                 />
-                <div className="judgment-emblem judgment-emblem-fallback">
+                <div className="judgment-image-fallback">
                   {result.mainCharacter.emblem}
                 </div>
               </div>
@@ -376,7 +376,7 @@ export function JudgmentExperience() {
                       if (fallback) fallback.style.display = "grid";
                     }}
                   />
-                  <div className="judgment-emblem judgment-sub-emblem-fallback">
+                  <div className="judgment-sub-image-fallback">
                     {result.subCharacter.emblem}
                   </div>
                 </div>

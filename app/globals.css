@@ -1263,12 +1263,14 @@ button {
   display: block;
 }
 
-.judgment-emblem-fallback,
-.judgment-sub-emblem-fallback {
+.judgment-image-fallback,
+.judgment-sub-image-fallback {
   display: none;
   position: absolute;
   inset: 0;
   place-items: center;
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .judgment-card-topline,
@@ -1378,6 +1380,10 @@ button {
   border-radius: 22px;
   border: 1px solid rgba(39, 56, 86, 0.08);
   background: rgba(255, 255, 255, 0.62);
+}
+
+.judgment-sub-image-fallback {
+  font-size: 2.4rem;
 }
 
 .judgment-sub-card strong {
