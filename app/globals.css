@@ -1608,6 +1608,11 @@ button {
     padding: 18px;
   }
 
+  .stimulation-preview {
+    min-height: auto;
+    padding: 18px;
+  }
+
   .preview-card.primary,
   .preview-card.secondary,
   .preview-quote {
@@ -1632,6 +1637,17 @@ button {
   .home-preview .preview-card.primary,
   .home-preview .preview-card.secondary,
   .home-preview .preview-quote {
+    right: auto;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+  }
+
+  .stimulation-preview .preview-card.primary,
+  .stimulation-preview .preview-card.secondary,
+  .stimulation-preview .preview-quote {
+    position: relative;
     right: auto;
     left: auto;
     top: auto;
