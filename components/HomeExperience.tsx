@@ -51,14 +51,6 @@ export function HomeExperience() {
             <span>공유하고 싶은 결과 카드</span>
             <span>친구랑 비교하면 더 재밌음</span>
           </div>
-          <div className="hero-actions">
-            <Link className="primary-button" href="/character">
-              인기 테스트 시작하기
-            </Link>
-            <Link className="ghost-button" href="/judgment">
-              새 테스트 보러가기
-            </Link>
-          </div>
         </div>
 
         <div className="hero-preview home-preview">
