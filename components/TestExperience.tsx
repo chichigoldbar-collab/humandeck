@@ -56,6 +56,11 @@ export function TestExperience() {
     setCurrentIndex((prev) => prev + 1);
   }
 
+  function goPrev() {
+    if (currentIndex === 0) return;
+    setCurrentIndex((prev) => prev - 1);
+  }
+
   function handleShare() {
     if (typeof window !== "undefined") {
       const shareUrl = new URL(window.location.href);
@@ -284,6 +289,11 @@ export function TestExperience() {
                 {option.label}
               </button>
             ))}
+          </div>
+          <div className="action-row">
+            <button className="ghost-button" onClick={goPrev} disabled={currentIndex === 0}>
+              이전 질문
+            </button>
           </div>
         </section>
       )}

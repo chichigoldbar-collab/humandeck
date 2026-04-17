@@ -299,30 +299,21 @@ export function JudgmentExperience() {
       {stage === "preResultAd" && (
         <section className="panel ad-panel">
           <div className="panel-header">
-            <span>결과 계산 중</span>
-            <h2>당신의 판단 패턴을 정리하고 있습니다</h2>
+            <span>거의 다 왔어요</span>
+            <h2>당신 결과를 정리하는 중입니다</h2>
           </div>
           <div className="ad-slot">
-            <p>결과를 보기 전에 짧은 안내가 표시됩니다</p>
-            <small>광고를 확인한 뒤 결과가 열립니다.</small>
+            <AdSlot slot="5302993836" label="sponsored" />
           </div>
-          <AdSlot slot="5302993836" label="sponsored" />
-          <div className="reward-panel">
-            <div>
-              <span>almost there</span>
-              <h3>{preResultCountdown > 0 ? `${preResultCountdown}초 후 결과 공개` : "결과를 확인할 수 있어요"}</h3>
-              <p>조금만 기다리면 메인 편향과 서브 성향이 바로 열립니다.</p>
-            </div>
-            <div className="reward-actions">
-              <button
-                className="primary-button"
-                onClick={revealResult}
-                disabled={preResultCountdown > 0}
-              >
-                결과 공개하기
-              </button>
-            </div>
-          </div>
+          <button
+            className="primary-button"
+            onClick={revealResult}
+            disabled={preResultCountdown > 0}
+          >
+            {preResultCountdown > 0
+              ? `${preResultCountdown}초 후 결과 공개`
+              : "결과 공개하기"}
+          </button>
         </section>
       )}
 

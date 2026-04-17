@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
 const siteUrl =
@@ -56,6 +57,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <SiteHeader />
         {children}
       </body>
     </html>

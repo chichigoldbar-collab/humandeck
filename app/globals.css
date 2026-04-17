@@ -36,6 +36,67 @@ body {
   font-family: var(--font-body);
 }
 
+a {
+  color: inherit;
+}
+
+.site-header-shell {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 14px 16px 0;
+}
+
+.site-header-inner {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(39, 56, 86, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 12px 28px rgba(64, 94, 140, 0.08);
+}
+
+.site-logo-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, #8dd5ff 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.site-logo-copy {
+  display: grid;
+  gap: 1px;
+}
+
+.site-logo-copy strong {
+  font-size: 0.96rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.site-logo-copy small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 button {
   font: inherit;
 }
@@ -44,7 +105,7 @@ button {
   position: relative;
   width: min(980px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 28px 0 72px;
+  padding: 18px 0 72px;
 }
 
 .shell::before,
@@ -1340,7 +1401,15 @@ button {
 @media (max-width: 768px) {
   .shell {
     width: min(100% - 20px, 720px);
-    padding-top: 20px;
+    padding-top: 12px;
+  }
+
+  .site-header-shell {
+    padding: 12px 10px 0;
+  }
+
+  .site-header-inner {
+    width: min(100%, 720px);
   }
 
   .hero-card,
