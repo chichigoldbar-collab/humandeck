@@ -1263,6 +1263,11 @@ button {
   display: block;
 }
 
+.judgment-image-multiant {
+  transform: scale(1.22);
+  transform-origin: center;
+}
+
 .judgment-image-fallback,
 .judgment-sub-image-fallback {
   display: none;

@@ -333,7 +333,7 @@ export function JudgmentExperience() {
                 <img
                   src={result.mainCharacter.imagePath}
                   alt={result.mainCharacter.name}
-                  className="judgment-image"
+                  className={`judgment-image judgment-image-${result.mainCharacter.slug}`}
                   onError={(event) => {
                     const target = event.currentTarget;
                     target.style.display = "none";
@@ -368,7 +368,7 @@ export function JudgmentExperience() {
                   <img
                     src={result.subCharacter.imagePath}
                     alt={result.subCharacter.name}
-                    className="judgment-sub-image"
+                    className={`judgment-sub-image judgment-image-${result.subCharacter.slug}`}
                     onError={(event) => {
                       const target = event.currentTarget;
                       target.style.display = "none";
