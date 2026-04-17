@@ -1068,7 +1068,7 @@ button {
 
 .home-test-card {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   padding: 24px;
   border-radius: 28px;
   border: 1px solid rgba(39, 56, 86, 0.08);
@@ -1103,7 +1103,7 @@ button {
 
 .home-test-meta {
   display: grid;
-  gap: 6px;
+  gap: 4px;
 }
 
 .home-test-meta strong {
@@ -1114,6 +1114,7 @@ button {
 .home-test-link {
   width: fit-content;
   text-decoration: none;
+  margin-top: 4px;
 }
 
 .home-card-character {

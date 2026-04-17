@@ -7,7 +7,6 @@ const tests: {
   title: string;
   summary: string;
   meta: string;
-  reaction: string;
   pickFor: string;
   accent: string;
 }[] = [
@@ -17,7 +16,6 @@ const tests: {
     title: "내 인간 캐릭터 테스트",
     summary: "관계, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 읽어내는 휴먼덱 대표 테스트",
     meta: "15문항 · 결과 5개",
-    reaction: "친구랑 같이 비교해보면 더 재밌는 타입",
     pickFor: "내 패턴을 넓게 보고 싶을 때",
     accent: "home-card-character",
   },
@@ -27,7 +25,6 @@ const tests: {
     title: "내 판단은 얼마나 틀렸을까?",
     summary: "확증편향부터 선택 과부하까지, 내 판단 습관이 어디서 흔들리는지 보여주는 테스트",
     meta: "12문항 · 메인 편향 + 서브 성향",
-    reaction: "웃으면서 시작했다가 은근 뜨끔해지는 타입",
     pickFor: "내 선택 습관을 찔러보고 싶을 때",
     accent: "home-card-judgment",
   },
@@ -107,7 +104,6 @@ export function HomeExperience() {
               <div className="home-test-meta">
                 <strong>{test.meta}</strong>
                 <span>{test.pickFor}</span>
-                <span>{test.reaction}</span>
               </div>
               <Link className="primary-button home-test-link" href={test.href}>
                 이 테스트 시작하기
