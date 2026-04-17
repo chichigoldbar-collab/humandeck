@@ -26,6 +26,7 @@ export type JudgmentCharacter = {
   name: string;
   slug: string;
   emblem: string;
+  imagePath: string;
   accent: string;
   biasLabel: string;
   headline: string;
@@ -325,6 +326,7 @@ export const judgmentCharacters: Record<JudgmentBiasType, JudgmentCharacter> = {
     name: "픽스폭스",
     slug: "pixfox",
     emblem: "🦊",
+    imagePath: "/assets/pixfox.png",
     accent: "pixfox",
     biasLabel: "확증편향",
     headline: "보고 싶은 것만 골라 믿는 타입",
@@ -350,6 +352,7 @@ export const judgmentCharacters: Record<JudgmentBiasType, JudgmentCharacter> = {
     name: "그랩옥토",
     slug: "grabocto",
     emblem: "🐙",
+    imagePath: "/assets/grabocto.png",
     accent: "grabocto",
     biasLabel: "손실회피",
     headline: "잃지 않으려다 기회를 놓치는 타입",
@@ -375,6 +378,7 @@ export const judgmentCharacters: Record<JudgmentBiasType, JudgmentCharacter> = {
     name: "앵커웨일",
     slug: "anchorwhale",
     emblem: "🐋",
+    imagePath: "/assets/anchorwhale.png",
     accent: "anchorwhale",
     biasLabel: "앵커링 효과",
     headline: "처음 본 기준에서 잘 못 벗어나는 타입",
@@ -399,6 +403,7 @@ export const judgmentCharacters: Record<JudgmentBiasType, JudgmentCharacter> = {
     name: "블레이즈치타",
     slug: "blazecheetah",
     emblem: "🐆",
+    imagePath: "/assets/blazecheetah.png",
     accent: "blazecheetah",
     biasLabel: "과잉확신",
     headline: "틀려도 자신 있게 밀어붙이는 타입",
@@ -424,6 +429,7 @@ export const judgmentCharacters: Record<JudgmentBiasType, JudgmentCharacter> = {
     name: "할로피콕",
     slug: "halopeacock",
     emblem: "🦚",
+    imagePath: "/assets/halopeacock.png",
     accent: "halopeacock",
     biasLabel: "후광효과",
     headline: "겉모습 하나로 전체를 판단하는 타입",
@@ -449,6 +455,7 @@ export const judgmentCharacters: Record<JudgmentBiasType, JudgmentCharacter> = {
     name: "멀티앤트",
     slug: "multiant",
     emblem: "🐜",
+    imagePath: "/assets/multiant.png",
     accent: "multiant",
     biasLabel: "선택 과부하",
     headline: "너무 많이 따지다가 결국 못 고르는 타입",

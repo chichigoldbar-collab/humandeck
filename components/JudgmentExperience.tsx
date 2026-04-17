@@ -329,12 +329,27 @@ export function JudgmentExperience() {
 
           <div className="judgment-result-grid">
             <article className={`judgment-result-card ${result.mainCharacter.accent}`}>
+              <div className="judgment-visual">
+                <img
+                  src={result.mainCharacter.imagePath}
+                  alt={result.mainCharacter.name}
+                  className="judgment-image"
+                  onError={(event) => {
+                    const target = event.currentTarget;
+                    target.style.display = "none";
+                    const fallback = target.nextElementSibling as HTMLElement | null;
+                    if (fallback) fallback.style.display = "grid";
+                  }}
+                />
+                <div className="judgment-emblem judgment-emblem-fallback">
+                  {result.mainCharacter.emblem}
+                </div>
+              </div>
               <div className="judgment-card-topline">
                 <span>메인 결과</span>
                 <strong>{result.mainCharacter.biasLabel}</strong>
               </div>
               <div className="judgment-card-head">
-                <div className="judgment-emblem">{result.mainCharacter.emblem}</div>
                 <div>
                   <h3>{result.mainCharacter.name}</h3>
                   <p>{result.mainCharacter.headline}</p>
@@ -348,10 +363,28 @@ export function JudgmentExperience() {
             </article>
 
             <article className={`judgment-sub-card ${result.subCharacter.accent}`}>
-              <span>서브 성향</span>
-              <strong>
-                {result.subCharacter.emblem} {result.subCharacter.name}
-              </strong>
+              <div className="judgment-sub-head">
+                <div className="judgment-sub-visual">
+                  <img
+                    src={result.subCharacter.imagePath}
+                    alt={result.subCharacter.name}
+                    className="judgment-sub-image"
+                    onError={(event) => {
+                      const target = event.currentTarget;
+                      target.style.display = "none";
+                      const fallback = target.nextElementSibling as HTMLElement | null;
+                      if (fallback) fallback.style.display = "grid";
+                    }}
+                  />
+                  <div className="judgment-emblem judgment-sub-emblem-fallback">
+                    {result.subCharacter.emblem}
+                  </div>
+                </div>
+                <div>
+                  <span>서브 성향</span>
+                  <strong>{result.subCharacter.name}</strong>
+                </div>
+              </div>
               <p>{result.subCharacter.headline}</p>
               <div className="judgment-sub-meta">
                 <span>{result.subCharacter.biasLabel}</span>
