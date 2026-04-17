@@ -26,6 +26,7 @@ export function TestExperience() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [detailUnlocked, setDetailUnlocked] = useState(false);
+  const [detailAdStarted, setDetailAdStarted] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<ResultKeys | null>(null);
   const [preResultCountdown, setPreResultCountdown] = useState(5);
   const [detailCountdown, setDetailCountdown] = useState(5);
@@ -61,6 +62,11 @@ export function TestExperience() {
     setCurrentIndex((prev) => prev - 1);
   }
 
+  function startDetailAd() {
+    setDetailAdStarted(true);
+    setDetailCountdown(5);
+  }
+
   function handleShare() {
     if (typeof window !== "undefined") {
       const shareUrl = new URL(window.location.href);
@@ -91,6 +97,7 @@ export function TestExperience() {
     setCurrentIndex(0);
     setStage("landing");
     setDetailUnlocked(false);
+    setDetailAdStarted(false);
     setSharedResultKeys(null);
     setPreResultCountdown(5);
     setDetailCountdown(5);
@@ -104,6 +111,7 @@ export function TestExperience() {
     setStage("questions");
     setSharedResultKeys(null);
     setDetailUnlocked(false);
+    setDetailAdStarted(false);
     setPreResultCountdown(5);
     setDetailCountdown(5);
 
@@ -152,7 +160,7 @@ export function TestExperience() {
   }, [stage, preResultCountdown]);
 
   useEffect(() => {
-    if (stage !== "result" || detailUnlocked) return;
+    if (stage !== "result" || detailUnlocked || !detailAdStarted) return;
     if (detailCountdown <= 0) return;
 
     const timer = window.setTimeout(() => {
@@ -160,7 +168,7 @@ export function TestExperience() {
     }, 1000);
 
     return () => window.clearTimeout(timer);
-  }, [stage, detailUnlocked, detailCountdown]);
+  }, [stage, detailUnlocked, detailAdStarted, detailCountdown]);
 
   return (
     <main className="shell">
@@ -375,21 +383,37 @@ export function TestExperience() {
           {!detailUnlocked ? (
             <div className="reward-panel">
               <div>
-                <span>더 깊게 보기</span>
-                <h3>이 캐릭터가 왜 생겼는지 열어보기</h3>
-                <p>겉으로 보이는 패턴 말고, 어디서 흔들리고 왜 반복되는지까지 보여드립니다.</p>
+                <span>{detailAdStarted ? "광고 확인 중" : "더 깊게 보기"}</span>
+                <h3>
+                  {detailAdStarted
+                    ? "광고를 본 뒤 상세 해설이 열립니다"
+                    : "이 캐릭터가 왜 생겼는지 열어보기"}
+                </h3>
+                <p>
+                  {detailAdStarted
+                    ? "조금만 기다리면 겉으로 보이는 패턴 너머의 해설이 바로 열립니다."
+                    : "겉으로 보이는 패턴 말고, 어디서 흔들리고 왜 반복되는지까지 보여드립니다."}
+                </p>
               </div>
               <div className="reward-actions">
-                <AdSlot slot="7737585483" label="sponsored" />
-                <button
-                  className="primary-button"
-                  onClick={() => setDetailUnlocked(true)}
-                  disabled={detailCountdown > 0}
-                >
-                  {detailCountdown > 0
-                    ? `${detailCountdown}초 후 상세 해설 열기`
-                    : "상세 해설 열기"}
-                </button>
+                {detailAdStarted ? (
+                  <>
+                    <AdSlot slot="7737585483" label="sponsored" />
+                    <button
+                      className="primary-button"
+                      onClick={() => setDetailUnlocked(true)}
+                      disabled={detailCountdown > 0}
+                    >
+                      {detailCountdown > 0
+                        ? `${detailCountdown}초 후 상세 해설 열기`
+                        : "상세 해설 열기"}
+                    </button>
+                  </>
+                ) : (
+                  <button className="primary-button" onClick={startDetailAd}>
+                    상세 해설 열기
+                  </button>
+                )}
               </div>
             </div>
           ) : (

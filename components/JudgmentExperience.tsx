@@ -27,6 +27,7 @@ export function JudgmentExperience() {
   const [preResultCountdown, setPreResultCountdown] = useState(5);
   const [detailCountdown, setDetailCountdown] = useState(5);
   const [detailUnlocked, setDetailUnlocked] = useState(false);
+  const [detailAdStarted, setDetailAdStarted] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<{
     mainBias: JudgmentBiasType;
     subBias: JudgmentBiasType;
@@ -48,6 +49,7 @@ export function JudgmentExperience() {
     setStage("questions");
     setSharedResultKeys(null);
     setDetailUnlocked(false);
+    setDetailAdStarted(false);
     setPreResultCountdown(5);
     setDetailCountdown(5);
 
@@ -89,6 +91,11 @@ export function JudgmentExperience() {
     setDetailUnlocked(true);
   }
 
+  function startDetailAd() {
+    setDetailAdStarted(true);
+    setDetailCountdown(5);
+  }
+
   function restart() {
     setAnswers({});
     setCurrentIndex(0);
@@ -96,6 +103,7 @@ export function JudgmentExperience() {
     setPreResultCountdown(5);
     setDetailCountdown(5);
     setDetailUnlocked(false);
+    setDetailAdStarted(false);
     setSharedResultKeys(null);
 
     if (typeof window !== "undefined") {
@@ -132,6 +140,7 @@ export function JudgmentExperience() {
       setSharedResultKeys({ mainBias, subBias });
       setStage("result");
       setDetailUnlocked(true);
+      setDetailAdStarted(true);
     }
   }, []);
 
@@ -146,14 +155,14 @@ export function JudgmentExperience() {
   }, [stage, preResultCountdown]);
 
   useEffect(() => {
-    if (stage !== "result" || detailUnlocked || detailCountdown <= 0) return;
+    if (stage !== "result" || detailUnlocked || !detailAdStarted || detailCountdown <= 0) return;
 
     const timer = window.setTimeout(() => {
       setDetailCountdown((prev) => prev - 1);
     }, 1000);
 
     return () => window.clearTimeout(timer);
-  }, [stage, detailUnlocked, detailCountdown]);
+  }, [stage, detailUnlocked, detailAdStarted, detailCountdown]);
 
   return (
     <main className="shell">
@@ -408,19 +417,37 @@ export function JudgmentExperience() {
           {!detailUnlocked ? (
             <div className="reward-panel">
               <div>
-                <span>상세 해설</span>
-                <h3>{detailCountdown > 0 ? `${detailCountdown}초 후 상세 해설 열기` : "상세 해설을 확인할 수 있어요"}</h3>
-                <p>왜 이런 결과가 나왔는지, 일상에서 어떻게 드러나는지까지 이어서 볼 수 있습니다.</p>
+                <span>{detailAdStarted ? "광고 확인 중" : "상세 해설"}</span>
+                <h3>
+                  {detailAdStarted
+                    ? detailCountdown > 0
+                      ? `${detailCountdown}초 후 상세 해설 열기`
+                      : "상세 해설을 확인할 수 있어요"
+                    : "광고를 본 뒤 상세 해설이 열립니다"}
+                </h3>
+                <p>
+                  {detailAdStarted
+                    ? "조금만 기다리면 왜 이런 결과가 나왔는지, 일상에서 어떻게 드러나는지까지 이어서 볼 수 있습니다."
+                    : "버튼을 누르면 광고 확인 뒤 상세 해설 단계로 넘어갑니다."}
+                </p>
               </div>
               <div className="reward-actions">
-                <AdSlot slot="7737585483" label="sponsored" />
-                <button
-                  className="primary-button"
-                  onClick={unlockDetail}
-                  disabled={detailCountdown > 0}
-                >
-                  상세 해설 열기
-                </button>
+                {detailAdStarted ? (
+                  <>
+                    <AdSlot slot="7737585483" label="sponsored" />
+                    <button
+                      className="primary-button"
+                      onClick={unlockDetail}
+                      disabled={detailCountdown > 0}
+                    >
+                      상세 해설 열기
+                    </button>
+                  </>
+                ) : (
+                  <button className="primary-button" onClick={startDetailAd}>
+                    상세 해설 열기
+                  </button>
+                )}
               </div>
             </div>
           ) : (
