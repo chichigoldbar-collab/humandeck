@@ -1025,6 +1025,25 @@ button {
     linear-gradient(160deg, rgba(255, 255, 255, 0.82) 0%, rgba(241, 249, 255, 0.96) 100%);
 }
 
+.home-preview .preview-card,
+.home-preview .preview-quote {
+  position: static;
+  width: 100%;
+  transform: none;
+}
+
+.home-preview {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 24px;
+  min-height: auto;
+}
+
+.home-preview .preview-orb {
+  display: none;
+}
+
 .home-panel {
   margin-top: 18px;
 }
@@ -1365,6 +1384,11 @@ button {
     min-height: 360px;
   }
 
+  .home-preview {
+    min-height: auto;
+    padding: 18px;
+  }
+
   .preview-card.primary,
   .preview-card.secondary,
   .preview-quote {
@@ -1384,6 +1408,16 @@ button {
 
   .preview-quote {
     bottom: 18px;
+  }
+
+  .home-preview .preview-card.primary,
+  .home-preview .preview-card.secondary,
+  .home-preview .preview-quote {
+    right: auto;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
   }
 
   .final-cta-panel {
