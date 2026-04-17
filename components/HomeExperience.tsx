@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const tests: {
-  href: "/character" | "/judgment";
+  href: "/character" | "/judgment" | "/stimulation";
   badge: string;
   title: string;
   summary: string;
@@ -27,6 +27,15 @@ const tests: {
     meta: "12문항 · 메인 편향 + 서브 성향",
     pickFor: "내 선택 습관을 찔러보고 싶을 때",
     accent: "home-card-judgment",
+  },
+  {
+    href: "/stimulation",
+    badge: "신규 테스트",
+    title: "나는 얼마나 자극에 약할까?",
+    summary: "스크롤, 충동구매, 집중력 붕괴처럼 일상 속 자극 반응 패턴을 보는 테스트",
+    meta: "12문항 · 메인 결과 + 서브 성향",
+    pickFor: "내 뇌 습관과 자극 내성을 보고 싶을 때",
+    accent: "home-card-stimulation",
   },
 ];
 
@@ -85,6 +94,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>둘 다 해도 결과 결이 다릅니다</strong>
             <p>하나는 내가 어떤 사람인지, 다른 하나는 내가 어떻게 판단하는지를 보여줍니다.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>내 자극 반응이 궁금하다면</strong>
+            <p>왜 자꾸 폰을 보게 되는지, 왜 빠른 재미에 끌리는지 보는 자극 반응 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>

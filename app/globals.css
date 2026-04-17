@@ -1120,7 +1120,7 @@ button {
 .home-intro-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .home-intro-card {
@@ -1147,7 +1147,7 @@ button {
 .home-test-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .home-test-card {
@@ -1213,6 +1213,12 @@ button {
     linear-gradient(180deg, #f6f8ff 0%, #eefbff 100%);
 }
 
+.home-card-stimulation {
+  background:
+    radial-gradient(circle at top right, rgba(255, 170, 87, 0.2), transparent 32%),
+    linear-gradient(180deg, #fff8ef 0%, #fff1dd 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1222,10 +1228,25 @@ button {
     linear-gradient(160deg, rgba(255, 255, 255, 0.86) 0%, rgba(242, 246, 255, 0.96) 100%);
 }
 
+.stimulation-hero-card::after {
+  background: radial-gradient(circle, rgba(255, 170, 87, 0.2) 0%, transparent 72%);
+}
+
+.stimulation-preview {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 246, 234, 0.96) 100%);
+}
+
 .judgment-result-hero {
   background:
     radial-gradient(circle at top right, rgba(92, 132, 255, 0.28), transparent 28%),
     linear-gradient(135deg, #152240 0%, #2d4384 100%);
+}
+
+.stimulation-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(255, 177, 74, 0.24), transparent 28%),
+    linear-gradient(135deg, #3a1c05 0%, #8b4a15 100%);
 }
 
 .judgment-result-grid,
@@ -1285,6 +1306,21 @@ button {
 
 .judgment-image-halopeacock {
   transform: scale(1.16);
+  transform-origin: center;
+}
+
+.stimulation-image-scrollhamster {
+  transform: scale(1.14);
+  transform-origin: center;
+}
+
+.stimulation-image-hotfox {
+  transform: scale(1.14);
+  transform-origin: center;
+}
+
+.stimulation-image-trophywolf {
+  transform: scale(1.1);
   transform-origin: center;
 }
 
@@ -1463,6 +1499,42 @@ button {
   background:
     radial-gradient(circle at top right, rgba(109, 191, 144, 0.2), transparent 38%),
     linear-gradient(180deg, #f1fbf4 0%, #ddf2e3 100%);
+}
+
+.sparkmonkey {
+  background:
+    radial-gradient(circle at top right, rgba(255, 186, 58, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff7e3 0%, #ffe7af 100%);
+}
+
+.novacat {
+  background:
+    radial-gradient(circle at top right, rgba(138, 123, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #f5f2ff 0%, #e9e2ff 100%);
+}
+
+.punchrabbit {
+  background:
+    radial-gradient(circle at top right, rgba(255, 128, 128, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff2f2 0%, #ffdcdc 100%);
+}
+
+.scrollhamster {
+  background:
+    radial-gradient(circle at top right, rgba(89, 193, 214, 0.2), transparent 38%),
+    linear-gradient(180deg, #effcff 0%, #dbf5fb 100%);
+}
+
+.hotfox {
+  background:
+    radial-gradient(circle at top right, rgba(255, 111, 43, 0.22), transparent 38%),
+    linear-gradient(180deg, #fff1e8 0%, #ffd6c2 100%);
+}
+
+.trophywolf {
+  background:
+    radial-gradient(circle at top right, rgba(246, 203, 79, 0.22), transparent 38%),
+    linear-gradient(180deg, #fff8df 0%, #ffe7a6 100%);
 }
 
 @keyframes fade-rise {
