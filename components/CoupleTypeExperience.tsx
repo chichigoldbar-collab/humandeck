@@ -137,6 +137,17 @@ export function CoupleTypeExperience() {
     }
   }, []);
 
+  useEffect(() => {
+    if (stage !== "result" || typeof window === "undefined") return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("couple-result-section")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [stage]);
+
   return (
     <main className="shell">
       <section className="hero-card couple-hero-card">
@@ -279,7 +290,7 @@ export function CoupleTypeExperience() {
       )}
 
       {stage === "result" && (
-        <section className="panel result-panel">
+        <section id="couple-result-section" className="panel result-panel">
           <div className="result-hero couple-result-hero">
             <p>당신들의 관계 유형</p>
             <strong>

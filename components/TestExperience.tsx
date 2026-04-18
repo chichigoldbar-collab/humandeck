@@ -136,6 +136,17 @@ export function TestExperience() {
     }
   }, []);
 
+  useEffect(() => {
+    if (stage !== "result" || typeof window === "undefined") return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("character-result-section")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [stage]);
+
   return (
     <main className="shell">
       <section className="hero-card">
@@ -273,7 +284,7 @@ export function TestExperience() {
       )}
 
       {stage === "result" && (
-        <section className="panel result-panel">
+        <section id="character-result-section" className="panel result-panel">
           <div className="result-hero">
             <strong>당신의 인간 캐릭터 세트가 완성됐습니다.</strong>
           </div>

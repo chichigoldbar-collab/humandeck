@@ -119,6 +119,17 @@ export function EatTypeExperience() {
     }
   }, []);
 
+  useEffect(() => {
+    if (stage !== "result" || typeof window === "undefined") return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("eat-result-section")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [stage]);
+
   return (
     <main className="shell">
       <section className="hero-card eat-hero-card">
@@ -261,7 +272,7 @@ export function EatTypeExperience() {
       )}
 
       {stage === "result" && (
-        <section className="panel result-panel">
+        <section id="eat-result-section" className="panel result-panel">
           <div className="result-hero eat-result-hero">
             <p>당신의 메인 먹는 성격</p>
             <strong>

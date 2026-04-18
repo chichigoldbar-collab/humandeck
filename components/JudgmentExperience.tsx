@@ -120,6 +120,17 @@ export function JudgmentExperience() {
     }
   }, []);
 
+  useEffect(() => {
+    if (stage !== "result" || typeof window === "undefined") return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("judgment-result-section")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [stage]);
+
   return (
     <main className="shell">
       <section className="hero-card judgment-hero-card">
@@ -262,7 +273,7 @@ export function JudgmentExperience() {
       )}
 
       {stage === "result" && (
-        <section className="panel result-panel">
+        <section id="judgment-result-section" className="panel result-panel">
           <div className="result-hero judgment-result-hero">
             <p>당신의 메인 편향</p>
             <strong>

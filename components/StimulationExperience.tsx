@@ -119,6 +119,17 @@ export function StimulationExperience() {
     }
   }, []);
 
+  useEffect(() => {
+    if (stage !== "result" || typeof window === "undefined") return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("stimulation-result-section")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [stage]);
+
   return (
     <main className="shell">
       <section className="hero-card stimulation-hero-card">
@@ -261,7 +272,7 @@ export function StimulationExperience() {
       )}
 
       {stage === "result" && (
-        <section className="panel result-panel">
+        <section id="stimulation-result-section" className="panel result-panel">
           <div className="result-hero stimulation-result-hero">
             <p>당신의 메인 도파민 성향</p>
             <strong>
