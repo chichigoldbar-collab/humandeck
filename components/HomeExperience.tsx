@@ -129,11 +129,6 @@ export function HomeExperience() {
       </section>
 
       <section className="panel home-panel">
-        <div className="panel-header">
-          <span>지금 열려 있는 테스트</span>
-          <h2>오늘은 어떤 쪽부터 볼까요?</h2>
-        </div>
-
         <div className="home-test-grid">
           {tests.map((test) => (
             <article key={test.href} className={`home-test-card ${test.accent}`}>
