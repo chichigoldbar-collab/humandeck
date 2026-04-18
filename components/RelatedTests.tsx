@@ -5,7 +5,8 @@ type TestPath =
   | "/judgment"
   | "/stimulation"
   | "/eat-type"
-  | "/couple-type";
+  | "/couple-type"
+  | "/ghost-sense";
 
 const tests: {
   href: TestPath;
@@ -42,6 +43,12 @@ const tests: {
     badge: "부부 관계",
     title: "부부 관계 분석 테스트",
     summary: "갈등, 연결, 생활, 애정 네 축으로 관계 패턴을 보는 테스트",
+  },
+  {
+    href: "/ghost-sense",
+    badge: "공포 콘셉트",
+    title: "귀신 보이는지 테스트",
+    summary: "감각 민감도, 공포 반응, 상상/착각으로 보는 어두운 테마 테스트",
   },
 ];
 

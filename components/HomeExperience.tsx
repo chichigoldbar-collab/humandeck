@@ -2,7 +2,13 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const tests: {
-  href: "/character" | "/judgment" | "/stimulation" | "/eat-type" | "/couple-type";
+  href:
+    | "/character"
+    | "/judgment"
+    | "/stimulation"
+    | "/eat-type"
+    | "/couple-type"
+    | "/ghost-sense";
   badge: string;
   title: string;
   summary: string;
@@ -54,6 +60,15 @@ const tests: {
     meta: "16문항 · 관계 유형 + 4축 그래프",
     pickFor: "관계의 결을 차분하게 보고 싶을 때",
     accent: "home-card-couple",
+  },
+  {
+    href: "/ghost-sense",
+    badge: "신규 테스트",
+    title: "귀신 보이는지 테스트",
+    summary: "감각 민감도, 공포 반응, 상상/착각으로 보는 공포 콘셉트 테스트",
+    meta: "12문항 · 결과 6개 · 어두운 테마",
+    pickFor: "무서운 분위기에서 나는 어떤 타입인지 궁금할 때",
+    accent: "home-card-ghost",
   },
 ];
 
@@ -124,6 +139,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>부부 관계 패턴을 보고 싶다면</strong>
             <p>안정적인지, 거리감이 있는지, 생활은 잘 굴러가는데 감정이 빈 건 아닌지 네 축으로 보는 관계 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>공포 콘셉트로 몰입하고 싶다면</strong>
+            <p>어두운 공간, 기척, 뒤돌아보는 습관 같은 반응으로 보는 귀신 보이는지 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>
