@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const tests: {
-  href: "/character" | "/judgment" | "/stimulation";
+  href: "/character" | "/judgment" | "/stimulation" | "/eat-type";
   badge: string;
   title: string;
   summary: string;
@@ -36,6 +36,15 @@ const tests: {
     meta: "12문항 · 메인 결과 + 서브 성향",
     pickFor: "내 뇌 습관과 도파민 패턴이 궁금할 때",
     accent: "home-card-stimulation",
+  },
+  {
+    href: "/eat-type",
+    badge: "신규 테스트",
+    title: "먹는 방식 성격 테스트",
+    summary: "라면 먹는 순서, 메뉴 고르는 방식만으로 캐릭터처럼 보는 먹는 성격 테스트",
+    meta: "10문항 · 메인 결과 + 보조 성향",
+    pickFor: "내 먹는 습관이 밈처럼 궁금할 때",
+    accent: "home-card-eattype",
   },
 ];
 
@@ -98,6 +107,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>내 도파민 반응이 궁금하다면</strong>
             <p>왜 자꾸 폰을 보게 되는지, 왜 빠른 재미에 끌리는지 보는 도파민 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>먹는 습관으로 성격을 보고 싶다면</strong>
+            <p>라면, 배달 앱, 치킨 고르는 방식처럼 너무 현실적인 질문으로 보는 먹는 방식 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>

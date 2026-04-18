@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type TestPath = "/character" | "/judgment" | "/stimulation";
+type TestPath = "/character" | "/judgment" | "/stimulation" | "/eat-type";
 
 const tests: {
   href: TestPath;
@@ -25,6 +25,12 @@ const tests: {
     badge: "도파민",
     title: "내 도파민은 얼마나 흔들릴까?",
     summary: "스크롤, 충동구매, 집중력 붕괴처럼 자극 반응 패턴을 보는 테스트",
+  },
+  {
+    href: "/eat-type",
+    badge: "먹는 방식",
+    title: "먹는 방식 성격 테스트",
+    summary: "라면, 배달 앱, 뷔페 선택만으로 캐릭터처럼 보는 먹는 습관 테스트",
   },
 ];
 
