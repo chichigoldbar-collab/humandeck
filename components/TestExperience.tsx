@@ -326,10 +326,6 @@ export function TestExperience() {
           </div>
 
           <div className="panel inline-ad-panel">
-            <div className="panel-header">
-              <span>광고</span>
-              <h2>결과 흐름을 해치지 않는 자리에서 자연스럽게 노출됩니다</h2>
-            </div>
             <div className="ad-slot">
               <AdSlot slot="5302993836" label="advertisement" />
             </div>
@@ -351,10 +347,6 @@ export function TestExperience() {
           ) : (
             <>
               <div className="panel inline-ad-panel">
-                <div className="panel-header">
-                  <span>광고</span>
-                  <h2>상세 해설 아래에도 한 번 더 자연스럽게 노출됩니다</h2>
-                </div>
                 <div className="ad-slot">
                   <AdSlot slot="7737585483" label="advertisement" />
                 </div>
