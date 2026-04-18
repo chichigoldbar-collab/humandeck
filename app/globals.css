@@ -1719,6 +1719,18 @@ button {
     linear-gradient(180deg, #f2fbff 0%, #dff0f7 100%);
 }
 
+.couple-panda {
+  background:
+    radial-gradient(circle at top right, rgba(176, 154, 154, 0.18), transparent 38%),
+    linear-gradient(180deg, #fcf9f9 0%, #eee5e5 100%);
+}
+
+.couple-sloth {
+  background:
+    radial-gradient(circle at top right, rgba(183, 160, 112, 0.18), transparent 38%),
+    linear-gradient(180deg, #fffaf2 0%, #efe1c8 100%);
+}
+
 .couple-dimension-card {
   display: grid;
   gap: 18px;

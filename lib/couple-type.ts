@@ -10,7 +10,9 @@ export type CoupleResultType =
   | "carefulFox"
   | "directTiger"
   | "avoidTurtle"
-  | "distancePenguin";
+  | "distancePenguin"
+  | "dependentPanda"
+  | "rebuildSloth";
 
 export type CoupleAnswerMap = Record<string, number>;
 
@@ -174,6 +176,40 @@ export const coupleResults: Record<CoupleResultType, CoupleResultProfile> = {
     ],
     advice: "문제 해결보다 먼저 연결 회복이 필요합니다. 하루 10분이라도 감정 이야기를 나누는 시간을 만들어보세요.",
   },
+  dependentPanda: {
+    type: "dependentPanda",
+    name: "의존형 판다 부부",
+    slug: "panda",
+    emblem: "🐼",
+    imagePath: "/assets/couple-panda.png",
+    accent: "couple-panda",
+    headline: "가깝지만 불안정할 수 있는 관계",
+    description: "서로에게 기대는 힘은 크지만, 기대만큼 상처도 크게 받는 패턴이 보입니다.",
+    meme: "좋아하긴 엄청 좋아하는데, 그래서 더 피곤한 부부",
+    summaryBody: "이 관계는 애정 에너지가 약해서 힘든 게 아니라, 오히려 기대와 결핍의 진폭이 커서 지치는 쪽에 가깝습니다. 서로를 향한 욕구가 크기 때문에 작은 서운함도 더 크게 남을 수 있습니다.",
+    reasonBullets: [
+      "정서적으로 가까워지고 싶은 욕구는 높은데, 동시에 애정 결핍감과 서운함도 크게 느껴질 가능성이 보였습니다.",
+      "좋아하는 마음과 불안이 함께 커져서 관계 피로가 쌓일 수 있는 흐름입니다.",
+    ],
+    advice: "애정의 양보다 기대를 확인하는 방식이 중요합니다. 서운함을 추측으로 키우기보다 바로 말하는 연습이 필요합니다.",
+  },
+  rebuildSloth: {
+    type: "rebuildSloth",
+    name: "재정비 필요형 나무늘보 부부",
+    slug: "sloth",
+    emblem: "🦥",
+    imagePath: "/assets/couple-sloth.png",
+    accent: "couple-sloth",
+    headline: "의식적인 재정비가 필요한 관계",
+    description: "서로 마음이 없는 건 아닐 수 있지만, 지금 방식으로는 계속 소모될 가능성이 큰 상태입니다.",
+    meme: "버티고는 있는데, 잘 살고 있는 건 아닐 수 있음",
+    summaryBody: "이 관계는 한두 군데의 작은 문제보다 전반적인 피로가 누적된 상태에 더 가깝습니다. 자동 회복을 기대하기보다, 관계 운영 방식을 의식적으로 다시 세울 필요가 있습니다.",
+    reasonBullets: [
+      "네 축 중 여러 영역이 동시에 위험 구간에 들어와 있어, 특정 문제만 고쳐서는 해결이 어려울 수 있습니다.",
+      "방치할수록 반복 패턴이 굳어질 가능성이 높습니다.",
+    ],
+    advice: "지금은 참는 힘보다 재정비가 더 중요합니다. 두 사람이 모두 부담을 느끼는 축부터 우선순위를 정해 손봐야 합니다.",
+  },
 };
 
 function scoreValue(answerValue: number, reverse: boolean) {
@@ -189,8 +225,28 @@ function getInitialScores(): DimensionScores {
   };
 }
 
-function resolveResultType(scores: DimensionScores): CoupleResultType {
+function resolveResultType(
+  scores: DimensionScores,
+  rawSignals?: {
+    connectionLonging: number;
+    unmetAffection: number;
+    riskCount: number;
+  },
+): CoupleResultType {
   const { conflict, connection, partnership, affection } = scores;
+  const connectionLonging = rawSignals?.connectionLonging ?? connection + affection;
+  const unmetAffection = rawSignals?.unmetAffection ?? (20 - affection) + (20 - connection);
+  const riskCount =
+    rawSignals?.riskCount ??
+    [conflict, connection, partnership, affection].filter((score) => score <= 10).length;
+
+  if (riskCount >= 2) {
+    return "rebuildSloth";
+  }
+
+  if (connectionLonging >= 14 && unmetAffection >= 14) {
+    return "dependentPanda";
+  }
 
   if (
     conflict >= 16 &&
@@ -233,7 +289,23 @@ export function calculateCoupleResult(answers: CoupleAnswerMap) {
     scores[question.dimension] += scoreValue(answerValue, question.reverse);
   }
 
-  return buildCoupleResultFromScores(scores);
+  const connectionLonging =
+    (answers["5"] ?? 0) +
+    (answers["6"] ?? 0) +
+    (answers["13"] ?? 0) +
+    (answers["14"] ?? 0);
+  const unmetAffection =
+    (answers["7"] ?? 0) +
+    (answers["8"] ?? 0) +
+    (answers["15"] ?? 0) +
+    (answers["16"] ?? 0);
+  const riskCount = Object.values(scores).filter((score) => score <= 10).length;
+
+  return buildCoupleResultFromScores(scores, {
+    connectionLonging,
+    unmetAffection,
+    riskCount,
+  });
 }
 
 export function buildCoupleSharedResult(input: SharedResult) {
@@ -247,8 +319,15 @@ export function buildCoupleSharedResult(input: SharedResult) {
   return buildCoupleResultFromScores(scores);
 }
 
-function buildCoupleResultFromScores(scores: DimensionScores) {
-  const resultType = resolveResultType(scores);
+function buildCoupleResultFromScores(
+  scores: DimensionScores,
+  rawSignals?: {
+    connectionLonging: number;
+    unmetAffection: number;
+    riskCount: number;
+  },
+) {
+  const resultType = resolveResultType(scores, rawSignals);
   const profile = coupleResults[resultType];
   const strongestDimension = (Object.entries(scores) as [CoupleDimension, number][])
     .sort((a, b) => b[1] - a[1])[0][0];
@@ -260,4 +339,3 @@ function buildCoupleResultFromScores(scores: DimensionScores) {
     strongestDimension,
   };
 }
-
