@@ -155,18 +155,16 @@ export function GhostSenseExperience() {
     <main className="shell ghost-shell">
       <section className="hero-card ghost-hero-card">
         <div className="hero-copy">
-          <span className="eyebrow">공포 콘셉트로 보는 감각 반응 테스트</span>
+          <span className="eyebrow">공포 콘셉트로 보는 감각 반응 분석</span>
           <h1>
-            귀신 보이는지
+            귀신을 얼마나 느끼는
             <br />
-            테스트
+            타입일까?
           </h1>
           <p>
-            당신은 기척을 먼저 느끼는 타입인지,
+            어두운 공간, 작은 소리, 이상한 기척에
             <br />
-            무서움을 오래 끌고 가는 타입인지,
-            <br />
-            아니면 상상으로 스스로 무서워지는 타입인지 보여드립니다.
+            당신이 반응하는 방식을 분석합니다.
           </p>
           <div className="hero-inline-copy">
             <span>총 12문항</span>
@@ -288,11 +286,11 @@ export function GhostSenseExperience() {
       {stage === "result" && (
         <section id="ghost-result-section" className="panel result-panel ghost-result-panel ghost-panel">
           <div className="ghost-disclaimer">
-            본 테스트는 मनोर용/공포 콘셉트이며 실제 초자연 현상을 판정하지 않습니다.
+            본 테스트는 오락용 공포 콘셉트이며 실제 초자연 현상을 판정하지 않습니다.
           </div>
 
           <div className="result-hero ghost-result-hero">
-            <p>당신의 귀신 인식 타입</p>
+            <p>당신의 공포 반응 타입</p>
             <strong>
               {result.profile.emblem} {result.profile.name}
             </strong>
@@ -416,4 +414,3 @@ export function GhostSenseExperience() {
     </main>
   );
 }
-
