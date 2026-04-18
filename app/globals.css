@@ -1199,6 +1199,52 @@ button {
   margin-top: 4px;
 }
 
+.related-tests-panel {
+  margin-top: 18px;
+}
+
+.related-tests-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.related-test-card {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.84);
+  text-decoration: none;
+  box-shadow: 0 14px 36px rgba(64, 94, 140, 0.08);
+}
+
+.related-test-card strong {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.related-test-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.related-test-badge {
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 107, 122, 0.12);
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.inline-ad-panel {
+  margin-top: 18px;
+}
+
 .home-card-character {
   background:
     radial-gradient(circle at top right, rgba(255, 153, 165, 0.18), transparent 32%),
@@ -1568,6 +1614,7 @@ button {
   .bullet-grid,
   .home-intro-grid,
   .home-test-grid,
+  .related-tests-grid,
   .result-grid,
   .detail-grid,
   .judgment-result-grid,

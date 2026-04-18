@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AdSlot } from "@/components/AdSlot";
+import { RelatedTests } from "@/components/RelatedTests";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   buildStimulationSharedResult,
@@ -12,7 +13,7 @@ import {
   type StimulationType,
 } from "@/lib/stimulation-test";
 
-type Stage = "landing" | "questions" | "preResultAd" | "result";
+type Stage = "landing" | "questions" | "result";
 
 const floatingNotes = [
   "당신의 손가락은 생각보다 솔직합니다",
@@ -24,10 +25,7 @@ export function StimulationExperience() {
   const [stage, setStage] = useState<Stage>("landing");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<StimulationAnswerMap>({});
-  const [preResultCountdown, setPreResultCountdown] = useState(5);
-  const [detailCountdown, setDetailCountdown] = useState(0);
   const [detailUnlocked, setDetailUnlocked] = useState(false);
-  const [detailAdStarted, setDetailAdStarted] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<{
     mainType: StimulationType;
     subType: StimulationType;
@@ -48,9 +46,6 @@ export function StimulationExperience() {
     setStage("questions");
     setSharedResultKeys(null);
     setDetailUnlocked(false);
-    setDetailAdStarted(false);
-    setPreResultCountdown(5);
-    setDetailCountdown(0);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", "/stimulation");
@@ -68,7 +63,7 @@ export function StimulationExperience() {
     setAnswers(nextAnswers);
 
     if (currentIndex === stimulationQuestions.length - 1) {
-      setStage("preResultAd");
+      setStage("result");
       return;
     }
 
@@ -80,29 +75,11 @@ export function StimulationExperience() {
     setCurrentIndex((prev) => prev - 1);
   }
 
-  function revealResult() {
-    if (preResultCountdown > 0) return;
-    setStage("result");
-  }
-
-  function startDetailAd() {
-    setDetailAdStarted(true);
-    setDetailCountdown(5);
-  }
-
-  function unlockDetail() {
-    if (detailCountdown > 0) return;
-    setDetailUnlocked(true);
-  }
-
   function restart() {
     setAnswers({});
     setCurrentIndex(0);
     setStage("landing");
-    setPreResultCountdown(5);
-    setDetailCountdown(0);
     setDetailUnlocked(false);
-    setDetailAdStarted(false);
     setSharedResultKeys(null);
 
     if (typeof window !== "undefined") {
@@ -139,29 +116,8 @@ export function StimulationExperience() {
       setSharedResultKeys({ mainType, subType });
       setStage("result");
       setDetailUnlocked(true);
-      setDetailAdStarted(true);
     }
   }, []);
-
-  useEffect(() => {
-    if (stage !== "preResultAd" || preResultCountdown <= 0) return;
-
-    const timer = window.setTimeout(() => {
-      setPreResultCountdown((prev) => prev - 1);
-    }, 1000);
-
-    return () => window.clearTimeout(timer);
-  }, [stage, preResultCountdown]);
-
-  useEffect(() => {
-    if (stage !== "result" || detailUnlocked || !detailAdStarted || detailCountdown <= 0) return;
-
-    const timer = window.setTimeout(() => {
-      setDetailCountdown((prev) => prev - 1);
-    }, 1000);
-
-    return () => window.clearTimeout(timer);
-  }, [stage, detailUnlocked, detailAdStarted, detailCountdown]);
 
   return (
     <main className="shell">
@@ -304,27 +260,6 @@ export function StimulationExperience() {
         </section>
       )}
 
-      {stage === "preResultAd" && (
-        <section className="panel ad-panel">
-          <div className="panel-header">
-            <span>거의 다 왔어요</span>
-            <h2>당신의 도파민 반응 패턴을 정리하는 중입니다</h2>
-          </div>
-          <div className="ad-slot">
-            <AdSlot slot="5302993836" label="sponsored" />
-          </div>
-          <button
-            className="primary-button"
-            onClick={revealResult}
-            disabled={preResultCountdown > 0}
-          >
-            {preResultCountdown > 0
-              ? `${preResultCountdown}초 후 결과 공개`
-              : "결과 공개하기"}
-          </button>
-        </section>
-      )}
-
       {stage === "result" && (
         <section className="panel result-panel">
           <div className="result-hero stimulation-result-hero">
@@ -409,80 +344,81 @@ export function StimulationExperience() {
             </div>
           </div>
 
+          <div className="panel inline-ad-panel">
+            <div className="panel-header">
+              <span>광고</span>
+              <h2>결과 흐름을 해치지 않는 자리에서 자연스럽게 노출됩니다</h2>
+            </div>
+            <div className="ad-slot">
+              <AdSlot slot="5302993836" label="advertisement" />
+            </div>
+          </div>
+
           {!detailUnlocked ? (
             <div className="reward-panel">
               <div>
-                <span>{detailAdStarted ? "광고 확인 중" : "상세 해설"}</span>
-                <h3>
-                  {detailAdStarted
-                    ? detailCountdown > 0
-                      ? `${detailCountdown}초 후 상세 해설 열기`
-                      : "상세 해설을 확인할 수 있어요"
-                    : "광고를 본 뒤 상세 해설이 열립니다"}
-                </h3>
-                <p>
-                  {detailAdStarted
-                    ? "조금만 기다리면 왜 이런 결과가 나왔는지, 일상에서 어떻게 나타나는지까지 이어서 볼 수 있습니다."
-                    : "버튼을 누르면 광고 확인 뒤 상세 해설 단계로 넘어갑니다."}
-                </p>
+                <span>상세 해설</span>
+                <h3>왜 이런 결과가 나왔는지 바로 이어서 보기</h3>
+                <p>메인 도파민 성향이 왜 잡혔는지, 일상에서 어떤 패턴으로 나타나는지, 서브 성향까지 이어서 확인할 수 있습니다.</p>
               </div>
               <div className="reward-actions">
-                {detailAdStarted ? (
-                  <>
-                    <AdSlot slot="7737585483" label="sponsored" />
-                    <button
-                      className="primary-button"
-                      onClick={unlockDetail}
-                      disabled={detailCountdown > 0}
-                    >
-                      상세 해설 열기
-                    </button>
-                  </>
-                ) : (
-                  <button className="primary-button" onClick={startDetailAd}>
-                    상세 해설 열기
-                  </button>
-                )}
+                <button className="primary-button" onClick={() => setDetailUnlocked(true)}>
+                  상세 해설 열기
+                </button>
               </div>
             </div>
           ) : (
-            <div className="judgment-detail-grid">
-              <article className="detail-card">
-                <h3>당신의 도파민 반응 요약</h3>
-                <p>{result.mainCharacter.summaryBody}</p>
-              </article>
-
-              <article className="detail-card">
-                <h3>왜 이런 결과가 나왔을까?</h3>
-                <ul>
-                  {result.mainCharacter.reasonBullets.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-
-              <article className="detail-card">
-                <h3>일상에서 이렇게 나타나요</h3>
-                <ul>
-                  {result.mainCharacter.dailyBullets.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-
-              <article className="detail-card">
-                <h3>한 줄 조언</h3>
-                <p>{result.mainCharacter.advice}</p>
-                <div className="judgment-sub-insight">
-                  <span>서브 성향</span>
-                  <strong>
-                    {result.subCharacter.emblem} {result.subCharacter.name}
-                  </strong>
-                  <p>{result.subCharacter.cardSummary}</p>
+            <>
+              <div className="panel inline-ad-panel">
+                <div className="panel-header">
+                  <span>광고</span>
+                  <h2>상세 해설 아래에도 한 번 더 자연스럽게 노출됩니다</h2>
                 </div>
-              </article>
-            </div>
+                <div className="ad-slot">
+                  <AdSlot slot="7737585483" label="advertisement" />
+                </div>
+              </div>
+
+              <div className="judgment-detail-grid">
+                <article className="detail-card">
+                  <h3>당신의 도파민 반응 요약</h3>
+                  <p>{result.mainCharacter.summaryBody}</p>
+                </article>
+
+                <article className="detail-card">
+                  <h3>왜 이런 결과가 나왔을까?</h3>
+                  <ul>
+                    {result.mainCharacter.reasonBullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+
+                <article className="detail-card">
+                  <h3>일상에서 이렇게 나타나요</h3>
+                  <ul>
+                    {result.mainCharacter.dailyBullets.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+
+                <article className="detail-card">
+                  <h3>한 줄 조언</h3>
+                  <p>{result.mainCharacter.advice}</p>
+                  <div className="judgment-sub-insight">
+                    <span>서브 성향</span>
+                    <strong>
+                      {result.subCharacter.emblem} {result.subCharacter.name}
+                    </strong>
+                    <p>{result.subCharacter.cardSummary}</p>
+                  </div>
+                </article>
+              </div>
+            </>
           )}
+
+          <RelatedTests current="/stimulation" />
         </section>
       )}
 

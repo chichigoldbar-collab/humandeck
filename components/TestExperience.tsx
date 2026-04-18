@@ -9,9 +9,10 @@ import {
 } from "@/lib/scoring";
 import { questions } from "@/lib/questions";
 import { AdSlot } from "@/components/AdSlot";
+import { RelatedTests } from "@/components/RelatedTests";
 import { SiteFooter } from "@/components/SiteFooter";
 
-type Stage = "landing" | "questions" | "preResultAd" | "result";
+type Stage = "landing" | "questions" | "result";
 
 const axisLabelMap = {
   attachment: "관계 패턴",
@@ -26,10 +27,7 @@ export function TestExperience() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [detailUnlocked, setDetailUnlocked] = useState(false);
-  const [detailAdStarted, setDetailAdStarted] = useState(false);
   const [sharedResultKeys, setSharedResultKeys] = useState<ResultKeys | null>(null);
-  const [preResultCountdown, setPreResultCountdown] = useState(5);
-  const [detailCountdown, setDetailCountdown] = useState(0);
 
   const result = useMemo(
     () => (sharedResultKeys ? buildResult(sharedResultKeys) : calculateResult(answers)),
@@ -50,7 +48,7 @@ export function TestExperience() {
     setAnswers(nextAnswers);
 
     if (currentIndex === questions.length - 1) {
-      setStage("preResultAd");
+      setStage("result");
       return;
     }
 
@@ -60,11 +58,6 @@ export function TestExperience() {
   function goPrev() {
     if (currentIndex === 0) return;
     setCurrentIndex((prev) => prev - 1);
-  }
-
-  function startDetailAd() {
-    setDetailAdStarted(true);
-    setDetailCountdown(5);
   }
 
   function handleShare() {
@@ -97,10 +90,7 @@ export function TestExperience() {
     setCurrentIndex(0);
     setStage("landing");
     setDetailUnlocked(false);
-    setDetailAdStarted(false);
     setSharedResultKeys(null);
-    setPreResultCountdown(5);
-    setDetailCountdown(0);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", window.location.pathname);
@@ -111,9 +101,6 @@ export function TestExperience() {
     setStage("questions");
     setSharedResultKeys(null);
     setDetailUnlocked(false);
-    setDetailAdStarted(false);
-    setPreResultCountdown(5);
-    setDetailCountdown(0);
 
     if (typeof window !== "undefined") {
       window.history.replaceState({}, "", window.location.pathname);
@@ -145,30 +132,9 @@ export function TestExperience() {
         decision: decision as ResultKeys["decision"],
       });
       setStage("result");
+      setDetailUnlocked(true);
     }
   }, []);
-
-  useEffect(() => {
-    if (stage !== "preResultAd") return;
-    if (preResultCountdown <= 0) return;
-
-    const timer = window.setTimeout(() => {
-      setPreResultCountdown((prev) => prev - 1);
-    }, 1000);
-
-    return () => window.clearTimeout(timer);
-  }, [stage, preResultCountdown]);
-
-  useEffect(() => {
-    if (stage !== "result" || detailUnlocked || !detailAdStarted) return;
-    if (detailCountdown <= 0) return;
-
-    const timer = window.setTimeout(() => {
-      setDetailCountdown((prev) => prev - 1);
-    }, 1000);
-
-    return () => window.clearTimeout(timer);
-  }, [stage, detailUnlocked, detailAdStarted, detailCountdown]);
 
   return (
     <main className="shell">
@@ -306,27 +272,6 @@ export function TestExperience() {
         </section>
       )}
 
-      {stage === "preResultAd" && (
-        <section className="panel ad-panel">
-          <div className="panel-header">
-            <span>거의 다 왔어요</span>
-            <h2>당신 결과를 정리하는 중입니다</h2>
-          </div>
-          <div className="ad-slot">
-            <AdSlot slot="5302993836" label="sponsored" />
-          </div>
-          <button
-            className="primary-button"
-            onClick={() => setStage("result")}
-            disabled={preResultCountdown > 0}
-          >
-            {preResultCountdown > 0
-              ? `${preResultCountdown}초 후 결과 공개`
-              : "결과 공개하기"}
-          </button>
-        </section>
-      )}
-
       {stage === "result" && (
         <section className="panel result-panel">
           <div className="result-hero">
@@ -353,7 +298,7 @@ export function TestExperience() {
                 </div>
                 <div className="result-card-body">
                   <h3>{profile.name}</h3>
-                <strong>{profile.aura}</strong>
+                  <strong>{profile.aura}</strong>
                   <p>{profile.summary}</p>
                   <div className="keyword-row">
                     {profile.keywords.map((keyword) => (
@@ -380,74 +325,75 @@ export function TestExperience() {
             </div>
           </div>
 
+          <div className="panel inline-ad-panel">
+            <div className="panel-header">
+              <span>광고</span>
+              <h2>결과 흐름을 해치지 않는 자리에서 자연스럽게 노출됩니다</h2>
+            </div>
+            <div className="ad-slot">
+              <AdSlot slot="5302993836" label="advertisement" />
+            </div>
+          </div>
+
           {!detailUnlocked ? (
             <div className="reward-panel">
               <div>
-                <span>{detailAdStarted ? "광고 확인 중" : "더 깊게 보기"}</span>
-                <h3>
-                  {detailAdStarted
-                    ? "광고를 본 뒤 상세 해설이 열립니다"
-                    : "이 캐릭터가 왜 생겼는지 열어보기"}
-                </h3>
-                <p>
-                  {detailAdStarted
-                    ? "조금만 기다리면 겉으로 보이는 패턴 너머의 해설이 바로 열립니다."
-                    : "겉으로 보이는 패턴 말고, 어디서 흔들리고 왜 반복되는지까지 보여드립니다."}
-                </p>
+                <span>더 깊게 보기</span>
+                <h3>이 캐릭터가 왜 생겼는지 열어보기</h3>
+                <p>겉으로 보이는 패턴 말고, 어디서 흔들리고 왜 반복되는지까지 바로 이어서 보여드립니다.</p>
               </div>
               <div className="reward-actions">
-                {detailAdStarted ? (
-                  <>
-                    <AdSlot slot="7737585483" label="sponsored" />
-                    <button
-                      className="primary-button"
-                      onClick={() => setDetailUnlocked(true)}
-                      disabled={detailCountdown > 0}
-                    >
-                      {detailCountdown > 0
-                        ? `${detailCountdown}초 후 상세 해설 열기`
-                        : "상세 해설 열기"}
-                    </button>
-                  </>
-                ) : (
-                  <button className="primary-button" onClick={startDetailAd}>
-                    상세 해설 열기
-                  </button>
-                )}
+                <button className="primary-button" onClick={() => setDetailUnlocked(true)}>
+                  상세 해설 열기
+                </button>
               </div>
             </div>
           ) : (
-            <div className="detail-grid">
-              {resultProfiles.map((profile) => (
-                <article key={profile.id} className={`detail-card ${profile.accent}`}>
-                  <h3>{profile.emoji} {profile.name} 상세</h3>
-                  <div className="insight-stack">
-                    <section>
-                      <h4>겉으로 보이는 패턴</h4>
-                      <p>{profile.pattern}</p>
-                    </section>
-                    <section>
-                      <h4>약한 순간</h4>
-                      <p>{profile.trigger}</p>
-                    </section>
-                    <section>
-                      <h4>무너지는 포인트</h4>
-                      <p>{profile.weakness}</p>
-                    </section>
-                    <section>
-                      <h4>덜 무너지는 방법</h4>
-                      <p>{profile.advice}</p>
-                    </section>
-                  </div>
-                  <ul>
-                    {profile.detail.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
+            <>
+              <div className="panel inline-ad-panel">
+                <div className="panel-header">
+                  <span>광고</span>
+                  <h2>상세 해설 아래에도 한 번 더 자연스럽게 노출됩니다</h2>
+                </div>
+                <div className="ad-slot">
+                  <AdSlot slot="7737585483" label="advertisement" />
+                </div>
+              </div>
+
+              <div className="detail-grid">
+                {resultProfiles.map((profile) => (
+                  <article key={profile.id} className={`detail-card ${profile.accent}`}>
+                    <h3>{profile.emoji} {profile.name} 상세</h3>
+                    <div className="insight-stack">
+                      <section>
+                        <h4>겉으로 보이는 패턴</h4>
+                        <p>{profile.pattern}</p>
+                      </section>
+                      <section>
+                        <h4>약한 순간</h4>
+                        <p>{profile.trigger}</p>
+                      </section>
+                      <section>
+                        <h4>무너지는 포인트</h4>
+                        <p>{profile.weakness}</p>
+                      </section>
+                      <section>
+                        <h4>덜 무너지는 방법</h4>
+                        <p>{profile.advice}</p>
+                      </section>
+                    </div>
+                    <ul>
+                      {profile.detail.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </>
           )}
+
+          <RelatedTests current="/character" />
         </section>
       )}
 
