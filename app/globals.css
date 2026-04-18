@@ -1118,7 +1118,7 @@ button {
 .home-intro-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .home-intro-card {
@@ -1145,7 +1145,7 @@ button {
 .home-test-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .home-test-card {
@@ -1269,6 +1269,12 @@ button {
     linear-gradient(180deg, #f8f5ff 0%, #efe8ff 100%);
 }
 
+.home-card-couple {
+  background:
+    radial-gradient(circle at top right, rgba(255, 125, 162, 0.18), transparent 32%),
+    linear-gradient(180deg, #fff4f8 0%, #ffe6ef 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1312,6 +1318,21 @@ button {
   background:
     radial-gradient(circle at top right, rgba(155, 120, 255, 0.24), transparent 28%),
     linear-gradient(135deg, #261742 0%, #5e43a1 100%);
+}
+
+.couple-hero-card::after {
+  background: radial-gradient(circle, rgba(255, 126, 168, 0.18) 0%, transparent 72%);
+}
+
+.couple-preview {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 241, 247, 0.96) 100%);
+}
+
+.couple-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(255, 141, 178, 0.24), transparent 28%),
+    linear-gradient(135deg, #4c1830 0%, #9f4066 100%);
 }
 
 .judgment-result-grid,
@@ -1660,6 +1681,87 @@ button {
   background:
     radial-gradient(circle at top right, rgba(255, 163, 76, 0.2), transparent 38%),
     linear-gradient(180deg, #fff6eb 0%, #ffe0b6 100%);
+}
+
+.couple-bear {
+  background:
+    radial-gradient(circle at top right, rgba(140, 191, 113, 0.18), transparent 38%),
+    linear-gradient(180deg, #f8ffef 0%, #e4f5cb 100%);
+}
+
+.couple-ant {
+  background:
+    radial-gradient(circle at top right, rgba(121, 155, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #f4f7ff 0%, #dde7ff 100%);
+}
+
+.couple-fox {
+  background:
+    radial-gradient(circle at top right, rgba(255, 163, 125, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff7f1 0%, #ffe0cf 100%);
+}
+
+.couple-tiger {
+  background:
+    radial-gradient(circle at top right, rgba(255, 131, 102, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff4ee 0%, #ffd3c5 100%);
+}
+
+.couple-turtle {
+  background:
+    radial-gradient(circle at top right, rgba(167, 171, 144, 0.18), transparent 38%),
+    linear-gradient(180deg, #fafbf4 0%, #ececcf 100%);
+}
+
+.couple-penguin {
+  background:
+    radial-gradient(circle at top right, rgba(124, 171, 201, 0.18), transparent 38%),
+    linear-gradient(180deg, #f2fbff 0%, #dff0f7 100%);
+}
+
+.couple-dimension-card {
+  display: grid;
+  gap: 18px;
+}
+
+.dimension-bars {
+  display: grid;
+  gap: 14px;
+}
+
+.dimension-row {
+  display: grid;
+  gap: 8px;
+}
+
+.dimension-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.dimension-meta span {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.dimension-meta strong {
+  font-size: 0.95rem;
+}
+
+.dimension-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(39, 56, 86, 0.08);
+  overflow: hidden;
+}
+
+.dimension-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff7b94 0%, #8dd5ff 100%);
 }
 
 @keyframes fade-rise {

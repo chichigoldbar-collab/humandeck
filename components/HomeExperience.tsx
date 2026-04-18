@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const tests: {
-  href: "/character" | "/judgment" | "/stimulation" | "/eat-type";
+  href: "/character" | "/judgment" | "/stimulation" | "/eat-type" | "/couple-type";
   badge: string;
   title: string;
   summary: string;
@@ -45,6 +45,15 @@ const tests: {
     meta: "10문항 · 메인 결과 + 보조 성향",
     pickFor: "내 먹는 습관이 밈처럼 궁금할 때",
     accent: "home-card-eattype",
+  },
+  {
+    href: "/couple-type",
+    badge: "신규 테스트",
+    title: "부부 관계 분석 테스트",
+    summary: "갈등, 연결, 생활, 애정 네 축으로 관계 패턴을 보는 부부 관계 테스트",
+    meta: "16문항 · 관계 유형 + 4축 그래프",
+    pickFor: "관계의 결을 차분하게 보고 싶을 때",
+    accent: "home-card-couple",
   },
 ];
 
@@ -111,6 +120,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>먹는 습관으로 성격을 보고 싶다면</strong>
             <p>라면, 배달 앱, 치킨 고르는 방식처럼 너무 현실적인 질문으로 보는 먹는 방식 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>부부 관계 패턴을 보고 싶다면</strong>
+            <p>안정적인지, 거리감이 있는지, 생활은 잘 굴러가는데 감정이 빈 건 아닌지 네 축으로 보는 관계 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>

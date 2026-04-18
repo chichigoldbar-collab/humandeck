@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-type TestPath = "/character" | "/judgment" | "/stimulation" | "/eat-type";
+type TestPath =
+  | "/character"
+  | "/judgment"
+  | "/stimulation"
+  | "/eat-type"
+  | "/couple-type";
 
 const tests: {
   href: TestPath;
@@ -31,6 +36,12 @@ const tests: {
     badge: "먹는 방식",
     title: "먹는 방식 성격 테스트",
     summary: "라면, 배달 앱, 뷔페 선택만으로 캐릭터처럼 보는 먹는 습관 테스트",
+  },
+  {
+    href: "/couple-type",
+    badge: "부부 관계",
+    title: "부부 관계 분석 테스트",
+    summary: "갈등, 연결, 생활, 애정 네 축으로 관계 패턴을 보는 테스트",
   },
 ];
 
