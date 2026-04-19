@@ -53,6 +53,10 @@ a {
 
 .site-header-inner {
   width: min(980px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin: 0 auto;
   padding: 14px 0;
 }
@@ -97,6 +101,31 @@ a {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--text);
 }
 
 button {
@@ -1082,6 +1111,23 @@ button {
   display: grid;
   gap: 16px;
   margin-top: 24px;
+}
+
+.content-link-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.content-link-row a {
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.content-link-row a:hover {
+  text-decoration: underline;
 }
 
 .faq-card h2 {
@@ -2144,7 +2190,17 @@ button {
 
   .site-header-inner {
     width: min(100%, 720px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
     padding: 12px 10px;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .hero-card,

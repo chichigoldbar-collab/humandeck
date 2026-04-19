@@ -182,6 +182,45 @@ export function HomeExperience() {
         </div>
       </section>
 
+      <section className="panel home-service-panel">
+        <div className="panel-header">
+          <span>읽어보기</span>
+          <h2>테스트만 끝내지 않고, 결과를 해석하는 글도 함께 볼 수 있습니다</h2>
+        </div>
+        <div className="home-service-grid">
+          <article className="home-service-card">
+            <strong>인간 캐릭터 테스트 해설</strong>
+            <p>
+              다섯 축으로 결과가 나오는 이유와, 여러 카드가 함께 보일 때 무엇을 먼저 읽으면
+              좋은지 정리한 설명형 가이드입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/character-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>인지편향 테스트 해설</strong>
+            <p>
+              확증편향, 손실회피, 과잉확신 같은 결과가 일상에서 어떤 선택으로 이어지는지
+              연결해서 읽어볼 수 있습니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/judgment-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>도파민 반응 테스트 해설</strong>
+            <p>
+              빠른 보상 선호, 집중 분산, 충동 반응을 생활 패턴과 연결해서 보는 방법을
+              정리한 설명 페이지입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/stimulation-results">가이드 읽기</Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="panel home-panel">
         <div className="home-test-grid">
           {tests.map((test) => (
