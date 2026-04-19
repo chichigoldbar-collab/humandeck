@@ -125,6 +125,11 @@ export function GhostSenseExperience() {
     if (typeof window === "undefined") return;
 
     const params = new URLSearchParams(window.location.search);
+    const hasSharedScores =
+      params.has("sensitivity") && params.has("fear") && params.has("imagination");
+
+    if (!hasSharedScores) return;
+
     const sensitivity = Number(params.get("sensitivity"));
     const fear = Number(params.get("fear"));
     const imagination = Number(params.get("imagination"));
