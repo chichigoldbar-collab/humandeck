@@ -147,6 +147,41 @@ export function HomeExperience() {
         </div>
       </section>
 
+      <section className="panel home-service-panel">
+        <div className="panel-header">
+          <span>휴먼덱 소개</span>
+          <h2>휴먼덱은 다양한 선택 패턴을 가볍게 읽어내는 테스트 아카이브입니다</h2>
+        </div>
+        <div className="home-service-grid">
+          <article className="home-service-card">
+            <strong>왜 이런 테스트를 만드나요?</strong>
+            <p>
+              휴먼덱은 관계, 판단, 자극 반응, 생활 습관처럼 일상에서 자주 드러나는
+              패턴을 짧은 질문으로 정리해보는 웹 서비스입니다. 무겁게 진단하는 대신,
+              스스로를 조금 더 선명하게 이해할 수 있는 가벼운 출발점을 만드는 데
+              초점을 둡니다.
+            </p>
+          </article>
+          <article className="home-service-card">
+            <strong>결과는 어떻게 만들어지나요?</strong>
+            <p>
+              각 테스트는 질문별 응답 패턴을 바탕으로 점수를 계산하고, 가장 가까운
+              유형을 캐릭터 형태로 보여줍니다. 결과는 재미 요소를 포함하지만, 사용자가
+              자신의 습관과 반응을 돌아보게 만드는 해석형 콘텐츠로 설계되어 있습니다.
+            </p>
+          </article>
+          <article className="home-service-card">
+            <strong>어떤 테스트를 볼 수 있나요?</strong>
+            <p>
+              현재는 인간 캐릭터, 인지편향, 도파민 반응, 먹는 방식, 부부 관계, 공포
+              반응 테스트를 제공하고 있습니다. 각 테스트는 서로 다른 주제를 다루기
+              때문에 하나만 해도 되고, 여러 개를 이어서 보면 패턴 차이를 비교하기 더
+              좋습니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section className="panel home-panel">
         <div className="home-test-grid">
           {tests.map((test) => (

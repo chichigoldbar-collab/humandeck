@@ -13,6 +13,8 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="footer-links">
+        <a href="/about">서비스 소개</a>
+        <a href="/faq">자주 묻는 질문</a>
         <a href="mailto:teddysmansion01@gmail.com">문의하기</a>
         <a href="/privacy">개인정보처리방침</a>
         <a href="/terms">이용약관</a>

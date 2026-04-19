@@ -1043,6 +1043,54 @@ button {
   letter-spacing: -0.03em;
 }
 
+.home-service-panel {
+  display: grid;
+  gap: 22px;
+}
+
+.home-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.home-service-card,
+.faq-card {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  padding: 22px 20px;
+  box-shadow: 0 18px 44px rgba(42, 77, 122, 0.08);
+}
+
+.home-service-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.home-service-card p,
+.faq-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.faq-card h2 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
 .policy-card > p {
   margin: 0 0 24px;
   color: var(--muted);
