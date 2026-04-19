@@ -1591,8 +1591,8 @@ button {
 .ghost-shell .judgment-sub-card span:first-child,
 .ghost-shell .judgment-sub-insight span,
 .ghost-shell .ad-unit-label {
-  background: rgba(255, 255, 255, 0.06);
-  color: #cfc3ea;
+  background: rgba(247, 242, 255, 0.92);
+  color: #2d2344;
 }
 
 .ghost-shell .judgment-card-topline strong,
@@ -1610,15 +1610,37 @@ button {
 .ghost-shell .ghost-disclaimer,
 .ghost-shell .ghost-warning-card,
 .ghost-shell .judgment-sub-insight {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(180, 160, 255, 0.12);
-  color: #eee7ff;
+  background: rgba(248, 244, 255, 0.92);
+  border-color: rgba(180, 160, 255, 0.18);
+  color: #241b35;
 }
 
 .ghost-shell .judgment-image-fallback,
 .ghost-shell .judgment-sub-image-fallback {
   background: rgba(255, 255, 255, 0.05);
   color: #f7f3ff;
+}
+
+.ghost-shell .ghost-disclaimer,
+.ghost-shell .ghost-warning-card p,
+.ghost-shell .judgment-result-card blockquote,
+.ghost-shell .judgment-percent-row span,
+.ghost-shell .judgment-percent-row strong,
+.ghost-shell .judgment-sub-insight p,
+.ghost-shell .ad-slot p,
+.ghost-shell .ad-slot small {
+  color: #241b35;
+}
+
+.ghost-shell .share-box p,
+.ghost-shell .reward-panel p,
+.ghost-shell .detail-card p,
+.ghost-shell .detail-card li,
+.ghost-shell .judgment-card-head p,
+.ghost-shell .judgment-sub-card p,
+.ghost-shell .dimension-meta span,
+.ghost-shell .related-test-card p {
+  color: #d7d0ea;
 }
 
 .ghost-wolf {
