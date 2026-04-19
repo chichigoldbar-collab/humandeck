@@ -205,39 +205,60 @@ export function GhostSenseExperience() {
         <>
           <section className="panel landing-panel ghost-panel">
             <div className="panel-header">
-              <span>이 테스트는 이렇게 진행됩니다</span>
-              <h2>공포 콘텐츠를 볼 때 당신의 반응 패턴이 어느 쪽인지 보여줍니다</h2>
+              <span>이 테스트는 이런 반응을 봅니다</span>
+              <h2>귀신을 믿는지보다, 낯선 분위기에 당신이 어떻게 흔들리는지를 읽어봅니다</h2>
             </div>
             <div className="landing-feature-grid">
               <article className="feature-card">
-                <strong>감각이 먼저 반응하는지</strong>
-                <p>낯선 공간, 작은 소리, 누가 보는 느낌 같은 자극에 얼마나 빨리 반응하는지 봅니다.</p>
+                <strong>기척을 얼마나 빨리 감지하는지</strong>
+                <p>어두운 공간, 작은 소리, 시선 같은 낯선 자극에 몸이 먼저 반응하는 편인지 확인합니다.</p>
               </article>
               <article className="feature-card">
-                <strong>공포가 오래 남는지</strong>
-                <p>무서운 콘텐츠를 본 뒤 머릿속이 얼마나 오래 따라가는지 확인합니다.</p>
+                <strong>무서움이 얼마나 오래 남는지</strong>
+                <p>공포 콘텐츠를 본 뒤에도 분위기와 장면이 머릿속에 오래 남는 편인지 함께 봅니다.</p>
               </article>
               <article className="feature-card">
                 <strong>상상이 얼마나 개입하는지</strong>
-                <p>현실보다 분위기와 상상으로 더 크게 반응하는 편인지 같이 봅니다.</p>
+                <p>실제 상황보다 상상과 분위기로 감정이 더 커지는 편인지 응답 패턴으로 읽어냅니다.</p>
               </article>
             </div>
           </section>
 
           <section className="panel social-proof-panel ghost-panel">
             <div className="panel-header">
-              <span>중요 안내</span>
-              <h2>본 테스트는 공포 콘셉트 기반이며 실제 초자연 현상을 판정하지 않습니다</h2>
+              <span>테스트 안내</span>
+              <h2>공포 콘셉트는 살리되, 결과는 실제 반응 패턴을 바탕으로 정리합니다</h2>
             </div>
             <div className="social-proof-grid">
               <article className="reaction-card">
-                <p>“무서운 걸 믿는지보다, 어떻게 반응하는지 보는 테스트에 가깝다.”</p>
+                <p>이 테스트는 실제 초자연 현상을 판정하는 기능이 아니라, 낯선 분위기와 공포 자극에 반응하는 방식을 가볍게 살펴보는 콘텐츠입니다.</p>
               </article>
               <article className="reaction-card">
-                <p>“결과는 웃긴데 질문은 은근 현실적이라 뒤늦게 더 무서움.”</p>
+                <p>질문은 어두운 공간, 기척, 뒤를 돌아보는 습관처럼 일상적인 공포 반응을 바탕으로 구성되어 있어 빠르게 답할 수 있습니다.</p>
               </article>
               <article className="reaction-card accent">
-                <p>“공포를 느끼는 방식이 사람마다 이렇게 다르다는 게 포인트.”</p>
+                <p>결과는 감각 민감도, 공포 반응, 상상 개입도를 함께 보고 가장 가까운 유형으로 정리됩니다.</p>
+              </article>
+            </div>
+          </section>
+
+          <section className="panel landing-panel ghost-panel">
+            <div className="panel-header">
+              <span>결과를 이렇게 보면 좋습니다</span>
+              <h2>무섭냐 안 무섭냐보다, 어떤 방식으로 분위기를 받아들이는지에 집중해보세요</h2>
+            </div>
+            <div className="landing-feature-grid">
+              <article className="feature-card">
+                <strong>감각이 예민한 편인지</strong>
+                <p>같은 공간에서도 남들보다 먼저 기척을 느끼는 편이라면 감각 민감도가 높게 나올 수 있습니다.</p>
+              </article>
+              <article className="feature-card">
+                <strong>공포를 오래 끌고 가는지</strong>
+                <p>무서운 장면을 본 뒤 쉽게 잊지 못하거나 혼자 있을 때 더 크게 떠오르면 공포 반응 축이 높아질 수 있습니다.</p>
+              </article>
+              <article className="feature-card">
+                <strong>상상력이 판단을 흔드는지</strong>
+                <p>논리보다 분위기와 느낌이 먼저 커지는 편이라면 상상 개입도가 결과에 더 크게 반영됩니다.</p>
               </article>
             </div>
           </section>
