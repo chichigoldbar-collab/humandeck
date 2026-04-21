@@ -8,7 +8,8 @@ const tests: {
     | "/stimulation"
     | "/eat-type"
     | "/couple-type"
-    | "/ghost-sense";
+    | "/ghost-sense"
+    | "/focus-type";
   badge: string;
   title: string;
   summary: string;
@@ -69,6 +70,15 @@ const tests: {
     meta: "12문항 · 결과 6개 · 어두운 테마",
     pickFor: "무서운 분위기에서 나는 어떤 타입인지 궁금할 때",
     accent: "home-card-ghost",
+  },
+  {
+    href: "/focus-type",
+    badge: "신규 테스트",
+    title: "집중 vs 멀티태스킹 성향 테스트",
+    summary: "한 가지에 깊게 몰입하는지, 여러 일을 동시에 돌리는지 보는 자기계발형 테스트",
+    meta: "12문항 · 결과 5개 · 3축 그래프",
+    pickFor: "내 작업 습관과 집중 패턴이 궁금할 때",
+    accent: "home-card-focus",
   },
 ];
 
@@ -143,6 +153,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>공포 콘셉트로 몰입하고 싶다면</strong>
             <p>어두운 공간, 작은 소리, 이상한 기척에 어떻게 반응하는지 보는 공포 반응 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>집중 습관을 점검하고 싶다면</strong>
+            <p>한 가지에 깊게 파는 타입인지, 여러 일을 동시에 굴리는 타입인지 보는 집중 성향 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>

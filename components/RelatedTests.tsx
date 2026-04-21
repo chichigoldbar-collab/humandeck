@@ -6,7 +6,8 @@ type TestPath =
   | "/stimulation"
   | "/eat-type"
   | "/couple-type"
-  | "/ghost-sense";
+  | "/ghost-sense"
+  | "/focus-type";
 
 const tests: {
   href: TestPath;
@@ -49,6 +50,12 @@ const tests: {
     badge: "공포 콘셉트",
     title: "귀신을 얼마나 느끼는 타입일까?",
     summary: "어두운 공간, 작은 소리, 이상한 기척에 어떻게 반응하는지 보는 어두운 테마 테스트",
+  },
+  {
+    href: "/focus-type",
+    badge: "자기계발",
+    title: "집중 vs 멀티태스킹 성향 테스트",
+    summary: "한 가지에 몰입하는지, 여러 일을 동시에 돌리는지 보는 작업 성향 테스트",
   },
 ];
 

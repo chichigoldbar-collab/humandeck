@@ -1376,6 +1376,12 @@ button {
     linear-gradient(180deg, #f4f1ff 0%, #e2dcff 100%);
 }
 
+.home-card-focus {
+  background:
+    radial-gradient(circle at top right, rgba(110, 209, 196, 0.18), transparent 32%),
+    linear-gradient(180deg, #f2fffc 0%, #e5fbf7 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1434,6 +1440,56 @@ button {
   background:
     radial-gradient(circle at top right, rgba(255, 141, 178, 0.24), transparent 28%),
     linear-gradient(135deg, #4c1830 0%, #9f4066 100%);
+}
+
+.focus-hero-card::after {
+  background: radial-gradient(circle, rgba(86, 197, 181, 0.2) 0%, transparent 72%);
+}
+
+.focus-preview {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(237, 255, 251, 0.96) 100%);
+}
+
+.focus-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(103, 206, 189, 0.24), transparent 28%),
+    linear-gradient(135deg, #123336 0%, #2e7770 100%);
+}
+
+.focus-progress-bar,
+.focus-dimension-bar {
+  background: linear-gradient(90deg, #56b7aa 0%, #5f91ff 100%);
+}
+
+.focus-owl {
+  background:
+    radial-gradient(circle at top right, rgba(107, 132, 188, 0.18), transparent 38%),
+    linear-gradient(180deg, #f3f8ff 0%, #e8efff 100%);
+}
+
+.focus-monkey {
+  background:
+    radial-gradient(circle at top right, rgba(255, 171, 110, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff8ef 0%, #ffead7 100%);
+}
+
+.focus-butterfly {
+  background:
+    radial-gradient(circle at top right, rgba(210, 127, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #fcf2ff 0%, #f2e3ff 100%);
+}
+
+.focus-dolphin {
+  background:
+    radial-gradient(circle at top right, rgba(88, 196, 222, 0.18), transparent 38%),
+    linear-gradient(180deg, #effcff 0%, #dcf6ff 100%);
+}
+
+.focus-dog {
+  background:
+    radial-gradient(circle at top right, rgba(255, 127, 127, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff3f3 0%, #ffe2e2 100%);
 }
 
 .ghost-shell {

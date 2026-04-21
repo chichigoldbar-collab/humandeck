@@ -14,7 +14,8 @@ const tests: {
     | "/stimulation"
     | "/eat-type"
     | "/couple-type"
-    | "/ghost-sense";
+    | "/ghost-sense"
+    | "/focus-type";
   title: string;
   summary: string;
 }[] = [
@@ -53,6 +54,12 @@ const tests: {
     title: "귀신을 얼마나 느끼는 타입일까?",
     summary:
       "감각 민감도, 공포 반응, 상상 개입도를 바탕으로 낯선 분위기와 공포 자극에 어떤 방식으로 반응하는지 살펴보는 테스트입니다.",
+  },
+  {
+    href: "/focus-type",
+    title: "집중 vs 멀티태스킹 성향 테스트",
+    summary:
+      "집중 몰입, 동시 처리, 중간 이탈이라는 세 축으로 내가 어떤 방식으로 일을 굴리는지 살펴보는 자기계발형 테스트입니다.",
   },
 ];
 
