@@ -15,7 +15,8 @@ const tests: {
     | "/eat-type"
     | "/couple-type"
     | "/ghost-sense"
-    | "/focus-type";
+    | "/focus-type"
+    | "/stress-type";
   title: string;
   summary: string;
 }[] = [
@@ -60,6 +61,12 @@ const tests: {
     title: "집중 vs 멀티태스킹 성향 테스트",
     summary:
       "집중 몰입, 동시 처리, 중간 이탈이라는 세 축으로 내가 어떤 방식으로 일을 굴리는지 살펴보는 자기계발형 테스트입니다.",
+  },
+  {
+    href: "/stress-type",
+    title: "스트레스 관리 스타일 테스트",
+    summary:
+      "회피, 해소, 해결, 과생각이라는 네 축을 바탕으로 내가 스트레스를 어떤 방식으로 처리하는지 살펴보는 자기이해형 테스트입니다.",
   },
 ];
 

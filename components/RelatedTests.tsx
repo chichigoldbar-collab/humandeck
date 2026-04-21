@@ -7,7 +7,8 @@ type TestPath =
   | "/eat-type"
   | "/couple-type"
   | "/ghost-sense"
-  | "/focus-type";
+  | "/focus-type"
+  | "/stress-type";
 
 const tests: {
   href: TestPath;
@@ -56,6 +57,12 @@ const tests: {
     badge: "자기계발",
     title: "집중 vs 멀티태스킹 성향 테스트",
     summary: "한 가지에 몰입하는지, 여러 일을 동시에 돌리는지 보는 작업 성향 테스트",
+  },
+  {
+    href: "/stress-type",
+    badge: "자기이해",
+    title: "스트레스 관리 스타일 테스트",
+    summary: "스트레스를 피하는지, 푸는지, 해결하는지 보는 스트레스 처리 패턴 테스트",
   },
 ];
 

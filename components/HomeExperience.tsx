@@ -9,7 +9,8 @@ const tests: {
     | "/eat-type"
     | "/couple-type"
     | "/ghost-sense"
-    | "/focus-type";
+    | "/focus-type"
+    | "/stress-type";
   badge: string;
   title: string;
   summary: string;
@@ -79,6 +80,15 @@ const tests: {
     meta: "12문항 · 결과 5개 · 3축 그래프",
     pickFor: "내 작업 습관과 집중 패턴이 궁금할 때",
     accent: "home-card-focus",
+  },
+  {
+    href: "/stress-type",
+    badge: "신규 테스트",
+    title: "스트레스 관리 스타일 테스트",
+    summary: "스트레스를 피하는지, 푸는지, 해결하는지 보여주는 자기이해형 스트레스 패턴 테스트",
+    meta: "12문항 · 결과 7개 · 4축 그래프",
+    pickFor: "내가 지칠 때 어떤 방식으로 반응하는지 알고 싶을 때",
+    accent: "home-card-stress",
   },
 ];
 
@@ -157,6 +167,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>집중 습관을 점검하고 싶다면</strong>
             <p>한 가지에 깊게 파는 타입인지, 여러 일을 동시에 굴리는 타입인지 보는 집중 성향 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>스트레스 처리 방식을 알고 싶다면</strong>
+            <p>회피하는지, 푸는지, 해결하는지, 생각만 많아지는지 보는 스트레스 관리 스타일 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>

@@ -1382,6 +1382,12 @@ button {
     linear-gradient(180deg, #f2fffc 0%, #e5fbf7 100%);
 }
 
+.home-card-stress {
+  background:
+    radial-gradient(circle at top right, rgba(255, 181, 86, 0.18), transparent 32%),
+    linear-gradient(180deg, #fff8ef 0%, #ffefd9 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1457,9 +1463,29 @@ button {
     linear-gradient(135deg, #123336 0%, #2e7770 100%);
 }
 
+.stress-hero-card::after {
+  background: radial-gradient(circle, rgba(255, 181, 86, 0.2) 0%, transparent 72%);
+}
+
+.stress-preview {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 248, 237, 0.96) 100%);
+}
+
+.stress-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(255, 183, 92, 0.24), transparent 28%),
+    linear-gradient(135deg, #4a260c 0%, #9d5b1e 100%);
+}
+
 .focus-progress-bar,
 .focus-dimension-bar {
   background: linear-gradient(90deg, #56b7aa 0%, #5f91ff 100%);
+}
+
+.stress-progress-bar,
+.stress-dimension-bar {
+  background: linear-gradient(90deg, #f2a042 0%, #ff6f61 100%);
 }
 
 .focus-owl {
@@ -1490,6 +1516,48 @@ button {
   background:
     radial-gradient(circle at top right, rgba(255, 127, 127, 0.18), transparent 38%),
     linear-gradient(180deg, #fff3f3 0%, #ffe2e2 100%);
+}
+
+.stress-sloth {
+  background:
+    radial-gradient(circle at top right, rgba(169, 179, 198, 0.18), transparent 38%),
+    linear-gradient(180deg, #f5f7fb 0%, #e8edf7 100%);
+}
+
+.stress-panda {
+  background:
+    radial-gradient(circle at top right, rgba(255, 190, 120, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff8ef 0%, #ffeed8 100%);
+}
+
+.stress-wolf {
+  background:
+    radial-gradient(circle at top right, rgba(120, 161, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #f2f7ff 0%, #e4edff 100%);
+}
+
+.stress-monkey {
+  background:
+    radial-gradient(circle at top right, rgba(255, 154, 120, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff5ef 0%, #ffe4d8 100%);
+}
+
+.stress-fox {
+  background:
+    radial-gradient(circle at top right, rgba(214, 154, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #fbf3ff 0%, #f0e2ff 100%);
+}
+
+.stress-boar {
+  background:
+    radial-gradient(circle at top right, rgba(255, 110, 110, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff1f1 0%, #ffdede 100%);
+}
+
+.stress-penguin {
+  background:
+    radial-gradient(circle at top right, rgba(121, 181, 214, 0.18), transparent 38%),
+    linear-gradient(180deg, #f2fbff 0%, #dff3ff 100%);
 }
 
 .ghost-shell {
