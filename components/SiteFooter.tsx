@@ -6,7 +6,9 @@ export function SiteFooter() {
         <p>나도 몰랐던 내 패턴을 가장 가볍고 선명하게 보는 테스트.</p>
         <div className="footer-business">
           <span>상호: 테디맨션</span>
+          <span>대표자: 노현정</span>
           <span>사업자등록번호: 563-49-01362</span>
+          <span>통신판매업신고번호: 2026-서울종로-0563</span>
           <span>주소: 서울특별시 종로구 성균관로 15-8 2층</span>
           <span>연락처: 070-4136-3336</span>
           <span>이메일: teddysmansion01@gmail.com</span>
