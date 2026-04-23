@@ -16,7 +16,8 @@ const tests: {
     | "/couple-type"
     | "/ghost-sense"
     | "/focus-type"
-    | "/stress-type";
+    | "/stress-type"
+    | "/persona-type";
   title: string;
   summary: string;
 }[] = [
@@ -67,6 +68,12 @@ const tests: {
     title: "스트레스 관리 스타일 테스트",
     summary:
       "회피, 해소, 해결, 과생각이라는 네 축을 바탕으로 내가 스트레스를 어떤 방식으로 처리하는지 살펴보는 자기이해형 테스트입니다.",
+  },
+  {
+    href: "/persona-type",
+    title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까?",
+    summary:
+      "착한 척, 괜찮은 척, 무심한 척, 유능한 척처럼 사람들 앞에서 반복해서 보여주는 겉모습 패턴을 캐릭터로 정리하는 테스트입니다.",
   },
 ];
 

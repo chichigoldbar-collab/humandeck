@@ -8,7 +8,8 @@ type TestPath =
   | "/couple-type"
   | "/ghost-sense"
   | "/focus-type"
-  | "/stress-type";
+  | "/stress-type"
+  | "/persona-type";
 
 const tests: {
   href: TestPath;
@@ -63,6 +64,12 @@ const tests: {
     badge: "자기이해",
     title: "스트레스 관리 스타일 테스트",
     summary: "스트레스를 피하는지, 푸는지, 해결하는지 보는 스트레스 처리 패턴 테스트",
+  },
+  {
+    href: "/persona-type",
+    badge: "페르소나",
+    title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까?",
+    summary: "사람들 앞에서 반복해서 보여주는 겉모습 패턴을 캐릭터로 보는 테스트",
   },
 ];
 

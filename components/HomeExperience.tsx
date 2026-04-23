@@ -10,7 +10,8 @@ const tests: {
     | "/couple-type"
     | "/ghost-sense"
     | "/focus-type"
-    | "/stress-type";
+    | "/stress-type"
+    | "/persona-type";
   badge: string;
   title: string;
   summary: string;
@@ -89,6 +90,15 @@ const tests: {
     meta: "12문항 · 결과 7개 · 4축 그래프",
     pickFor: "내가 지칠 때 어떤 방식으로 반응하는지 알고 싶을 때",
     accent: "home-card-stress",
+  },
+  {
+    href: "/persona-type",
+    badge: "신규 테스트",
+    title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까?",
+    summary: "착한 척, 괜찮은 척, 무심한 척처럼 사람들 앞에서 보이는 겉모습 패턴 테스트",
+    meta: "12문항 · 결과 8개 · 메인 + 서브",
+    pickFor: "내가 사람들 앞에서 맡는 역할이 궁금할 때",
+    accent: "home-card-persona",
   },
 ];
 
@@ -171,6 +181,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>스트레스 처리 방식을 알고 싶다면</strong>
             <p>회피하는지, 푸는지, 해결하는지, 생각만 많아지는지 보는 스트레스 관리 스타일 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>사람들 앞의 내 모습이 궁금하다면</strong>
+            <p>착한 척, 괜찮은 척, 유능한 척처럼 관계 안에서 반복되는 겉모습 패턴 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>

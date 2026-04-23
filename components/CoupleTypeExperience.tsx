@@ -120,6 +120,14 @@ export function CoupleTypeExperience() {
     if (typeof window === "undefined") return;
 
     const params = new URLSearchParams(window.location.search);
+    const hasSharedScores =
+      params.has("conflict") &&
+      params.has("connection") &&
+      params.has("partnership") &&
+      params.has("affection");
+
+    if (!hasSharedScores) return;
+
     const conflict = Number(params.get("conflict"));
     const connection = Number(params.get("connection"));
     const partnership = Number(params.get("partnership"));
