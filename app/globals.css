@@ -1396,6 +1396,12 @@ button {
     linear-gradient(180deg, #fff4fb 0%, #ffe5f4 100%);
 }
 
+.home-card-music {
+  background:
+    radial-gradient(circle at top right, rgba(126, 148, 255, 0.18), transparent 32%),
+    linear-gradient(180deg, #f3f6ff 0%, #e4ebff 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1501,6 +1507,21 @@ button {
     linear-gradient(135deg, #3e1733 0%, #9a3d76 100%);
 }
 
+.music-hero-card::after {
+  background: radial-gradient(circle, rgba(126, 148, 255, 0.2) 0%, transparent 72%);
+}
+
+.music-preview {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(242, 246, 255, 0.96) 100%);
+}
+
+.music-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(126, 148, 255, 0.24), transparent 28%),
+    linear-gradient(135deg, #1d2551 0%, #4b63c7 100%);
+}
+
 .focus-progress-bar,
 .focus-dimension-bar {
   background: linear-gradient(90deg, #56b7aa 0%, #5f91ff 100%);
@@ -1514,6 +1535,11 @@ button {
 .persona-progress-bar,
 .persona-dimension-bar {
   background: linear-gradient(90deg, #e85f9d 0%, #8f7bff 100%);
+}
+
+.music-progress-bar,
+.music-dimension-bar {
+  background: linear-gradient(90deg, #6f87ff 0%, #7ad4ff 100%);
 }
 
 .focus-owl {
@@ -1634,6 +1660,54 @@ button {
   background:
     radial-gradient(circle at top right, rgba(98, 184, 203, 0.2), transparent 38%),
     linear-gradient(180deg, #effcff 0%, #dff6ff 100%);
+}
+
+.music-whale {
+  background:
+    radial-gradient(circle at top right, rgba(115, 141, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #f3f6ff 0%, #e2e8ff 100%);
+}
+
+.music-cheetah {
+  background:
+    radial-gradient(circle at top right, rgba(255, 168, 92, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff7ee 0%, #ffe6ca 100%);
+}
+
+.music-owl {
+  background:
+    radial-gradient(circle at top right, rgba(103, 153, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #f2f7ff 0%, #dfeaff 100%);
+}
+
+.music-otter {
+  background:
+    radial-gradient(circle at top right, rgba(255, 167, 173, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff4f5 0%, #ffe0e4 100%);
+}
+
+.music-capybara {
+  background:
+    radial-gradient(circle at top right, rgba(169, 193, 215, 0.18), transparent 38%),
+    linear-gradient(180deg, #f4f8fb 0%, #e3edf5 100%);
+}
+
+.music-fox {
+  background:
+    radial-gradient(circle at top right, rgba(201, 143, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #faf2ff 0%, #eddfff 100%);
+}
+
+.music-rabbit {
+  background:
+    radial-gradient(circle at top right, rgba(255, 151, 166, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff2f7 0%, #ffe1eb 100%);
+}
+
+.music-wolf {
+  background:
+    radial-gradient(circle at top right, rgba(114, 136, 188, 0.18), transparent 38%),
+    linear-gradient(180deg, #f3f6ff 0%, #dde5f8 100%);
 }
 
 .ghost-shell {

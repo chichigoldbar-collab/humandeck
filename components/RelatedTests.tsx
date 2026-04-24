@@ -9,7 +9,8 @@ type TestPath =
   | "/ghost-sense"
   | "/focus-type"
   | "/stress-type"
-  | "/persona-type";
+  | "/persona-type"
+  | "/music-type";
 
 const tests: {
   href: TestPath;
@@ -70,6 +71,12 @@ const tests: {
     badge: "페르소나",
     title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까?",
     summary: "사람들 앞에서 반복해서 보여주는 겉모습 패턴을 캐릭터로 보는 테스트",
+  },
+  {
+    href: "/music-type",
+    badge: "플레이리스트",
+    title: "내 플레이리스트가 말해주는 나의 진짜 성향",
+    summary: "감정 정리, 집중, 추억, 즉흥 재생 등 음악 사용 패턴을 보는 테스트",
   },
 ];
 

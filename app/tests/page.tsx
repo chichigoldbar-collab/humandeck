@@ -17,7 +17,8 @@ const tests: {
     | "/ghost-sense"
     | "/focus-type"
     | "/stress-type"
-    | "/persona-type";
+    | "/persona-type"
+    | "/music-type";
   title: string;
   summary: string;
 }[] = [
@@ -74,6 +75,12 @@ const tests: {
     title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까?",
     summary:
       "착한 척, 괜찮은 척, 무심한 척, 유능한 척처럼 사람들 앞에서 반복해서 보여주는 겉모습 패턴을 캐릭터로 정리하는 테스트입니다.",
+  },
+  {
+    href: "/music-type",
+    title: "내 플레이리스트가 말해주는 나의 진짜 성향",
+    summary:
+      "감정 해소형, 자극 추구형, 몰입형, 추억형 등 음악을 어떤 순간에 어떻게 사용하는지 캐릭터로 정리하는 테스트입니다.",
   },
 ];
 

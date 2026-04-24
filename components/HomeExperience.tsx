@@ -11,7 +11,8 @@ const tests: {
     | "/ghost-sense"
     | "/focus-type"
     | "/stress-type"
-    | "/persona-type";
+    | "/persona-type"
+    | "/music-type";
   badge: string;
   title: string;
   summary: string;
@@ -100,6 +101,15 @@ const tests: {
     pickFor: "내가 사람들 앞에서 맡는 역할이 궁금할 때",
     accent: "home-card-persona",
   },
+  {
+    href: "/music-type",
+    badge: "신규 테스트",
+    title: "내 플레이리스트가 말해주는 나의 진짜 성향",
+    summary: "감정을 파는지, 집중에 쓰는지, 그냥 틀어두는지 보는 음악 사용 패턴 테스트",
+    meta: "12문항 · 결과 8개 · 메인 + 서브",
+    pickFor: "이어폰 속 생활 패턴이 궁금할 때",
+    accent: "home-card-music",
+  },
 ];
 
 export function HomeExperience() {
@@ -185,6 +195,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>사람들 앞의 내 모습이 궁금하다면</strong>
             <p>착한 척, 괜찮은 척, 유능한 척처럼 관계 안에서 반복되는 겉모습 패턴 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>플레이리스트로 나를 보고 싶다면</strong>
+            <p>음악을 감정 정리에 쓰는지, 집중에 쓰는지, 그냥 틀어두는지 보는 음악 성향 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>
