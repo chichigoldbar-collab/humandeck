@@ -10,7 +10,8 @@ type TestPath =
   | "/focus-type"
   | "/stress-type"
   | "/persona-type"
-  | "/music-type";
+  | "/music-type"
+  | "/movie-type";
 
 const tests: {
   href: TestPath;
@@ -77,6 +78,12 @@ const tests: {
     badge: "플레이리스트",
     title: "내 플레이리스트가 말해주는 나의 진짜 성향",
     summary: "감정 정리, 집중, 추억, 즉흥 재생 등 음악 사용 패턴을 보는 테스트",
+  },
+  {
+    href: "/movie-type",
+    badge: "영화 취향",
+    title: "내 영화 취향이 말해주는 나의 진짜 성향",
+    summary: "스토리, 감정, 자극, 연출 중 어디에 먼저 몰입하는지 보는 영화 취향 테스트",
   },
 ];
 

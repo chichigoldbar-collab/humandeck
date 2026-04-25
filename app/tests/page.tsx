@@ -18,7 +18,8 @@ const tests: {
     | "/focus-type"
     | "/stress-type"
     | "/persona-type"
-    | "/music-type";
+    | "/music-type"
+    | "/movie-type";
   title: string;
   summary: string;
 }[] = [
@@ -81,6 +82,12 @@ const tests: {
     title: "내 플레이리스트가 말해주는 나의 진짜 성향",
     summary:
       "감정 해소형, 자극 추구형, 몰입형, 추억형 등 음악을 어떤 순간에 어떻게 사용하는지 캐릭터로 정리하는 테스트입니다.",
+  },
+  {
+    href: "/movie-type",
+    title: "내 영화 취향이 말해주는 나의 진짜 성향",
+    summary:
+      "스토리, 감정, 자극, 해석, 연출, 몰입 도피처럼 영화를 볼 때 어디에 먼저 끌리는지 캐릭터로 정리하는 테스트입니다.",
   },
 ];
 

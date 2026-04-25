@@ -12,7 +12,8 @@ const tests: {
     | "/focus-type"
     | "/stress-type"
     | "/persona-type"
-    | "/music-type";
+    | "/music-type"
+    | "/movie-type";
   badge: string;
   title: string;
   summary: string;
@@ -110,6 +111,15 @@ const tests: {
     pickFor: "이어폰 속 생활 패턴이 궁금할 때",
     accent: "home-card-music",
   },
+  {
+    href: "/movie-type",
+    badge: "신규 테스트",
+    title: "내 영화 취향이 말해주는 나의 진짜 성향",
+    summary: "스토리, 감정, 자극, 연출 중 어디에 가장 먼저 몰입하는지 보는 영화 취향 패턴 테스트",
+    meta: "12문항 · 결과 8개 · 메인 + 서브",
+    pickFor: "어떤 이야기 속에 빠지는 사람인지 궁금할 때",
+    accent: "home-card-movie",
+  },
 ];
 
 export function HomeExperience() {
@@ -199,6 +209,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>플레이리스트로 나를 보고 싶다면</strong>
             <p>음악을 감정 정리에 쓰는지, 집중에 쓰는지, 그냥 틀어두는지 보는 음악 성향 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>영화 취향으로 나를 보고 싶다면</strong>
+            <p>스토리, 감정, 자극, 연출 중 어디에 먼저 몰입하는지 보는 영화 취향 테스트가 잘 맞아요.</p>
           </article>
         </div>
       </section>
