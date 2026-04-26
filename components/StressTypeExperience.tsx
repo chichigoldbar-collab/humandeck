@@ -310,17 +310,19 @@ export function StressTypeExperience() {
                 />
                 <div className="judgment-image-fallback">{result.profile.emblem}</div>
               </div>
-              <div className="judgment-card-topline">
-                <span>메인 결과</span>
-                <strong>{result.profile.headline}</strong>
-              </div>
-              <div className="judgment-card-head">
-                <div>
-                  <h3>{result.profile.name}</h3>
-                  <p>{result.profile.description}</p>
+              <div className="judgment-card-copy">
+                <div className="judgment-card-topline">
+                  <span>메인 결과</span>
+                  <strong>{result.profile.headline}</strong>
                 </div>
+                <div className="judgment-card-head">
+                  <div>
+                    <h3>{result.profile.name}</h3>
+                    <p>{result.profile.description}</p>
+                  </div>
+                </div>
+                <blockquote>{result.profile.meme}</blockquote>
               </div>
-              <blockquote>{result.profile.meme}</blockquote>
             </article>
 
             <article className="judgment-sub-card stress-dimension-card">

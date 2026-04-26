@@ -309,17 +309,19 @@ export function MovieTypeExperience() {
                 />
                 <div className="judgment-image-fallback">{result.profile.emblem}</div>
               </div>
-              <div className="judgment-card-topline">
-                <span>메인 결과</span>
-                <strong>몰입도 {result.percent}%</strong>
-              </div>
-              <div className="judgment-card-head">
-                <div>
-                  <h3>{result.profile.name}</h3>
-                  <p>{result.profile.title}</p>
+              <div className="judgment-card-copy">
+                <div className="judgment-card-topline">
+                  <span>메인 결과</span>
+                  <strong>몰입도 {result.percent}%</strong>
                 </div>
+                <div className="judgment-card-head">
+                  <div>
+                    <h3>{result.profile.name}</h3>
+                    <p>{result.profile.title}</p>
+                  </div>
+                </div>
+                <blockquote>{result.profile.summary}</blockquote>
               </div>
-              <blockquote>{result.profile.summary}</blockquote>
             </article>
 
             <article className="judgment-sub-card movie-dimension-card">

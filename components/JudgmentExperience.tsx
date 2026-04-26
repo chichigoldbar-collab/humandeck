@@ -298,21 +298,23 @@ export function JudgmentExperience() {
                 />
                 <div className="judgment-image-fallback">{result.mainCharacter.emblem}</div>
               </div>
-              <div className="judgment-card-topline">
-                <span>메인 결과</span>
-                <strong>{result.mainCharacter.biasLabel}</strong>
-              </div>
-              <div className="judgment-card-head">
-                <div>
-                  <h3>{result.mainCharacter.name}</h3>
-                  <p>{result.mainCharacter.headline}</p>
+              <div className="judgment-card-copy">
+                <div className="judgment-card-topline">
+                  <span>메인 결과</span>
+                  <strong>{result.mainCharacter.biasLabel}</strong>
                 </div>
+                <div className="judgment-card-head">
+                  <div>
+                    <h3>{result.mainCharacter.name}</h3>
+                    <p>{result.mainCharacter.headline}</p>
+                  </div>
+                </div>
+                <div className="judgment-percent-row">
+                  <span>{result.mainCharacter.biasLabel}</span>
+                  <strong>{result.mainPercent}%</strong>
+                </div>
+                <blockquote>{result.mainCharacter.shortComment}</blockquote>
               </div>
-              <div className="judgment-percent-row">
-                <span>{result.mainCharacter.biasLabel}</span>
-                <strong>{result.mainPercent}%</strong>
-              </div>
-              <blockquote>{result.mainCharacter.shortComment}</blockquote>
             </article>
 
             <article className={`judgment-sub-card ${result.subCharacter.accent}`}>
