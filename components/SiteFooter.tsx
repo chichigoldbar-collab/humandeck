@@ -18,8 +18,8 @@ export function SiteFooter() {
         <a href="/tests">테스트 모아보기</a>
         <a href="/guides">해설 가이드</a>
         <a href="/about">서비스 소개</a>
+        <a href="/contact">문의하기</a>
         <a href="/faq">자주 묻는 질문</a>
-        <a href="mailto:teddysmansion01@gmail.com">문의하기</a>
         <a href="/privacy">개인정보처리방침</a>
         <a href="/terms">이용약관</a>
       </div>
