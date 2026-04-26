@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86d9d1"/>
+      <stop offset="1" stop-color="#58b7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="72" y="88" width="368" height="340" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#111827" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#effcff"/>
+  <circle cx="256" cy="236" r="156" fill="url(#bg)" opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <rect x="88" y="112" width="336" height="304" rx="92" fill="url(#bg)"/>
+    <rect x="104" y="128" width="304" height="272" rx="78" fill="#effcff" fill-opacity="0.94"/>
+  </g>
+  
+    <circle cx="256" cy="182" r="20" fill="#5dc0c8"/>
+    <path d="M242 166L232 150" stroke="#4a83d8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M256 162L256 144" stroke="#4a83d8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M270 166L280 150" stroke="#4a83d8" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="196" cy="228" rx="36" ry="56" fill="#7ce0cf"/>
+    <ellipse cx="256" cy="220" rx="38" ry="62" fill="#6dc7ff"/>
+    <ellipse cx="316" cy="228" rx="36" ry="56" fill="#8bc4ff"/>
+    <ellipse cx="256" cy="262" rx="54" ry="78" fill="#f5fcff"/>
+    
+    <ellipse cx="222" cy="236" rx="10" ry="12" fill="#1f2937"/>
+    <ellipse cx="290" cy="236" rx="10" ry="12" fill="#1f2937"/>
+    <circle cx="218" cy="232" r="3" fill="#ffffff"/>
+    <circle cx="286" cy="232" r="3" fill="#ffffff"/>
+    <polygon points="256,258 242,272 270,272" fill="#f59e0b"/>
+    <ellipse cx="256" cy="346" rx="82" ry="38" fill="#f5fcff" opacity="0.96"/>
+  
+</svg>

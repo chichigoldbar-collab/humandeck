@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c4a08d"/>
+      <stop offset="1" stop-color="#8a6c5a"/>
+    </linearGradient>
+    <filter id="shadow" x="72" y="88" width="368" height="340" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#111827" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#fbf5f1"/>
+  <circle cx="256" cy="236" r="156" fill="url(#bg)" opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <rect x="88" y="112" width="336" height="304" rx="92" fill="url(#bg)"/>
+    <rect x="104" y="128" width="304" height="272" rx="78" fill="#fbf5f1" fill-opacity="0.94"/>
+  </g>
+  
+    <path d="M168 228C184 172 232 148 282 154C330 160 360 194 358 246C356 286 334 316 298 332L214 330C184 316 164 282 168 228Z" fill="#9f7a69"/>
+    <path d="M178 216L164 198" stroke="#8b6757" stroke-width="6" stroke-linecap="round"/>
+    <path d="M196 188L188 164" stroke="#8b6757" stroke-width="6" stroke-linecap="round"/>
+    <path d="M224 172L222 148" stroke="#8b6757" stroke-width="6" stroke-linecap="round"/>
+    <path d="M288 172L292 148" stroke="#8b6757" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="256" cy="252" rx="82" ry="78" fill="#f0e3da"/>
+    
+    <ellipse cx="222" cy="236" rx="10" ry="12" fill="#1f2937"/>
+    <ellipse cx="290" cy="236" rx="10" ry="12" fill="#1f2937"/>
+    <circle cx="218" cy="232" r="3" fill="#ffffff"/>
+    <circle cx="286" cy="232" r="3" fill="#ffffff"/>
+    
+    <ellipse cx="256" cy="272" rx="38" ry="28" fill="#f7eee8"/>
+    <ellipse cx="256" cy="262" rx="10" ry="7" fill="#8b6760"/>
+    <path d="M244 277C248 284 252 287 256 287C260 287 264 284 268 277" stroke="#6b4f4f" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="256" cy="346" rx="84" ry="40" fill="#f0e3da" opacity="0.96"/>
+  
+</svg>

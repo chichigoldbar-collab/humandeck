@@ -166,7 +166,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "서사집착 사자",
     slug: "lion",
     emblem: "🦁",
-    imagePath: "/assets/movie-lion.png",
+    imagePath: "/assets/movie-lion.svg",
     accent: "movie-lion",
     title: "이야기가 말이 돼야 몰입하는 타입",
     summary:
@@ -190,7 +190,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "감정몰입 늑대",
     slug: "wolf",
     emblem: "🐺",
-    imagePath: "/assets/movie-wolf.png",
+    imagePath: "/assets/movie-wolf.svg",
     accent: "movie-wolf",
     title: "캐릭터 감정에 깊게 빠지는 타입",
     summary:
@@ -214,7 +214,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "자극추구 치타",
     slug: "cheetah",
     emblem: "🐆",
-    imagePath: "/assets/movie-cheetah.png",
+    imagePath: "/assets/movie-cheetah.svg",
     accent: "movie-cheetah",
     title: "지루하면 바로 집중 끊기는 타입",
     summary:
@@ -238,7 +238,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "해석중독 부엉이",
     slug: "owl",
     emblem: "🦉",
-    imagePath: "/assets/movie-owl.png",
+    imagePath: "/assets/movie-owl.svg",
     accent: "movie-owl",
     title: "보고 나서 생각하는 게 더 중요한 타입",
     summary:
@@ -262,7 +262,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "가벼움추구 다람쥐",
     slug: "squirrel",
     emblem: "🐿",
-    imagePath: "/assets/movie-squirrel.png",
+    imagePath: "/assets/movie-squirrel.svg",
     accent: "movie-squirrel",
     title: "편하게 볼 수 있는 게 중요한 타입",
     summary:
@@ -286,7 +286,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "연출집착 여우",
     slug: "fox",
     emblem: "🦊",
-    imagePath: "/assets/movie-fox.png",
+    imagePath: "/assets/movie-fox.svg",
     accent: "movie-fox",
     title: "스토리보다 어떻게 보여주느냐를 보는 타입",
     summary:
@@ -310,7 +310,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "현실회피 곰",
     slug: "bear",
     emblem: "🐻",
-    imagePath: "/assets/movie-bear.png",
+    imagePath: "/assets/movie-bear.svg",
     accent: "movie-bear",
     title: "현실을 잊으려고 영화 보는 타입",
     summary:
@@ -334,7 +334,7 @@ export const movieCharacters: Record<MovieType, MovieCharacter> = {
     name: "취향확장 문어",
     slug: "octopus",
     emblem: "🐙",
-    imagePath: "/assets/movie-octopus.png",
+    imagePath: "/assets/movie-octopus.svg",
     accent: "movie-octopus",
     title: "장르 안 가리고 이것저것 보는 타입",
     summary:

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#92dcff"/>
+      <stop offset="1" stop-color="#59b6d8"/>
+    </linearGradient>
+    <filter id="shadow" x="72" y="88" width="368" height="340" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#111827" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#eefbff"/>
+  <circle cx="256" cy="236" r="156" fill="url(#bg)" opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <rect x="88" y="112" width="336" height="304" rx="92" fill="url(#bg)"/>
+    <rect x="104" y="128" width="304" height="272" rx="78" fill="#eefbff" fill-opacity="0.94"/>
+  </g>
+  
+    <path d="M176 266C176 202 212 160 256 160C300 160 336 202 336 266V288C336 296 334 304 330 310L320 324C314 332 300 332 294 324L286 314L278 324C272 332 258 332 252 324L244 314L236 324C230 332 216 332 210 324L202 314L194 324C188 332 174 332 168 324L160 314C156 308 154 300 154 292V286C154 278 160 272 168 272H176V266Z" fill="#7fd0ea"/>
+    <circle cx="222" cy="238" r="10" fill="#1f2937"/>
+    <circle cx="290" cy="238" r="10" fill="#1f2937"/>
+    <circle cx="218" cy="234" r="3" fill="#ffffff"/>
+    <circle cx="286" cy="234" r="3" fill="#ffffff"/>
+    <path d="M230 278C238 288 246 292 256 292C266 292 274 288 282 278" stroke="#4f95ad" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="256" cy="356" rx="92" ry="28" fill="#eefbff" opacity="0.96"/>
+  
+</svg>

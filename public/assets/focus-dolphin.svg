@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7de0ff"/>
+      <stop offset="1" stop-color="#4db6ff"/>
+    </linearGradient>
+    <filter id="shadow" x="72" y="88" width="368" height="340" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#111827" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#eefbff"/>
+  <circle cx="256" cy="236" r="156" fill="url(#bg)" opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <rect x="88" y="112" width="336" height="304" rx="92" fill="url(#bg)"/>
+    <rect x="104" y="128" width="304" height="272" rx="78" fill="#eefbff" fill-opacity="0.94"/>
+  </g>
+  
+    <path d="M166 282C178 202 246 168 318 188C338 194 352 208 356 224C364 260 336 304 292 318C270 324 250 324 232 318L204 340L212 304C184 298 168 292 166 282Z" fill="#79cfff"/>
+    <path d="M252 216C268 202 296 198 314 206C302 206 286 214 278 224C266 236 262 248 262 260C252 250 246 236 252 216Z" fill="#48aef2"/>
+    <circle cx="236" cy="244" r="9" fill="#17324d"/>
+    <circle cx="232" cy="240" r="3" fill="#ffffff"/>
+    <path d="M224 274C234 282 248 286 262 286C278 286 292 280 304 268" stroke="#3b7dad" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="256" cy="356" rx="92" ry="28" fill="#eefbff" opacity="0.96"/>
+  
+</svg>

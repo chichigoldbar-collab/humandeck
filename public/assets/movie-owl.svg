@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b5a7ff"/>
+      <stop offset="1" stop-color="#7b69e3"/>
+    </linearGradient>
+    <filter id="shadow" x="72" y="88" width="368" height="340" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#111827" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#f6f3ff"/>
+  <circle cx="256" cy="236" r="156" fill="url(#bg)" opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <rect x="88" y="112" width="336" height="304" rx="92" fill="url(#bg)"/>
+    <rect x="104" y="128" width="304" height="272" rx="78" fill="#f6f3ff" fill-opacity="0.94"/>
+  </g>
+  
+    <polygon points="204,168 226,146 236,184" fill="#6d7cc8"/>
+    <polygon points="308,168 286,146 276,184" fill="#6d7cc8"/>
+    <ellipse cx="256" cy="246" rx="92" ry="92" fill="#f8fbff"/>
+    <circle cx="222" cy="236" r="24" fill="#f8d782"/>
+    <circle cx="290" cy="236" r="24" fill="#f8d782"/>
+    <circle cx="222" cy="236" r="11" fill="#1f2937"/>
+    <circle cx="290" cy="236" r="11" fill="#1f2937"/>
+    <polygon points="256,254 242,272 270,272" fill="#f59e0b"/>
+    <path d="M230 292C238 300 247 304 256 304C265 304 274 300 282 292" stroke="#7380a6" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="256" cy="346" rx="86" ry="42" fill="#f8fbff" opacity="0.96"/>
+  
+</svg>
