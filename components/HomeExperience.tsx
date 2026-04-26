@@ -268,7 +268,7 @@ export function HomeExperience() {
       <section className="panel home-service-panel">
         <div className="panel-header">
           <span>읽어보기</span>
-          <h2>테스트 결과를 조금 더 깊게 읽을 수 있도록 해설 가이드를 함께 제공합니다</h2>
+          <h2>테스트 결과 해설과 생활 패턴 글을 함께 읽을 수 있도록 설명형 콘텐츠를 제공합니다</h2>
         </div>
         <div className="home-service-grid">
           <article className="home-service-card">
@@ -329,6 +329,16 @@ export function HomeExperience() {
             </p>
             <div className="content-link-row">
               <Link href="/guides/music-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>스트레스와 번아웃 읽을거리</strong>
+            <p>
+              스트레스 반응이 왜 다르게 나타나는지, 회피와 과생각이 왜 피로를 키우는지
+              설명형 글로 정리한 읽을거리 모음입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/articles">글 보러가기</Link>
             </div>
           </article>
         </div>

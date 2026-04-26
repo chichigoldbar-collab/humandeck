@@ -19,6 +19,7 @@ export function SiteHeader() {
           <Link href="/">홈</Link>
           <Link href="/tests">테스트 모아보기</Link>
           <Link href="/guides">해설 가이드</Link>
+          <Link href="/articles">읽을거리</Link>
           <Link href="/about">서비스 소개</Link>
           <Link href="/faq">FAQ</Link>
         </nav>

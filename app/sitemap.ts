@@ -9,6 +9,12 @@ const siteUrl =
 const routes = [
   "",
   "/about",
+  "/articles",
+  "/articles/stress-reactions",
+  "/articles/burnout-signs",
+  "/articles/avoidance-patterns",
+  "/articles/overthinking-patterns",
+  "/articles/stress-habits",
   "/contact",
   "/faq",
   "/privacy",
