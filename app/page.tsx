@@ -4,7 +4,7 @@ import { HomeExperience } from "@/components/HomeExperience";
 export const metadata: Metadata = {
   title: "휴먼덱 | 테스트 홈",
   description:
-    "휴먼덱의 캐릭터 테스트와 인지편향 테스트를 한곳에서 시작해보세요.",
+    "관계, 판단, 자극 반응, 생활 습관을 다양한 테스트와 해설 가이드로 읽어보는 휴먼덱 서비스 홈입니다.",
 };
 
 export default function Home() {

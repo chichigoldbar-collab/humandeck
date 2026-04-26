@@ -127,7 +127,7 @@ export function HomeExperience() {
     <main className="shell">
       <section className="hero-card home-hero-card">
         <div className="hero-copy">
-          <span className="eyebrow">가볍게 눌렀는데 생각보다 오래 남는 테스트</span>
+          <span className="eyebrow">짧은 질문으로 생활 패턴을 읽어보는 테스트 아카이브</span>
           <h1>
             지금의 나를
             <br />
@@ -135,10 +135,14 @@ export function HomeExperience() {
             <br />
             보는 방법
           </h1>
+          <p>
+            휴먼덱은 관계, 판단, 자극 반응, 스트레스 처리, 취향 패턴처럼
+            일상에서 반복되는 반응을 짧은 질문과 해설형 결과로 정리하는 서비스입니다.
+          </p>
           <div className="hero-inline-copy">
-            <span>3분 안에 끝나는 테스트</span>
-            <span>공유하고 싶은 결과 카드</span>
-            <span>친구랑 비교하면 더 재밌음</span>
+            <span>3분 안에 끝나는 설문</span>
+            <span>결과 카드와 상세 해설 제공</span>
+            <span>여러 주제를 한곳에서 비교 가능</span>
           </div>
         </div>
 
@@ -155,7 +159,7 @@ export function HomeExperience() {
             <p>확신, 첫인상, 손해 회피가 판단을 어떻게 흔드는지 보는 테스트</p>
           </article>
           <article className="preview-quote">
-            <p>"재밌게 했는데, 결과가 너무 나 같아서 저장하게 된다."</p>
+            <p>"짧게 답했는데, 생활 습관이 왜 반복되는지 설명이 붙으니 훨씬 이해가 쉬웠다."</p>
           </article>
         </div>
       </section>
@@ -172,7 +176,7 @@ export function HomeExperience() {
           </article>
           <article className="home-intro-card">
             <strong>내 판단 습관을 찔러보고 싶다면</strong>
-            <p>확증편향, 과잉확신, 선택 과부하처럼 선택의 흔들림을 보는 판단 테스트가 더 재밌어요.</p>
+            <p>확증편향, 과잉확신, 선택 과부하처럼 선택의 흔들림을 정리하는 판단 테스트가 잘 맞습니다.</p>
           </article>
           <article className="home-intro-card">
             <strong>둘 다 해도 결과 결이 다릅니다</strong>
@@ -184,7 +188,7 @@ export function HomeExperience() {
           </article>
           <article className="home-intro-card">
             <strong>먹는 습관으로 성격을 보고 싶다면</strong>
-            <p>라면, 배달 앱, 치킨 고르는 방식처럼 너무 현실적인 질문으로 보는 먹는 방식 테스트가 잘 맞아요.</p>
+            <p>라면, 배달 앱, 메뉴 선택처럼 생활 속 장면을 통해 보는 먹는 방식 테스트가 잘 맞습니다.</p>
           </article>
           <article className="home-intro-card">
             <strong>부부 관계 패턴을 보고 싶다면</strong>
@@ -192,7 +196,7 @@ export function HomeExperience() {
           </article>
           <article className="home-intro-card">
             <strong>공포 콘셉트로 몰입하고 싶다면</strong>
-            <p>어두운 공간, 작은 소리, 이상한 기척에 어떻게 반응하는지 보는 공포 반응 테스트가 잘 맞아요.</p>
+            <p>어두운 공간, 작은 소리, 이상한 기척에 어떻게 반응하는지 정리하는 공포 반응 테스트가 잘 맞습니다.</p>
           </article>
           <article className="home-intro-card">
             <strong>집중 습관을 점검하고 싶다면</strong>
@@ -244,9 +248,18 @@ export function HomeExperience() {
             <strong>어떤 테스트를 볼 수 있나요?</strong>
             <p>
               현재는 인간 캐릭터, 인지편향, 도파민 반응, 먹는 방식, 부부 관계, 공포
-              반응 테스트를 제공하고 있습니다. 각 테스트는 서로 다른 주제를 다루기
+              반응, 집중 습관, 스트레스 처리, 페르소나, 음악과 영화 취향 테스트를
+              제공하고 있습니다. 각 테스트는 서로 다른 주제를 다루기
               때문에 하나만 해도 되고, 여러 개를 이어서 보면 패턴 차이를 비교하기 더
               좋습니다.
+            </p>
+          </article>
+          <article className="home-service-card">
+            <strong>결과를 더 깊게 보고 싶다면</strong>
+            <p>
+              휴먼덱은 테스트 결과만 보여주고 끝내지 않으려 합니다. 그래서 주요 테스트마다
+              별도의 해설 가이드를 두고, 왜 이런 결과가 나왔는지와 일상에서 어떻게 해석하면
+              좋은지를 설명형 콘텐츠로 함께 제공합니다.
             </p>
           </article>
         </div>
@@ -255,7 +268,7 @@ export function HomeExperience() {
       <section className="panel home-service-panel">
         <div className="panel-header">
           <span>읽어보기</span>
-          <h2>테스트만 끝내지 않고, 결과를 해석하는 글도 함께 볼 수 있습니다</h2>
+          <h2>테스트 결과를 조금 더 깊게 읽을 수 있도록 해설 가이드를 함께 제공합니다</h2>
         </div>
         <div className="home-service-grid">
           <article className="home-service-card">
@@ -286,6 +299,36 @@ export function HomeExperience() {
             </p>
             <div className="content-link-row">
               <Link href="/guides/stimulation-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>스트레스 관리 스타일 해설</strong>
+            <p>
+              회피, 해소, 해결, 과생각 축이 실제 생활에서 어떻게 드러나는지 읽어보는
+              자기이해형 해설 페이지입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/stress-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>영화 취향 테스트 해설</strong>
+            <p>
+              스토리, 감정, 자극, 연출 중 어디에 먼저 몰입하는지와 그 취향이 왜 생기는지를
+              설명형으로 정리한 페이지입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/movie-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>음악 성향 테스트 해설</strong>
+            <p>
+              플레이리스트를 감정 정리용으로 쓰는지, 집중 배경으로 쓰는지, 습관처럼 두는지
+              해석하는 가이드입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/music-results">가이드 읽기</Link>
             </div>
           </article>
         </div>
