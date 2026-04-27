@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   publisher: "테디맨션",
   other: {
     "google-adsense-account": "ca-pub-7928504805613676",
+    "google-site-verification": "1sOamcmAwFPJok6hZpGYxUO806EYRZLiKidtEbY7sdc",
   },
   metadataBase: new URL(siteUrl),
   alternates: {
