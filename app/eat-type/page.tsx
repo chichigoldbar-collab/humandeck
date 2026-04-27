@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { EatTypeExperience } from "@/components/EatTypeExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "먹는 방식 성격 테스트 | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function EatTypePage() {
-  return <EatTypeExperience />;
+  return (
+    <>
+      <EatTypeExperience />
+      <TestStaticInfo
+        title="먹는 방식 성격 테스트는 왜 공감이 잘 될까요?"
+        intro={[
+          "먹는 방식은 아주 사소해 보이지만, 실제로는 선택 습관과 통제 방식, 즉흥성, 안정감 추구가 꽤 자연스럽게 드러나는 장면입니다. 그래서 휴먼덱은 메뉴를 고르는 방식, 라면을 먹는 순서, 끝까지 챙기는 태도 같은 디테일을 성격 해석의 실마리로 씁니다.",
+          "이 페이지는 거창한 심리 진단보다 생활 속 행동 패턴을 재미있게 읽는 데 초점을 둡니다. 특히 음식 앞에서 드러나는 반응은 생각보다 꾸밈이 적어서, 스스로도 몰랐던 취향과 습관이 잘 드러나는 편입니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 음식과 성향을 연결하나요?",
+            body: [
+              "먹는 장면은 계획성과 즉흥성, 안정감과 자극 추구, 혼자만의 기준과 주변 반응 읽기까지 다양한 습관을 드러냅니다. 그래서 단순 취향 테스트가 아니라 행동형 질문 중심으로 답하게 만들면 자기 패턴이 꽤 선명하게 드러납니다.",
+            ],
+          },
+          {
+            title: "2. 결과를 너무 가볍게만 보면 안 되는 이유",
+            body: [
+              "재미 요소가 강한 테스트이지만, 실제로는 선택 피로, 통제 욕구, 즉흥적 반응처럼 생활 전반에 연결되는 습관을 비추는 면도 있습니다. 그래서 결과 문장이 웃기더라도 생활 속에서 반복되는 장면과 연결해보면 의외로 활용도가 높습니다.",
+            ],
+          },
+          {
+            title: "3. 이런 분들에게 특히 잘 맞습니다",
+            body: [
+              "너무 무거운 자기이해 테스트가 부담스럽지만, 가벼운 질문 속에서 자기 성향을 읽어보고 싶은 분들에게 적합합니다. 친구나 연인과 같이 해도 부담이 적고, 결과를 비교하며 취향 차이를 말로 풀어내기 쉬운 구조입니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

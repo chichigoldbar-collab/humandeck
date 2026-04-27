@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PersonaTypeExperience } from "@/components/PersonaTypeExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까? | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function PersonaTypePage() {
-  return <PersonaTypeExperience />;
+  return (
+    <>
+      <PersonaTypeExperience />
+      <TestStaticInfo
+        title="페르소나 테스트는 겉모습의 어떤 패턴을 읽나요?"
+        intro={[
+          "이 테스트는 사람들 앞에서 내가 어떤 역할을 맡고 있는지, 어떤 모습으로 자신을 정리해서 보여주는지 살펴보는 페이지입니다. 착한 척, 괜찮은 척, 무심한 척처럼 생활어에 가까운 패턴을 행동형 질문으로 읽습니다.",
+          "겉모습 패턴은 거짓말이라기보다 관계 속에서 자주 선택하는 생존 방식에 가깝습니다. 분위기를 살리는 쪽으로 움직이는지, 상처받기 전에 선을 긋는지, 아는 척과 괜찮은 척으로 스스로를 방어하는지 같은 차이를 캐릭터로 정리합니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 '척'이라는 표현을 쓰나요?",
+            body: [
+              "사람은 사회적 장면에서 자신의 감정과 상태를 그대로 드러내기보다, 조금 가공된 모습을 선택하는 경우가 많습니다. 이 테스트는 그 패턴을 비난하려는 것이 아니라, 어떤 상황에서 어떤 캐릭터를 자주 꺼내는지 보여주려는 목적을 갖고 있습니다.",
+            ],
+          },
+          {
+            title: "2. 결과는 어떻게 읽는 것이 좋을까요?",
+            body: [
+              "메인 결과는 가장 자주 드러나는 겉모습 패턴을 뜻하고, 서브 결과는 그 패턴을 보완하거나 숨기는 방식으로 볼 수 있습니다. 예를 들어 괜찮은 척 여우와 무심한 척 고양이가 같이 높다면 감정을 숨기면서 거리도 두는 조합으로 읽을 수 있습니다.",
+            ],
+          },
+          {
+            title: "3. 누구에게 특히 잘 맞는 테스트인가요?",
+            body: [
+              "사람들과 있을 때 유독 더 피곤하거나, 혼자 있을 때와 남들 앞의 내가 다르다고 느끼는 분들에게 잘 맞습니다. 결과를 통해 사회적 장면에서의 자동 반응을 언어화하면 관계에서 쓰는 에너지를 더 잘 이해할 수 있습니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

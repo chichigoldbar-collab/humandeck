@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { MusicTypeExperience } from "@/components/MusicTypeExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "내 플레이리스트가 말해주는 나의 진짜 성향 | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function MusicTypePage() {
-  return <MusicTypeExperience />;
+  return (
+    <>
+      <MusicTypeExperience />
+      <TestStaticInfo
+        title="플레이리스트 테스트는 음악 취향보다 무엇을 보나요?"
+        intro={[
+          "이 테스트는 음악 장르 취향을 맞히기보다, 사용자가 음악을 어떤 도구로 쓰는지 보는 구조입니다. 감정을 정리하려고 찾는지, 집중을 위해 틀어두는지, 배경처럼 습관적으로 켜두는지, 혹은 플레이리스트를 통해 자기 세계를 정리하는지 살펴봅니다.",
+          "같은 노래를 들어도 누군가는 감정에 잠수하고, 누군가는 텐션을 끌어올리며, 누군가는 추억을 떠올리고, 누군가는 그저 공간을 채우기 위해 재생합니다. 이어폰 속 습관은 생각보다 생활 패턴과 가까운 자기표현이 됩니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 음악을 생활 패턴으로 해석하나요?",
+            body: [
+              "음악은 취향이면서 동시에 사용 방식이기도 합니다. 슬플 때 일부러 더 깊은 노래를 찾는지, 일할 때 특정 사운드가 있어야 하는지, 감정보다 흐름과 큐레이션에 더 집착하는지 같은 선택은 단순한 장르 선호를 넘어 생활 리듬을 보여줍니다.",
+            ],
+          },
+          {
+            title: "2. 결과는 어떤 순간에 특히 공감될까요?",
+            body: [
+              "혼자 돌아가는 길, 기분이 급격히 가라앉은 날, 오래 작업할 때처럼 음악을 많이 찾는 장면에서 공감도가 높습니다. 결과 카드의 문장을 최근 자주 듣는 플레이리스트와 연결해보면 자신이 음악에 기대는 이유가 더 또렷하게 보입니다.",
+            ],
+          },
+          {
+            title: "3. 활용법은 생각보다 단순합니다",
+            body: [
+              "테스트 결과를 보고 끝내기보다, 요즘 가장 자주 튼 플레이리스트가 감정용인지 집중용인지 배경용인지 한번 분류해보면 좋습니다. 그러면 음악이 단순한 취향이 아니라 현재 컨디션과 생활 흐름을 비추는 힌트로 읽히기 시작합니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

@@ -1161,6 +1161,67 @@ button {
   line-height: 1.7;
 }
 
+.test-static-shell {
+  padding: 0 16px 64px;
+}
+
+.test-static-card {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 30px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 48px rgba(42, 77, 122, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.test-static-card h2 {
+  margin: 14px 0 16px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.test-static-copy,
+.test-static-closing,
+.test-static-sections {
+  display: grid;
+  gap: 14px;
+}
+
+.test-static-copy p,
+.test-static-section p,
+.test-static-closing p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.78;
+}
+
+.test-static-sections {
+  margin-top: 24px;
+}
+
+.test-static-section {
+  padding: 22px 20px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.test-static-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.test-static-closing {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
 .hero-card,
 .panel,
 .result-card,
@@ -2782,6 +2843,19 @@ button {
   .site-footer {
     flex-direction: column;
     padding-top: 20px;
+  }
+
+  .test-static-shell {
+    padding: 0 16px 56px;
+  }
+
+  .test-static-card {
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .test-static-section {
+    padding: 18px 16px;
   }
 
   .footer-links {

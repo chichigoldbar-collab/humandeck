@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { MovieTypeExperience } from "@/components/MovieTypeExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "내 영화 취향이 말해주는 나의 진짜 성향 | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function MovieTypePage() {
-  return <MovieTypeExperience />;
+  return (
+    <>
+      <MovieTypeExperience />
+      <TestStaticInfo
+        title="영화 취향 테스트는 무엇에 몰입하는지 보여줍니다"
+        intro={[
+          "영화 취향 테스트는 장르 취향만 나누는 페이지가 아닙니다. 사용자가 영화를 볼 때 이야기 구조에 먼저 반응하는지, 감정에 빠지는지, 자극과 속도를 원하는지, 연출과 메시지를 더 오래 붙잡는지 보는 구조로 설계되어 있습니다.",
+          "같은 영화를 봐도 누군가는 서사를 따지고, 누군가는 캐릭터 감정에 흔들리며, 누군가는 영상미를 기억하고, 누군가는 해석을 더 오래 붙듭니다. 이 테스트는 그 몰입 포인트를 생활어로 정리해줍니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 영화 취향이 성향처럼 느껴질까요?",
+            body: [
+              "영화는 취향이면서 동시에 세상을 받아들이는 방식이 드러나는 콘텐츠이기 때문입니다. 구조를 먼저 보는 사람, 감정을 먼저 느끼는 사람, 장면 미학에 집중하는 사람은 같은 작품에서도 전혀 다른 기억을 가져갑니다.",
+            ],
+          },
+          {
+            title: "2. 결과를 읽을 때 보면 좋은 기준",
+            body: [
+              "메인 결과는 가장 강한 몰입 포인트를, 서브 결과는 그 취향을 보완하는 두 번째 관점을 뜻합니다. 예를 들어 서사집착 사자와 해석중독 부엉이가 같이 나오면, 단순히 이야기만 보는 것이 아니라 의미와 구조를 함께 붙잡는 타입으로 해석할 수 있습니다.",
+            ],
+          },
+          {
+            title: "3. 이런 분들에게 특히 잘 맞습니다",
+            body: [
+              "친구와 같은 영화를 보고도 감상이 자꾸 엇갈리는 분, 내가 왜 특정 장르만 반복해서 찾는지 궁금한 분, 영화를 단순한 시간 보내기보다 자기 취향을 읽는 단서로 보고 싶은 분들에게 적합합니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

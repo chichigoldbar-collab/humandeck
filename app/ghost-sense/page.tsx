@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GhostSenseExperience } from "@/components/GhostSenseExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "귀신을 얼마나 느끼는 타입일까? | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function GhostSensePage() {
-  return <GhostSenseExperience />;
+  return (
+    <>
+      <GhostSenseExperience />
+      <TestStaticInfo
+        title="귀신 감지 테스트는 실제로 무엇을 보나요?"
+        intro={[
+          "이 테스트는 초자연 현상을 판정하려는 목적이 아니라, 어두운 공간과 낯선 자극 앞에서 사람이 어떻게 반응하는지 살펴보는 공포 콘셉트형 테스트입니다. 감각 민감도, 공포 반응, 상상 개입 정도를 통해 생활 반응 패턴을 읽습니다.",
+          "같은 기척과 같은 소리라도 누구는 거의 반응하지 않고, 누구는 의미를 부여하며, 누구는 감각은 빠르지만 확신은 약하게 느낍니다. 고스트 테스트는 이런 차이를 무겁지 않게 풀어낸 체험형 콘텐츠입니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 공포 반응을 따로 보나요?",
+            body: [
+              "공포는 단순히 겁이 많고 적음의 문제가 아니라 감각 처리, 불확실성 해석, 상상력 개입이 함께 작동하는 장면입니다. 그래서 이 테스트는 무서운 걸 믿는 사람인지보다, 낯선 자극을 어떤 방식으로 받아들이는지에 더 집중합니다.",
+            ],
+          },
+          {
+            title: "2. 결과는 재미용일까, 해석용일까?",
+            body: [
+              "분위기는 분명 공포 콘셉트지만, 결과 해석은 의외로 생활형입니다. 작은 소리에 빠르게 반응하는지, 뒤를 자주 확인하는지, 상상이 현실보다 먼저 커지는지 같은 습관은 일상적인 예민함이나 불확실성 대처 방식과도 연결될 수 있습니다.",
+            ],
+          },
+          {
+            title: "3. 이용할 때 알아두면 좋은 점",
+            body: [
+              "휴먼덱의 고스트 테스트는 मनोर용이 아니라 공포 콘셉트 기반 자기반응 테스트로 이해하는 편이 정확합니다. 결과를 사실 판단으로 받아들이기보다, 내가 어떤 분위기와 자극 앞에서 민감해지는지 돌아보는 가벼운 장치로 활용해보면 좋습니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

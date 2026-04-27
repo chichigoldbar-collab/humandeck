@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StimulationExperience } from "@/components/StimulationExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "내 도파민은 얼마나 흔들릴까? | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function StimulationPage() {
-  return <StimulationExperience />;
+  return (
+    <>
+      <StimulationExperience />
+      <TestStaticInfo
+        title="도파민 반응 테스트는 어떤 습관을 보나요?"
+        intro={[
+          "도파민 테스트는 자극을 많이 찾는 사람을 단순히 의지가 약하다고 보는 대신, 어떤 상황에서 즉각적인 보상에 더 끌리는지 살펴봅니다. 스크롤, 충동구매, 새로움 탐색, 보상 의존 같은 장면을 통해 반응 패턴을 읽습니다.",
+          "사람마다 같은 피로, 심심함, 불안 앞에서도 선택이 달라집니다. 어떤 사람은 바로 재미를 찾고, 어떤 사람은 조용히 쉬지 못하며, 어떤 사람은 결과와 반응이 보여야만 움직입니다. 이 테스트는 그 차이를 생활어로 설명합니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 도파민이라는 표현을 쓰나요?",
+            body: [
+              "여기서 말하는 도파민은 의학적 진단이 아니라 보상과 자극에 반응하는 생활 습관을 뜻합니다. 즉각적인 재미에 끌리는지, 늘 새로운 것을 찾아다니는지, 반응이 없으면 쉽게 힘이 빠지는지 같은 장면을 통해 패턴을 해석합니다.",
+            ],
+          },
+          {
+            title: "2. 결과는 어떤 순간에 특히 유용할까요?",
+            body: [
+              "집중이 자주 끊기거나, 쇼츠와 스크롤에서 빠져나오기 어렵거나, 계획보다 순간 기분에 자주 끌릴 때 이 테스트 결과가 꽤 현실적으로 느껴질 수 있습니다. 결과 카드는 스스로를 탓하기보다 자극 구조를 이해하는 출발점으로 보는 것이 좋습니다.",
+            ],
+          },
+          {
+            title: "3. 생활에 적용하려면 무엇을 보면 좋을까요?",
+            body: [
+              "가장 높은 축이 무엇인지보다, 어떤 장면에서 그 반응이 반복되는지 보는 편이 더 중요합니다. 일할 때인지, 쉬는 시간인지, 기분이 가라앉을 때인지, 혹은 목표가 사라졌을 때인지 구체적인 맥락을 함께 떠올리면 활용도가 높아집니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

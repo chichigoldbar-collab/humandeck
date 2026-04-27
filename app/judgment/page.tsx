@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JudgmentExperience } from "@/components/JudgmentExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "내 판단은 얼마나 틀렸을까? | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function JudgmentPage() {
-  return <JudgmentExperience />;
+  return (
+    <>
+      <JudgmentExperience />
+      <TestStaticInfo
+        title="인지편향 테스트는 무엇을 보여주나요?"
+        intro={[
+          "이 테스트는 사용자가 합리적인지 아닌지를 단순 판정하기보다, 판단 과정에서 어떤 종류의 왜곡이 자주 끼어드는지 살펴보는 데 목적이 있습니다. 투자, 소비, 사람 평가, 선택 과정에서 반복되는 습관을 캐릭터 형태로 읽어냅니다.",
+          "같은 정보를 봐도 누구는 손실을 더 크게 느끼고, 누구는 처음 본 숫자나 인상에 더 강하게 끌리며, 누구는 자기 확신을 쉽게 수정하지 못합니다. 그런 미세한 차이를 가볍지만 선명하게 보여주는 것이 이 페이지의 역할입니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 어떤 편향을 중심으로 보나요?",
+            body: [
+              "확증편향, 손실회피, 앵커링, 과잉확신, 후광효과, 선택 과부하처럼 실제 생활에서 자주 나타나는 여섯 가지 반응을 중심으로 봅니다. 결과는 가장 높은 축을 메인 캐릭터로, 두 번째 축을 서브 성향으로 정리해 해석을 더 입체적으로 만듭니다.",
+            ],
+          },
+          {
+            title: "2. 결과를 생활에 어떻게 연결할 수 있나요?",
+            body: [
+              "이 테스트는 성격의 좋고 나쁨보다 판단 습관의 반복성을 보는 데 유용합니다. 구매를 앞두고 손해를 과하게 피하는지, 사람을 첫인상으로 판단하는지, 익숙한 결론을 쉽게 놓지 못하는지 확인하면 실제 의사결정 장면을 돌아보는 데 도움이 됩니다.",
+            ],
+          },
+          {
+            title: "3. 왜 캐릭터 형식으로 풀어내나요?",
+            body: [
+              "인지편향은 설명만 보면 학술적으로 느껴질 수 있지만, 실제로는 아주 일상적인 선택 습관에 가깝습니다. 그래서 휴먼덱은 차갑게 점수만 보여주기보다 기억에 남는 캐릭터와 짧은 해석으로 사용자가 자기 반응을 더 쉽게 떠올릴 수 있게 구성했습니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

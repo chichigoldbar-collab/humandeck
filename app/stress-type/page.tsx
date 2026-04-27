@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StressTypeExperience } from "@/components/StressTypeExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "스트레스 관리 스타일 테스트 | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function StressTypePage() {
-  return <StressTypeExperience />;
+  return (
+    <>
+      <StressTypeExperience />
+      <TestStaticInfo
+        title="스트레스 관리 스타일 테스트는 무엇을 알려주나요?"
+        intro={[
+          "이 테스트는 스트레스를 얼마나 받는 사람인지보다, 스트레스를 받았을 때 실제로 무엇을 하는 사람인지에 초점을 둡니다. 회피하는지, 기분 전환으로 푸는지, 해결하려는지, 아니면 생각만 많아지는지를 행동형 질문으로 읽어냅니다.",
+          "같은 스트레스라도 누군가는 잠깐 도망가고, 누군가는 먹거나 소비하며 풀고, 누군가는 바로 정리하고, 누군가는 머릿속에서만 오래 붙잡습니다. 그 차이를 알아야 회복 습관도 더 현실적으로 잡을 수 있습니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 상황형 질문으로 묻나요?",
+            body: [
+              "스트레스 대처는 자기평가형 질문보다 실제 장면에서 훨씬 잘 드러납니다. 할 일이 몰렸을 때, 갈등이 생겼을 때, 하루가 꼬였을 때 무엇을 하는지를 묻는 방식이 사용자의 반복 행동을 더 자연스럽게 드러냅니다.",
+            ],
+          },
+          {
+            title: "2. 결과를 해석할 때 주의할 점",
+            body: [
+              "결과는 성격 낙인이 아니라 현재 자주 쓰는 대처 방식에 가깝습니다. 회피형이라고 해서 늘 회피만 하는 것도 아니고, 해결형이라고 해서 항상 건강한 것도 아닙니다. 상황에 따라 자동으로 튀어나오는 기본 반응을 읽는 데 의미가 있습니다.",
+            ],
+          },
+          {
+            title: "3. 실제 생활에서는 어떻게 쓰면 좋을까요?",
+            body: [
+              "최근 스트레스가 쌓였던 장면을 결과와 연결해보면 활용도가 높습니다. 예를 들어 과생각 축이 높다면 해결보다 분석에 오래 머무는 장면을, 해소 축이 높다면 먹기나 소비로 감정을 푸는 장면을 점검해볼 수 있습니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }

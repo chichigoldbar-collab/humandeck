@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CoupleTypeExperience } from "@/components/CoupleTypeExperience";
+import { TestStaticInfo } from "@/components/TestStaticInfo";
 
 export const metadata: Metadata = {
   title: "부부 관계 분석 테스트 | 휴먼덱",
@@ -8,5 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function CoupleTypePage() {
-  return <CoupleTypeExperience />;
+  return (
+    <>
+      <CoupleTypeExperience />
+      <TestStaticInfo
+        title="부부 관계 분석 테스트는 무엇을 함께 보나요?"
+        intro={[
+          "부부 관계 테스트는 갈등 처리, 정서적 연결, 생활 협업, 애정 표현을 함께 읽어보는 구조로 설계되어 있습니다. 한 축만 높거나 낮다고 관계 전체를 단정하기보다, 현재 어떤 장면에서 힘이 빠지고 있는지 확인하는 데 의미가 있습니다.",
+          "관계는 좋고 나쁨 하나로만 설명되지 않습니다. 싸움은 적지만 속으로 쌓일 수도 있고, 협업은 잘 되지만 정서적 온기는 부족할 수도 있으며, 애정은 높지만 불안정성이 같이 클 수도 있습니다. 이 페이지는 그런 차이를 보기 위한 해석 도구입니다.",
+        ]}
+        sections={[
+          {
+            title: "1. 왜 네 가지 축을 함께 보나요?",
+            body: [
+              "관계 만족도는 대화 방식 하나만으로 설명되지 않기 때문입니다. 실제 생활에서는 갈등 해결 방식, 정서적 안정감, 역할 분담, 애정 표현의 지속성이 서로 얽혀 관계 체감을 만듭니다. 그래서 휴먼덱은 네 축을 같이 보여주는 방식을 택했습니다.",
+            ],
+          },
+          {
+            title: "2. 결과는 어떻게 활용하면 좋을까요?",
+            body: [
+              "결과를 상대를 평가하는 기준으로 쓰기보다, 두 사람이 반복적으로 부딪히는 장면을 설명하는 언어로 사용하는 것이 좋습니다. 예를 들어 연결은 낮은데 협업은 높게 나온다면, 생활은 굴러가지만 감정 교류가 부족한 상태를 이야기해볼 수 있습니다.",
+            ],
+          },
+          {
+            title: "3. 이 테스트가 말해주지 않는 것",
+            body: [
+              "이 결과는 의료적 진단이나 법적 판단을 대신하지 않습니다. 다만 현재 관계에서 어디를 먼저 점검하면 좋을지, 어떤 대화가 필요한지 가볍게 시작할 수 있는 구조를 제공한다는 점에서 실용적인 자기점검 도구로 볼 수 있습니다.",
+            ],
+          },
+        ]}
+      />
+    </>
+  );
 }
