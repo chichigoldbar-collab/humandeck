@@ -16,10 +16,11 @@ const tests: {
     | "/couple-type"
     | "/ghost-sense"
     | "/focus-type"
-    | "/stress-type"
-    | "/persona-type"
-    | "/music-type"
-    | "/movie-type";
+  | "/stress-type"
+  | "/persona-type"
+  | "/music-type"
+  | "/movie-type"
+  | "/baseball-type";
   title: string;
   summary: string;
 }[] = [
@@ -89,6 +90,12 @@ const tests: {
     summary:
       "스토리, 감정, 자극, 해석, 연출, 몰입 도피처럼 영화를 볼 때 어디에 먼저 끌리는지 캐릭터로 정리하는 테스트입니다.",
   },
+  {
+    href: "/baseball-type",
+    title: "나는 야구를 얼마나 아는 척 하는 인간일까",
+    summary:
+      "진짜 분석형인지, 감정 응원형인지, 확신형인지, 아는 척형인지 야구 얘기할 때 드러나는 패턴을 캐릭터로 정리하는 테스트입니다.",
+  },
 ];
 
 export default function TestsPage() {
@@ -116,7 +123,8 @@ export default function TestsPage() {
           <h2>어떤 주제를 다루고 있나요?</h2>
           <p>
             현재 휴먼덱은 관계와 애착, 인지편향, 도파민 반응, 먹는 습관, 부부 관계, 공포 반응,
-            집중과 멀티태스킹, 스트레스 처리, 사회적 페르소나, 음악 사용 패턴, 영화 취향처럼
+            집중과 멀티태스킹, 스트레스 처리, 사회적 페르소나, 음악 사용 패턴, 영화 취향, 야구
+            대화 패턴처럼
             일상에서 자주 마주치는 주제를 중심으로 테스트를 운영하고 있습니다. 서로 다른 테스트를
             이어서 보면 한 사람 안에서 다른 패턴이 어떻게 나타나는지 비교해서 읽어볼 수 있습니다.
           </p>

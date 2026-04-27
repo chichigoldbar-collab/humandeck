@@ -11,7 +11,8 @@ type TestPath =
   | "/stress-type"
   | "/persona-type"
   | "/music-type"
-  | "/movie-type";
+  | "/movie-type"
+  | "/baseball-type";
 
 const tests: {
   href: TestPath;
@@ -84,6 +85,12 @@ const tests: {
     badge: "영화 취향",
     title: "내 영화 취향이 말해주는 나의 진짜 성향",
     summary: "스토리, 감정, 자극, 연출 중 어디에 먼저 몰입하는지 보는 영화 취향 테스트",
+  },
+  {
+    href: "/baseball-type",
+    badge: "야구 성향",
+    title: "나는 야구를 얼마나 아는 척 하는 인간일까",
+    summary: "진짜 분석형인지, 감정 응원형인지, 아는 척형인지 읽는 야구 팬 패턴 테스트",
   },
 ];
 

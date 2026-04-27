@@ -10,10 +10,11 @@ const tests: {
     | "/couple-type"
     | "/ghost-sense"
     | "/focus-type"
-    | "/stress-type"
-    | "/persona-type"
-    | "/music-type"
-    | "/movie-type";
+  | "/stress-type"
+  | "/persona-type"
+  | "/music-type"
+  | "/movie-type"
+  | "/baseball-type";
   badge: string;
   title: string;
   summary: string;
@@ -120,6 +121,15 @@ const tests: {
     pickFor: "어떤 이야기 속에 빠지는 사람인지 궁금할 때",
     accent: "home-card-movie",
   },
+  {
+    href: "/baseball-type",
+    badge: "신규 테스트",
+    title: "나는 야구를 얼마나 아는 척 하는 인간일까",
+    summary: "진짜 분석형인지, 감정 응원형인지, 아는 척형인지 읽어보는 야구 대화 패턴 테스트",
+    meta: "12문항 · 결과 8개 · 메인 + 서브",
+    pickFor: "야구 얘기할 때 내 진짜 스타일이 궁금할 때",
+    accent: "home-card-baseball",
+  },
 ];
 
 export function HomeExperience() {
@@ -218,6 +228,10 @@ export function HomeExperience() {
             <strong>영화 취향으로 나를 보고 싶다면</strong>
             <p>스토리, 감정, 자극, 연출 중 어디에 먼저 몰입하는지 보는 영화 취향 테스트가 잘 맞아요.</p>
           </article>
+          <article className="home-intro-card">
+            <strong>야구 얘기할 때 내 태도가 궁금하다면</strong>
+            <p>진짜 분석형인지, 확신형인지, 아는 척형인지 보는 야구 팬 패턴 테스트가 잘 맞아요.</p>
+          </article>
         </div>
       </section>
 
@@ -248,7 +262,8 @@ export function HomeExperience() {
             <strong>어떤 테스트를 볼 수 있나요?</strong>
             <p>
               현재는 인간 캐릭터, 인지편향, 도파민 반응, 먹는 방식, 부부 관계, 공포
-              반응, 집중 습관, 스트레스 처리, 페르소나, 음악과 영화 취향 테스트를
+              반응, 집중 습관, 스트레스 처리, 페르소나, 음악과 영화 취향, 야구 팬
+              패턴 테스트를
               제공하고 있습니다. 각 테스트는 서로 다른 주제를 다루기
               때문에 하나만 해도 되고, 여러 개를 이어서 보면 패턴 차이를 비교하기 더
               좋습니다.
