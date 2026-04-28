@@ -1475,6 +1475,12 @@ button {
     linear-gradient(180deg, #fff6f2 0%, #ffe1d9 100%);
 }
 
+.home-card-survival {
+  background:
+    radial-gradient(circle at top right, rgba(93, 164, 122, 0.18), transparent 32%),
+    linear-gradient(180deg, #f4fbf3 0%, #dff0dc 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1592,6 +1598,10 @@ button {
   background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 72%);
 }
 
+.survival-hero-card::after {
+  background: radial-gradient(circle, rgba(95, 164, 122, 0.2) 0%, transparent 72%);
+}
+
 .music-preview {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(242, 246, 255, 0.96) 100%);
@@ -1605,6 +1615,11 @@ button {
 .baseball-preview {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 243, 240, 0.96) 100%);
+}
+
+.survival-preview {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(240, 249, 240, 0.96) 100%);
 }
 
 .music-result-hero {
@@ -1623,6 +1638,12 @@ button {
   background:
     radial-gradient(circle at top right, rgba(255, 118, 96, 0.24), transparent 28%),
     linear-gradient(135deg, #431819 0%, #9f3f37 100%);
+}
+
+.survival-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(108, 174, 120, 0.24), transparent 28%),
+    linear-gradient(135deg, #183122 0%, #456c42 100%);
 }
 
 .focus-progress-bar,
@@ -1653,6 +1674,11 @@ button {
 .baseball-progress-bar,
 .baseball-dimension-bar {
   background: linear-gradient(90deg, #ff7360 0%, #ffb14f 100%);
+}
+
+.survival-progress-bar,
+.survival-dimension-bar {
+  background: linear-gradient(90deg, #5ea86e 0%, #9fd26d 100%);
 }
 
 .focus-owl {
@@ -1905,6 +1931,54 @@ button {
   background:
     radial-gradient(circle at top right, rgba(154, 170, 197, 0.18), transparent 38%),
     linear-gradient(180deg, #f4f7fb 0%, #e6ebf4 100%);
+}
+
+.survival-wolf {
+  background:
+    radial-gradient(circle at top right, rgba(104, 138, 101, 0.18), transparent 38%),
+    linear-gradient(180deg, #f0f7f0 0%, #dcead9 100%);
+}
+
+.survival-owl {
+  background:
+    radial-gradient(circle at top right, rgba(116, 146, 191, 0.18), transparent 38%),
+    linear-gradient(180deg, #f2f7ff 0%, #dee7f5 100%);
+}
+
+.survival-rabbit {
+  background:
+    radial-gradient(circle at top right, rgba(255, 174, 197, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff3f8 0%, #ffe0ea 100%);
+}
+
+.survival-bear {
+  background:
+    radial-gradient(circle at top right, rgba(176, 157, 128, 0.18), transparent 38%),
+    linear-gradient(180deg, #faf6ef 0%, #ebdfd0 100%);
+}
+
+.survival-monkey {
+  background:
+    radial-gradient(circle at top right, rgba(255, 165, 104, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff5ef 0%, #ffe2d0 100%);
+}
+
+.survival-fox {
+  background:
+    radial-gradient(circle at top right, rgba(219, 154, 103, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff6ef 0%, #f4e3d3 100%);
+}
+
+.survival-dog {
+  background:
+    radial-gradient(circle at top right, rgba(255, 203, 120, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff9ef 0%, #ffefcf 100%);
+}
+
+.survival-octopus {
+  background:
+    radial-gradient(circle at top right, rgba(185, 132, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #faf4ff 0%, #eadfff 100%);
 }
 
 .movie-bear {

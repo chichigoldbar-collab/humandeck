@@ -12,7 +12,8 @@ type TestPath =
   | "/persona-type"
   | "/music-type"
   | "/movie-type"
-  | "/baseball-type";
+  | "/baseball-type"
+  | "/survival-type";
 
 const tests: {
   href: TestPath;
@@ -91,6 +92,12 @@ const tests: {
     badge: "야구 성향",
     title: "나는 야구를 얼마나 아는 척 하는 인간일까",
     summary: "진짜 분석형인지, 감정 응원형인지, 아는 척형인지 읽는 야구 팬 패턴 테스트",
+  },
+  {
+    href: "/survival-type",
+    badge: "위기 대응",
+    title: "당신은 위기 상황에서 어떤 인간일까",
+    summary: "빠른 판단형인지, 분석형인지, 회피형인지 읽는 몰입형 생존 대응 테스트",
   },
 ];
 

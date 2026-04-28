@@ -14,7 +14,8 @@ const tests: {
   | "/persona-type"
   | "/music-type"
   | "/movie-type"
-  | "/baseball-type";
+  | "/baseball-type"
+  | "/survival-type";
   badge: string;
   title: string;
   summary: string;
@@ -130,6 +131,15 @@ const tests: {
     pickFor: "야구 얘기할 때 내 진짜 스타일이 궁금할 때",
     accent: "home-card-baseball",
   },
+  {
+    href: "/survival-type",
+    badge: "신규 테스트",
+    title: "당신은 위기 상황에서 어떤 인간일까",
+    summary: "숲에서 길을 잃은 상황으로 판단력, 감정, 행동 스타일을 읽는 몰입형 테스트",
+    meta: "12문항 · 결과 8개 · 메인 + 서브",
+    pickFor: "압박과 위기 앞에서 내 진짜 반응이 궁금할 때",
+    accent: "home-card-survival",
+  },
 ];
 
 export function HomeExperience() {
@@ -232,6 +242,10 @@ export function HomeExperience() {
             <strong>야구 얘기할 때 내 태도가 궁금하다면</strong>
             <p>진짜 분석형인지, 확신형인지, 아는 척형인지 보는 야구 팬 패턴 테스트가 잘 맞아요.</p>
           </article>
+          <article className="home-intro-card">
+            <strong>위기에서 내 반응이 궁금하다면</strong>
+            <p>숲에서 길을 잃은 상황을 통해 판단력과 행동 스타일을 보는 위기 대응 테스트가 잘 맞아요.</p>
+          </article>
         </div>
       </section>
 
@@ -262,7 +276,8 @@ export function HomeExperience() {
             <strong>어떤 테스트를 볼 수 있나요?</strong>
             <p>
               현재는 인간 캐릭터, 인지편향, 도파민 반응, 먹는 방식, 부부 관계, 공포
-              반응, 집중 습관, 스트레스 처리, 페르소나, 음악과 영화 취향, 야구 팬
+              반응, 집중 습관, 스트레스 처리, 페르소나, 음악과 영화 취향, 야구 팬,
+              위기 대응
               패턴 테스트를
               제공하고 있습니다. 각 테스트는 서로 다른 주제를 다루기
               때문에 하나만 해도 되고, 여러 개를 이어서 보면 패턴 차이를 비교하기 더

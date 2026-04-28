@@ -44,6 +44,7 @@ const routes = [
   "/music-type",
   "/movie-type",
   "/baseball-type",
+  "/survival-type",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
