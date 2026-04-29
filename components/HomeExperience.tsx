@@ -157,17 +157,17 @@ export function HomeExperience() {
     <main className="shell">
       <section className="hero-card home-hero-card">
         <div className="hero-copy">
-          <span className="eyebrow">심리테스트와 성격테스트로 생활 패턴을 읽어보는 테스트 아카이브</span>
+          <span className="eyebrow">심리테스트, 성격테스트, 연애테스트를 한곳에서 보는 테스트 아카이브</span>
           <h1>
+            휴먼덱에서
+            <br />
             지금의 나를
             <br />
-            조금 더 선명하게
-            <br />
-            보는 방법
+            조금 더 선명하게 보는 방법
           </h1>
           <p>
             휴먼덱은 관계, 판단, 자극 반응, 스트레스 처리, 취향 패턴처럼
-            일상에서 반복되는 반응을 심리테스트와 성격테스트 형식으로 정리하는 서비스입니다.
+            일상에서 반복되는 반응을 심리테스트, 성격테스트, 연애테스트 형식으로 정리하는 서비스입니다.
           </p>
           <div className="hero-inline-copy">
             <span>3분 안에 끝나는 설문</span>
@@ -196,8 +196,8 @@ export function HomeExperience() {
 
       <section className="panel home-intro-panel">
         <div className="panel-header">
-          <span>이렇게 시작해보세요</span>
-          <h2>지금 보고 싶은 게 무엇인지에 따라 고르면 됩니다</h2>
+          <span>심리테스트와 성격테스트를 찾는다면</span>
+          <h2>휴먼덱은 이런 테스트를 한곳에서 볼 수 있습니다</h2>
         </div>
         <div className="content-link-row">
           <Link href="/psychology-tests">심리테스트 모음 보기</Link>

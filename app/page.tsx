@@ -4,17 +4,19 @@ import { HomeExperience } from "@/components/HomeExperience";
 import { buildCollectionPage, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "휴먼덱 | 심리테스트·성격테스트 모음",
+  title: "휴먼덱 | 심리테스트, 성격테스트, 연애테스트, 재미있는 테스트 모음",
   description:
-    "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱 서비스 홈입니다.",
+    "심리테스트, 성격테스트, 연애테스트, 취향 테스트를 한곳에서 볼 수 있는 휴먼덱 서비스 홈입니다. 관계, 판단, 자극 반응, 생활 습관을 짧은 질문과 결과 카드로 읽어보세요.",
   path: "/",
   keywords: [
     "휴먼덱",
     "성향 테스트",
     "심리 테스트",
     "성격 테스트",
+    "연애 테스트",
     "심리테스트 모음",
     "성격테스트 모음",
+    "재미있는 테스트",
     "관계 테스트",
     "인지편향 테스트",
   ],
@@ -27,7 +29,7 @@ export default function Home() {
         data={buildCollectionPage({
           name: "휴먼덱 테스트 홈",
           description:
-            "심리테스트, 성격테스트, 취향 테스트로 관계, 판단, 자극 반응, 취향 패턴을 읽어보는 휴먼덱 서비스 홈",
+            "심리테스트, 성격테스트, 연애테스트, 취향 테스트로 관계, 판단, 자극 반응, 취향 패턴을 읽어보는 휴먼덱 서비스 홈",
           path: "/",
           items: [
             { name: "테스트 모아보기", path: "/tests", description: "휴먼덱 전체 테스트 목록" },

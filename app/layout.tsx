@@ -10,9 +10,9 @@ const siteUrl =
     : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  title: "휴먼덱 | 심리테스트·성격테스트 모음",
+  title: "휴먼덱 | 심리테스트, 성격테스트, 연애테스트, 재미있는 테스트 모음",
   description:
-    "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱",
+    "심리테스트, 성격테스트, 연애테스트, 취향 테스트를 한곳에서 볼 수 있는 휴먼덱입니다. 관계, 판단, 자극 반응, 생활 습관을 짧은 질문과 결과 카드로 읽어보세요.",
   applicationName: "휴먼덱",
   authors: [{ name: "테디맨션" }],
   creator: "테디맨션",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "휴먼덱 | 심리테스트·성격테스트 모음",
+    title: "휴먼덱 | 심리테스트, 성격테스트, 연애테스트, 재미있는 테스트 모음",
     description:
-      "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱",
+      "심리테스트, 성격테스트, 연애테스트, 취향 테스트를 한곳에서 볼 수 있는 휴먼덱입니다. 관계, 판단, 자극 반응, 생활 습관을 짧은 질문과 결과 카드로 읽어보세요.",
     url: siteUrl,
     siteName: "휴먼덱",
     locale: "ko_KR",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "휴먼덱 | 심리테스트·성격테스트 모음",
+    title: "휴먼덱 | 심리테스트, 성격테스트, 연애테스트, 재미있는 테스트 모음",
     description:
-      "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱",
+      "심리테스트, 성격테스트, 연애테스트, 취향 테스트를 한곳에서 볼 수 있는 휴먼덱입니다. 관계, 판단, 자극 반응, 생활 습관을 짧은 질문과 결과 카드로 읽어보세요.",
     images: ["/twitter-image"],
   },
 };
@@ -77,7 +77,7 @@ export default function RootLayout({
     name: "휴먼덱",
     url: siteUrl,
     description:
-      "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 콘텐츠형 테스트 서비스",
+      "심리테스트, 성격테스트, 연애테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 콘텐츠형 테스트 서비스",
     inLanguage: "ko-KR",
     publisher: {
       "@type": "Organization",
