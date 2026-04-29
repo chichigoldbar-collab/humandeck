@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { StimulationExperience } from "@/components/StimulationExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "내 도파민은 얼마나 흔들릴까? | 휴먼덱",
-  description:
-    "스크롤, 충동구매, 집중력 붕괴로 알아보는 도파민 반응 패턴 테스트",
-};
+  description: "스크롤, 충동구매, 집중력 붕괴로 알아보는 도파민 반응 패턴 테스트",
+  path: "/stimulation",
+  keywords: ["도파민 테스트", "집중력 테스트", "충동구매", "스크롤 중독"],
+});
 
 export default function StimulationPage() {
   return (

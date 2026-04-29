@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildBreadcrumbList, buildCollectionPage, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "테스트 모아보기 | 휴먼덱",
   description:
     "관계, 판단, 자극 반응, 생활 습관, 취향 패턴을 정리하는 휴먼덱의 테스트와 설명형 콘텐츠를 한눈에 볼 수 있습니다.",
-};
+  path: "/tests",
+  keywords: [
+    "성향 테스트 모음",
+    "심리 테스트 모음",
+    "성격 테스트 모음",
+    "휴먼덱 테스트",
+  ],
+});
 
 const tests: {
   href:
@@ -114,49 +123,69 @@ const tests: {
 
 export default function TestsPage() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Tests</span>
-        <h1>휴먼덱 테스트 모아보기</h1>
-        <p>
-          휴먼덱은 짧은 질문을 통해 사용자의 반응 패턴을 캐릭터와 해설 형태로 정리하는
-          테스트형 콘텐츠 서비스를 제공합니다. 아래 페이지에서 현재 공개된 테스트를 한눈에
-          확인하고, 보고 싶은 주제부터 바로 시작할 수 있습니다.
-        </p>
-
-        <div className="policy-section">
-          <h2>휴먼덱 테스트는 어떻게 구성되나요?</h2>
+    <>
+      <SeoJsonLd
+        data={buildCollectionPage({
+          name: "휴먼덱 테스트 모아보기",
+          description:
+            "관계, 판단, 자극 반응, 생활 습관, 취향 패턴을 정리하는 휴먼덱의 테스트 목록",
+          path: "/tests",
+          items: tests.map((test) => ({
+            name: test.title,
+            path: test.href,
+            description: test.summary,
+          })),
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "테스트 모아보기", path: "/tests" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Tests</span>
+          <h1>휴먼덱 테스트 모아보기</h1>
           <p>
-            각 테스트는 생활 장면에 가까운 질문을 바탕으로 응답 패턴을 점수화하고, 가장 가까운
-            유형을 캐릭터와 해설 문장으로 정리해 보여줍니다. 결과는 의료적·심리적 진단을 대신하지
-            않으며, 스스로의 습관과 반응을 가볍게 돌아보는 자기이해형 콘텐츠를 목표로 합니다.
+            휴먼덱은 짧은 질문을 통해 사용자의 반응 패턴을 캐릭터와 해설 형태로 정리하는
+            테스트형 콘텐츠 서비스를 제공합니다. 아래 페이지에서 현재 공개된 테스트를 한눈에
+            확인하고, 보고 싶은 주제부터 바로 시작할 수 있습니다.
           </p>
-        </div>
 
-        <div className="policy-section">
-          <h2>어떤 주제를 다루고 있나요?</h2>
-          <p>
-            현재 휴먼덱은 관계와 애착, 인지편향, 도파민 반응, 먹는 습관, 부부 관계, 공포 반응,
-            집중과 멀티태스킹, 스트레스 처리, 사회적 페르소나, 음악 사용 패턴, 영화 취향, 야구,
-            위기 대응, 좀비 생존
-            대화 패턴처럼
-            일상에서 자주 마주치는 주제를 중심으로 테스트를 운영하고 있습니다. 서로 다른 테스트를
-            이어서 보면 한 사람 안에서 다른 패턴이 어떻게 나타나는지 비교해서 읽어볼 수 있습니다.
-          </p>
-        </div>
+          <div className="policy-section">
+            <h2>휴먼덱 테스트는 어떻게 구성되나요?</h2>
+            <p>
+              각 테스트는 생활 장면에 가까운 질문을 바탕으로 응답 패턴을 점수화하고, 가장 가까운
+              유형을 캐릭터와 해설 문장으로 정리해 보여줍니다. 결과는 의료적·심리적 진단을 대신하지
+              않으며, 스스로의 습관과 반응을 가볍게 돌아보는 자기이해형 콘텐츠를 목표로 합니다.
+            </p>
+          </div>
 
-        <div className="faq-list">
-          {tests.map((test) => (
-            <article key={test.href} className="faq-card">
-              <h2>{test.title}</h2>
-              <p>{test.summary}</p>
-              <div className="content-link-row">
-                <Link href={test.href}>테스트 바로가기</Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
+          <div className="policy-section">
+            <h2>어떤 주제를 다루고 있나요?</h2>
+            <p>
+              현재 휴먼덱은 관계와 애착, 인지편향, 도파민 반응, 먹는 습관, 부부 관계, 공포 반응,
+              집중과 멀티태스킹, 스트레스 처리, 사회적 페르소나, 음악 사용 패턴, 영화 취향, 야구,
+              위기 대응, 좀비 생존 대화 패턴처럼 일상에서 자주 마주치는 주제를 중심으로 테스트를
+              운영하고 있습니다. 서로 다른 테스트를 이어서 보면 한 사람 안에서 다른 패턴이 어떻게
+              나타나는지 비교해서 읽어볼 수 있습니다.
+            </p>
+          </div>
+
+          <div className="faq-list">
+            {tests.map((test) => (
+              <article key={test.href} className="faq-card">
+                <h2>{test.title}</h2>
+                <p>{test.summary}</p>
+                <div className="content-link-row">
+                  <Link href={test.href}>테스트 바로가기</Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

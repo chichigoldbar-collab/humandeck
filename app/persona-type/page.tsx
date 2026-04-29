@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { PersonaTypeExperience } from "@/components/PersonaTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "나는 남들 앞에서 어떤 캐릭터로 살아갈까? | 휴먼덱",
-  description:
-    "사람들 앞에서 보여주는 모습과 상황마다 달라지는 겉모습 패턴을 분석하는 페르소나 테스트",
-};
+  description: "사람들 앞에서 보여주는 모습과 상황마다 달라지는 겉모습 패턴을 분석하는 페르소나 테스트",
+  path: "/persona-type",
+  keywords: ["페르소나 테스트", "사회적 성향 테스트", "겉모습 패턴 테스트"],
+});
 
 export default function PersonaTypePage() {
   return (

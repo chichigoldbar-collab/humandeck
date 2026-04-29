@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { CoupleTypeExperience } from "@/components/CoupleTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "부부 관계 분석 테스트 | 휴먼덱",
-  description:
-    "갈등 처리, 정서적 연결, 생활 협업, 애정 표현으로 보는 부부 관계 분석 테스트",
-};
+  description: "갈등 처리, 정서적 연결, 생활 협업, 애정 표현으로 보는 부부 관계 분석 테스트",
+  path: "/couple-type",
+  keywords: ["부부 관계 테스트", "관계 분석", "부부 성향 테스트"],
+});
 
 export default function CoupleTypePage() {
   return (

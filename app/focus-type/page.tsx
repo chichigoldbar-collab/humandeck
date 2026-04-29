@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { FocusTypeExperience } from "@/components/FocusTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "집중 vs 멀티태스킹 성향 테스트 | 휴먼덱",
   description:
     "한 가지에 몰입하는지, 여러 일을 동시에 돌리는지, 중간에 쉽게 끌리는지 보여주는 자기계발형 테스트",
-};
+  path: "/focus-type",
+  keywords: ["집중력 테스트", "멀티태스킹 테스트", "업무 습관 테스트"],
+});
 
 export default function FocusTypePage() {
   return (

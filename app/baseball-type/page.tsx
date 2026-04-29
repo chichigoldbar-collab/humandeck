@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { BaseballTypeExperience } from "@/components/BaseballTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "나는 야구를 얼마나 아는 척 하는 인간일까 | 휴먼덱",
   description:
     "야구 얘기할 때 진짜 분석형인지, 감정 응원형인지, 아는 척형인지 캐릭터로 읽어보는 테스트",
-};
+  path: "/baseball-type",
+  keywords: ["야구 테스트", "야구팬 성향 테스트", "스포츠 취향 테스트"],
+});
 
 export default function BaseballTypePage() {
   return (

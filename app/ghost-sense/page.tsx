@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { GhostSenseExperience } from "@/components/GhostSenseExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "귀신을 얼마나 느끼는 타입일까? | 휴먼덱",
-  description:
-    "어두운 공간, 작은 소리, 이상한 기척에 당신이 반응하는 방식을 분석합니다",
-};
+  description: "어두운 공간, 작은 소리, 이상한 기척에 당신이 반응하는 방식을 분석합니다",
+  path: "/ghost-sense",
+  keywords: ["공포 반응 테스트", "귀신 테스트", "기척 감지 테스트"],
+});
 
 export default function GhostSensePage() {
   return (

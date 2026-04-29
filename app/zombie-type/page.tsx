@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
 import { ZombieTypeExperience } from "@/components/ZombieTypeExperience";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "좀비 세상에서 당신은 어떤 인간일까 | 휴먼덱",
   description:
     "좀비 아포칼립스 설정으로 돌파형인지, 전략형인지, 회피형인지 읽어보는 몰입형 생존 본능 테스트",
-};
+  path: "/zombie-type",
+  keywords: ["좀비 테스트", "생존 테스트", "몰입형 성향 테스트"],
+});
 
 export default function ZombieTypePage() {
   return (

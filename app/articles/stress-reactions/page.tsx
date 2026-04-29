@@ -1,24 +1,47 @@
 import type { Metadata } from "next";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildArticleSchema, buildBreadcrumbList, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "스트레스를 받을 때 사람마다 반응이 다른 이유 | 휴먼덱",
   description:
     "같은 스트레스 상황에서도 사람마다 멈추거나, 풀거나, 해결하거나, 생각이 길어지는 이유를 설명합니다.",
-};
+  path: "/articles/stress-reactions",
+  type: "article",
+  keywords: ["스트레스 반응", "스트레스 대처", "자기이해"],
+});
 
 export default function StressReactionsArticle() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Article</span>
-        <h1>스트레스를 받을 때 사람마다 반응이 다른 이유</h1>
-        <p>
-          스트레스를 받는다는 사실 자체보다 더 중요한 것은, 그 스트레스를 어떤 방식으로
-          처리하느냐입니다. 같은 상황을 겪어도 누군가는 일단 멈추고, 누군가는 먹거나
-          수다로 풀고, 누군가는 계획을 다시 세우며, 또 다른 누군가는 계속 생각만 할 수
-          있습니다. 이 차이는 의지의 크기보다 익숙한 대응 패턴의 차이로 이해하는 편이
-          현실적입니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildArticleSchema({
+          headline: "스트레스를 받을 때 사람마다 반응이 다른 이유",
+          description:
+            "같은 스트레스 상황에서도 사람마다 멈추거나, 풀거나, 해결하거나, 생각이 길어지는 이유를 설명합니다.",
+          path: "/articles/stress-reactions",
+          datePublished: "2026-04-29",
+          dateModified: "2026-04-29",
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "읽을거리", path: "/articles" },
+          { name: "스트레스를 받을 때 사람마다 반응이 다른 이유", path: "/articles/stress-reactions" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Article</span>
+          <h1>스트레스를 받을 때 사람마다 반응이 다른 이유</h1>
+          <p>
+            스트레스를 받는다는 사실 자체보다 더 중요한 것은, 그 스트레스를 어떤 방식으로
+            처리하느냐입니다. 같은 상황을 겪어도 누군가는 일단 멈추고, 누군가는 먹거나
+            수다로 풀고, 누군가는 계획을 다시 세우며, 또 다른 누군가는 계속 생각만 할 수
+            있습니다. 이 차이는 의지의 크기보다 익숙한 대응 패턴의 차이로 이해하는 편이
+            현실적입니다.
+          </p>
 
         <div className="policy-section">
           <h2>멈추는 사람은 회복을 먼저 찾는 경우가 많습니다</h2>
@@ -46,7 +69,8 @@ export default function StressReactionsArticle() {
             진지해 보여도 실제 피로도와 결과는 꽤 다르게 나타날 수 있습니다.
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

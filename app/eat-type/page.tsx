@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { EatTypeExperience } from "@/components/EatTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "먹는 방식 성격 테스트 | 휴먼덱",
-  description:
-    "라면 먹는 순서, 메뉴 고르는 방식으로 알아보는 먹는 방식 성격 테스트",
-};
+  description: "라면 먹는 순서, 메뉴 고르는 방식으로 알아보는 먹는 방식 성격 테스트",
+  path: "/eat-type",
+  keywords: ["먹는 방식 테스트", "음식 성향 테스트", "생활 성향 테스트"],
+});
 
 export default function EatTypePage() {
   return (

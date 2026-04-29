@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildBreadcrumbList, buildCollectionPage, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "읽을거리 | 휴먼덱",
   description:
     "스트레스, 번아웃, 생활 패턴, 자기이해와 관련된 휴먼덱 설명형 글 모음입니다.",
-};
+  path: "/articles",
+  keywords: ["스트레스 관리", "번아웃", "과생각", "회피형 패턴", "자기이해 콘텐츠"],
+});
 
 const articles: {
   href:
@@ -51,28 +55,48 @@ const articles: {
 
 export default function ArticlesPage() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Articles</span>
-        <h1>휴먼덱 읽을거리</h1>
-        <p>
-          휴먼덱은 테스트 결과만 제공하는 데서 끝나지 않고, 생활 패턴과 자기이해에 관한
-          설명형 글도 함께 제공합니다. 아래 글은 스트레스, 번아웃, 과생각, 회피 패턴처럼
-          많은 이용자가 궁금해하는 주제를 중심으로 정리한 원본 콘텐츠입니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildCollectionPage({
+          name: "휴먼덱 읽을거리",
+          description: "스트레스, 번아웃, 생활 패턴, 자기이해와 관련된 휴먼덱 설명형 글 모음",
+          path: "/articles",
+          items: articles.map((article) => ({
+            name: article.title,
+            path: article.href,
+            description: article.summary,
+          })),
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "읽을거리", path: "/articles" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Articles</span>
+          <h1>휴먼덱 읽을거리</h1>
+          <p>
+            휴먼덱은 테스트 결과만 제공하는 데서 끝나지 않고, 생활 패턴과 자기이해에 관한
+            설명형 글도 함께 제공합니다. 아래 글은 스트레스, 번아웃, 과생각, 회피 패턴처럼
+            많은 이용자가 궁금해하는 주제를 중심으로 정리한 원본 콘텐츠입니다.
+          </p>
 
-        <div className="faq-list">
-          {articles.map((article) => (
-            <article key={article.href} className="faq-card">
-              <h2>{article.title}</h2>
-              <p>{article.summary}</p>
-              <div className="content-link-row">
-                <Link href={article.href}>글 읽기</Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
+          <div className="faq-list">
+            {articles.map((article) => (
+              <article key={article.href} className="faq-card">
+                <h2>{article.title}</h2>
+                <p>{article.summary}</p>
+                <div className="content-link-row">
+                  <Link href={article.href}>글 읽기</Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

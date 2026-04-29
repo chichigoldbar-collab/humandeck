@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { MusicTypeExperience } from "@/components/MusicTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "내 플레이리스트가 말해주는 나의 진짜 성향 | 휴먼덱",
   description:
     "감정 해소형, 자극 추구형, 몰입형, 추억형 등 이어폰 속 음악 사용 패턴을 캐릭터로 분석하는 테스트",
-};
+  path: "/music-type",
+  keywords: ["음악 취향 테스트", "플레이리스트 테스트", "음악 성향 테스트"],
+});
 
 export default function MusicTypePage() {
   return (

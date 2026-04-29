@@ -1,23 +1,46 @@
 import type { Metadata } from "next";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildArticleSchema, buildBreadcrumbList, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "회피형 스트레스 대처를 줄이는 방법 | 휴먼덱",
   description:
     "미루기, 도피, 멈춤처럼 나타나는 회피형 스트레스 반응이 왜 생기고 어떻게 다루면 좋은지 설명합니다.",
-};
+  path: "/articles/avoidance-patterns",
+  type: "article",
+  keywords: ["회피형 스트레스", "미루기", "도피 패턴"],
+});
 
 export default function AvoidancePatternsArticle() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Article</span>
-        <h1>회피형 스트레스 대처를 줄이는 방법</h1>
-        <p>
-          스트레스가 쌓일수록 오히려 아무것도 못 하게 되는 사람이 있습니다. 해야 할 일은
-          더 분명해졌는데, 몸은 눕고 싶고, 다른 콘텐츠로 도망가고 싶고, 나중에 하자는 말만
-          반복하게 됩니다. 이 반응은 게으름 하나로 설명하기보다, 자극을 줄이고 싶어지는
-          회피 패턴으로 이해하는 편이 더 정확합니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildArticleSchema({
+          headline: "회피형 스트레스 대처를 줄이는 방법",
+          description:
+            "미루기, 도피, 멈춤처럼 나타나는 회피형 스트레스 반응이 왜 생기고 어떻게 다루면 좋은지 설명합니다.",
+          path: "/articles/avoidance-patterns",
+          datePublished: "2026-04-29",
+          dateModified: "2026-04-29",
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "읽을거리", path: "/articles" },
+          { name: "회피형 스트레스 대처를 줄이는 방법", path: "/articles/avoidance-patterns" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Article</span>
+          <h1>회피형 스트레스 대처를 줄이는 방법</h1>
+          <p>
+            스트레스가 쌓일수록 오히려 아무것도 못 하게 되는 사람이 있습니다. 해야 할 일은
+            더 분명해졌는데, 몸은 눕고 싶고, 다른 콘텐츠로 도망가고 싶고, 나중에 하자는 말만
+            반복하게 됩니다. 이 반응은 게으름 하나로 설명하기보다, 자극을 줄이고 싶어지는
+            회피 패턴으로 이해하는 편이 더 정확합니다.
+          </p>
 
         <div className="policy-section">
           <h2>작게 시작할 수 있는 구조가 필요합니다</h2>
@@ -44,7 +67,8 @@ export default function AvoidancePatternsArticle() {
             조정하는 것이 현실적인 방법일 수 있습니다.
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

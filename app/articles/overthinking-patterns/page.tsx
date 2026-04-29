@@ -1,22 +1,45 @@
 import type { Metadata } from "next";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildArticleSchema, buildBreadcrumbList, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "생각이 많아서 더 지치는 사람의 패턴 | 휴먼덱",
   description:
     "과생각이 신중함과 어떻게 다르고, 왜 실행 타이밍을 늦추며 피로를 키우는지 생활 장면으로 설명합니다.",
-};
+  path: "/articles/overthinking-patterns",
+  type: "article",
+  keywords: ["과생각", "오버씽킹", "실행 지연"],
+});
 
 export default function OverthinkingPatternsArticle() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Article</span>
-        <h1>생각이 많아서 더 지치는 사람의 패턴</h1>
-        <p>
-          생각이 많다는 말은 종종 신중함처럼 들리지만, 실제로는 결정과 시작을 계속 늦추는
-          피로 구조가 되기도 합니다. 문제를 잘 이해하고 싶고 실수하고 싶지 않아서 더 오래
-          붙잡게 되지만, 그 시간이 길어질수록 실행 에너지는 더 줄어들 수 있습니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildArticleSchema({
+          headline: "생각이 많아서 더 지치는 사람의 패턴",
+          description:
+            "과생각이 신중함과 어떻게 다르고, 왜 실행 타이밍을 늦추며 피로를 키우는지 생활 장면으로 설명합니다.",
+          path: "/articles/overthinking-patterns",
+          datePublished: "2026-04-29",
+          dateModified: "2026-04-29",
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "읽을거리", path: "/articles" },
+          { name: "생각이 많아서 더 지치는 사람의 패턴", path: "/articles/overthinking-patterns" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Article</span>
+          <h1>생각이 많아서 더 지치는 사람의 패턴</h1>
+          <p>
+            생각이 많다는 말은 종종 신중함처럼 들리지만, 실제로는 결정과 시작을 계속 늦추는
+            피로 구조가 되기도 합니다. 문제를 잘 이해하고 싶고 실수하고 싶지 않아서 더 오래
+            붙잡게 되지만, 그 시간이 길어질수록 실행 에너지는 더 줄어들 수 있습니다.
+          </p>
 
         <div className="policy-section">
           <h2>과생각은 정보 부족이 아니라 종료 기준 부족일 수 있습니다</h2>
@@ -42,7 +65,8 @@ export default function OverthinkingPatternsArticle() {
             바꿀 때 훨씬 줄어드는 경우가 많습니다.
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildBreadcrumbList, buildFAQPageSchema, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "자주 묻는 질문 | 휴먼덱",
   description:
     "휴먼덱 테스트 이용 방법, 결과 해석, 개인정보 처리, 광고 노출에 대해 자주 묻는 질문을 정리했습니다.",
-};
+  path: "/faq",
+  keywords: ["휴먼덱 FAQ", "테스트 결과 해석", "개인정보", "광고 안내"],
+});
 
 const faqs = [
   {
@@ -46,24 +50,33 @@ const faqs = [
 
 export default function FaqPage() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">FAQ</span>
-        <h1>자주 묻는 질문</h1>
-        <p>
-          휴먼덱을 이용하면서 자주 묻는 질문을 모았습니다. 테스트 결과, 이용 방식,
-          광고와 개인정보 처리에 대한 기본 내용을 아래에서 확인하실 수 있습니다.
-        </p>
+    <>
+      <SeoJsonLd data={buildFAQPageSchema(faqs)} />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "자주 묻는 질문", path: "/faq" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">FAQ</span>
+          <h1>자주 묻는 질문</h1>
+          <p>
+            휴먼덱을 이용하면서 자주 묻는 질문을 모았습니다. 테스트 결과, 이용 방식,
+            광고와 개인정보 처리에 대한 기본 내용을 아래에서 확인하실 수 있습니다.
+          </p>
 
-        <div className="faq-list">
-          {faqs.map((faq) => (
-            <article key={faq.question} className="faq-card">
-              <h2>{faq.question}</h2>
-              <p>{faq.answer}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <article key={faq.question} className="faq-card">
+                <h2>{faq.question}</h2>
+                <p>{faq.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

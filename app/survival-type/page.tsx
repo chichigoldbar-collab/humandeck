@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { SurvivalTypeExperience } from "@/components/SurvivalTypeExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "당신은 위기 상황에서 어떤 인간일까 | 휴먼덱",
   description:
     "숲에서 길을 잃은 상황을 바탕으로 빠른 판단형인지, 분석형인지, 회피형인지 읽어보는 위기 대응 테스트",
-};
+  path: "/survival-type",
+  keywords: ["위기 대응 테스트", "생존 본능 테스트", "판단력 테스트"],
+});
 
 export default function SurvivalTypePage() {
   return (

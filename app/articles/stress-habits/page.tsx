@@ -1,22 +1,45 @@
 import type { Metadata } from "next";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildArticleSchema, buildBreadcrumbList, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "스트레스 관리 습관을 만드는 법 | 휴먼덱",
   description:
     "큰 결심보다 작은 회복 루틴이 왜 더 효과적인지, 스트레스 관리 습관을 만드는 현실적인 방법을 정리했습니다.",
-};
+  path: "/articles/stress-habits",
+  type: "article",
+  keywords: ["스트레스 관리", "회복 습관", "자기관리 루틴"],
+});
 
 export default function StressHabitsArticle() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Article</span>
-        <h1>스트레스 관리 습관을 만드는 법</h1>
-        <p>
-          스트레스 관리는 큰 결심으로 오래 가기 어렵습니다. 오히려 작고 반복 가능한 회복
-          습관이 쌓일 때 더 안정적으로 유지되는 경우가 많습니다. 중요한 것은 완벽한 루틴보다,
-          내가 지칠 때 실제로 다시 돌아올 수 있는 작은 기준을 만드는 것입니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildArticleSchema({
+          headline: "스트레스 관리 습관을 만드는 법",
+          description:
+            "큰 결심보다 작은 회복 루틴이 왜 더 효과적인지, 스트레스 관리 습관을 만드는 현실적인 방법을 정리했습니다.",
+          path: "/articles/stress-habits",
+          datePublished: "2026-04-29",
+          dateModified: "2026-04-29",
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "읽을거리", path: "/articles" },
+          { name: "스트레스 관리 습관을 만드는 법", path: "/articles/stress-habits" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Article</span>
+          <h1>스트레스 관리 습관을 만드는 법</h1>
+          <p>
+            스트레스 관리는 큰 결심으로 오래 가기 어렵습니다. 오히려 작고 반복 가능한 회복
+            습관이 쌓일 때 더 안정적으로 유지되는 경우가 많습니다. 중요한 것은 완벽한 루틴보다,
+            내가 지칠 때 실제로 다시 돌아올 수 있는 작은 기준을 만드는 것입니다.
+          </p>
 
         <div className="policy-section">
           <h2>회복은 남는 시간에 하는 일이 아닙니다</h2>
@@ -43,7 +66,8 @@ export default function StressHabitsArticle() {
             지속 가능한 회복 습관이 될 수 있습니다.
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

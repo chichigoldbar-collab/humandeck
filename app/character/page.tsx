@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import { TestExperience } from "@/components/TestExperience";
 import { TestStaticInfo } from "@/components/TestStaticInfo";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "내 인간 캐릭터 테스트 | 휴먼덱",
+  description:
+    "관계, 자극, 생각 습관, 자존감, 의사결정까지 다섯 축으로 읽어보는 휴먼덱 대표 성향 테스트",
+  path: "/character",
+  keywords: ["인간 캐릭터 테스트", "성향 테스트", "심리 테스트", "애착 테스트"],
+});
 
 export default function CharacterPage() {
   return (

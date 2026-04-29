@@ -1,22 +1,45 @@
 import type { Metadata } from "next";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildArticleSchema, buildBreadcrumbList, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "번아웃 오기 쉬운 사람의 특징 | 휴먼덱",
   description:
     "계속 버티는 습관, 쉬지 못하는 생활 패턴, 감정을 뒤로 미루는 방식이 왜 번아웃으로 이어질 수 있는지 설명합니다.",
-};
+  path: "/articles/burnout-signs",
+  type: "article",
+  keywords: ["번아웃", "소진", "회복 습관"],
+});
 
 export default function BurnoutSignsArticle() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Article</span>
-        <h1>번아웃 오기 쉬운 사람의 특징</h1>
-        <p>
-          번아웃은 단순히 바쁜 사람만 겪는 것이 아닙니다. 쉬는 방법을 모르는 사람, 감정을
-          계속 뒤로 미루는 사람, 해야 할 일을 끝낼 때까지 멈추지 못하는 사람에게도 자주
-          나타납니다. 중요한 것은 업무량보다, 오랫동안 어떤 방식으로 버텨왔는가입니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildArticleSchema({
+          headline: "번아웃 오기 쉬운 사람의 특징",
+          description:
+            "계속 버티는 습관, 쉬지 못하는 생활 패턴, 감정을 뒤로 미루는 방식이 왜 번아웃으로 이어질 수 있는지 설명합니다.",
+          path: "/articles/burnout-signs",
+          datePublished: "2026-04-29",
+          dateModified: "2026-04-29",
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "읽을거리", path: "/articles" },
+          { name: "번아웃 오기 쉬운 사람의 특징", path: "/articles/burnout-signs" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Article</span>
+          <h1>번아웃 오기 쉬운 사람의 특징</h1>
+          <p>
+            번아웃은 단순히 바쁜 사람만 겪는 것이 아닙니다. 쉬는 방법을 모르는 사람, 감정을
+            계속 뒤로 미루는 사람, 해야 할 일을 끝낼 때까지 멈추지 못하는 사람에게도 자주
+            나타납니다. 중요한 것은 업무량보다, 오랫동안 어떤 방식으로 버텨왔는가입니다.
+          </p>
 
         <div className="policy-section">
           <h2>괜찮은 척 오래 버티는 사람</h2>
@@ -44,7 +67,8 @@ export default function BurnoutSignsArticle() {
             내부 기준을 함께 만들어두는 것이 중요합니다.
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

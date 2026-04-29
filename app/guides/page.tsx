@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { buildBreadcrumbList, buildCollectionPage, buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "해설 가이드 | 휴먼덱",
   description:
     "휴먼덱 테스트를 더 깊게 이해할 수 있도록 각 테스트 주제와 결과 해석 포인트를 정리한 가이드 모음입니다.",
-};
+  path: "/guides",
+  keywords: ["심리 테스트 해석", "성향 테스트 결과 해설", "휴먼덱 가이드"],
+});
 
 const guides: {
   href:
@@ -93,28 +97,48 @@ const guides: {
 
 export default function GuidesPage() {
   return (
-    <main className="policy-shell">
-      <section className="policy-card">
-        <span className="eyebrow">Guides</span>
-        <h1>휴먼덱 해설 가이드</h1>
-        <p>
-          테스트 결과는 짧고 직관적으로 보이지만, 각 결과가 어떤 질문 패턴에서 나왔는지
-          함께 보면 더 도움이 됩니다. 아래 가이드는 휴먼덱 테스트를 조금 더 깊게 읽고 싶은
-          이용자를 위해 정리한 설명형 콘텐츠입니다.
-        </p>
+    <>
+      <SeoJsonLd
+        data={buildCollectionPage({
+          name: "휴먼덱 해설 가이드",
+          description: "휴먼덱 테스트 결과를 더 깊게 이해하기 위한 설명형 해설 가이드 모음",
+          path: "/guides",
+          items: guides.map((guide) => ({
+            name: guide.title,
+            path: guide.href,
+            description: guide.summary,
+          })),
+        })}
+      />
+      <SeoJsonLd
+        data={buildBreadcrumbList([
+          { name: "홈", path: "/" },
+          { name: "해설 가이드", path: "/guides" },
+        ])}
+      />
+      <main className="policy-shell">
+        <section className="policy-card">
+          <span className="eyebrow">Guides</span>
+          <h1>휴먼덱 해설 가이드</h1>
+          <p>
+            테스트 결과는 짧고 직관적으로 보이지만, 각 결과가 어떤 질문 패턴에서 나왔는지
+            함께 보면 더 도움이 됩니다. 아래 가이드는 휴먼덱 테스트를 조금 더 깊게 읽고 싶은
+            이용자를 위해 정리한 설명형 콘텐츠입니다.
+          </p>
 
-        <div className="faq-list">
-          {guides.map((guide) => (
-            <article key={guide.href} className="faq-card">
-              <h2>{guide.title}</h2>
-              <p>{guide.summary}</p>
-              <div className="content-link-row">
-                <Link href={guide.href}>가이드 읽기</Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
+          <div className="faq-list">
+            {guides.map((guide) => (
+              <article key={guide.href} className="faq-card">
+                <h2>{guide.title}</h2>
+                <p>{guide.summary}</p>
+                <div className="content-link-row">
+                  <Link href={guide.href}>가이드 읽기</Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
