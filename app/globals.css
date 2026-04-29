@@ -1481,6 +1481,12 @@ button {
     linear-gradient(180deg, #f4fbf3 0%, #dff0dc 100%);
 }
 
+.home-card-zombie {
+  background:
+    radial-gradient(circle at top right, rgba(130, 255, 166, 0.14), transparent 32%),
+    linear-gradient(180deg, #eff6ef 0%, #d7e6d6 100%);
+}
+
 .home-bottom-panel {
   margin-top: 18px;
 }
@@ -1602,6 +1608,10 @@ button {
   background: radial-gradient(circle, rgba(95, 164, 122, 0.2) 0%, transparent 72%);
 }
 
+.zombie-hero-card::after {
+  background: radial-gradient(circle, rgba(102, 214, 123, 0.18) 0%, transparent 72%);
+}
+
 .music-preview {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(242, 246, 255, 0.96) 100%);
@@ -1620,6 +1630,16 @@ button {
 .survival-preview {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(240, 249, 240, 0.96) 100%);
+}
+
+.zombie-preview {
+  background:
+    linear-gradient(160deg, rgba(17, 28, 20, 0.94) 0%, rgba(34, 50, 38, 0.98) 100%);
+}
+
+.zombie-preview .preview-card,
+.zombie-preview .preview-quote {
+  background: rgba(245, 251, 244, 0.9);
 }
 
 .music-result-hero {
@@ -1644,6 +1664,12 @@ button {
   background:
     radial-gradient(circle at top right, rgba(108, 174, 120, 0.24), transparent 28%),
     linear-gradient(135deg, #183122 0%, #456c42 100%);
+}
+
+.zombie-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(119, 220, 129, 0.2), transparent 28%),
+    linear-gradient(135deg, #121d14 0%, #2f4a34 100%);
 }
 
 .focus-progress-bar,
@@ -1679,6 +1705,11 @@ button {
 .survival-progress-bar,
 .survival-dimension-bar {
   background: linear-gradient(90deg, #5ea86e 0%, #9fd26d 100%);
+}
+
+.zombie-progress-bar,
+.zombie-dimension-bar {
+  background: linear-gradient(90deg, #4bb36b 0%, #b6d06a 100%);
 }
 
 .focus-owl {
@@ -1979,6 +2010,54 @@ button {
   background:
     radial-gradient(circle at top right, rgba(185, 132, 255, 0.18), transparent 38%),
     linear-gradient(180deg, #faf4ff 0%, #eadfff 100%);
+}
+
+.zombie-wolf {
+  background:
+    radial-gradient(circle at top right, rgba(109, 171, 105, 0.22), transparent 38%),
+    linear-gradient(180deg, #eef7ee 0%, #d9e8d8 100%);
+}
+
+.zombie-owl {
+  background:
+    radial-gradient(circle at top right, rgba(126, 161, 199, 0.18), transparent 38%),
+    linear-gradient(180deg, #f1f6fb 0%, #dbe6ef 100%);
+}
+
+.zombie-rabbit {
+  background:
+    radial-gradient(circle at top right, rgba(233, 167, 188, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff3f6 0%, #f5dde5 100%);
+}
+
+.zombie-bear {
+  background:
+    radial-gradient(circle at top right, rgba(188, 167, 133, 0.18), transparent 38%),
+    linear-gradient(180deg, #faf6ef 0%, #e8dfd0 100%);
+}
+
+.zombie-monkey {
+  background:
+    radial-gradient(circle at top right, rgba(241, 163, 98, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff5ed 0%, #f4e0cf 100%);
+}
+
+.zombie-fox {
+  background:
+    radial-gradient(circle at top right, rgba(222, 161, 92, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff6ef 0%, #efdfcf 100%);
+}
+
+.zombie-dog {
+  background:
+    radial-gradient(circle at top right, rgba(234, 202, 122, 0.18), transparent 38%),
+    linear-gradient(180deg, #fff9ef 0%, #f1e7cf 100%);
+}
+
+.zombie-octopus {
+  background:
+    radial-gradient(circle at top right, rgba(174, 126, 224, 0.18), transparent 38%),
+    linear-gradient(180deg, #f8f2ff 0%, #e6d8f6 100%);
 }
 
 .movie-bear {

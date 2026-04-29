@@ -21,7 +21,8 @@ const tests: {
   | "/music-type"
   | "/movie-type"
   | "/baseball-type"
-  | "/survival-type";
+  | "/survival-type"
+  | "/zombie-type";
   title: string;
   summary: string;
 }[] = [
@@ -103,6 +104,12 @@ const tests: {
     summary:
       "숲에서 길을 잃은 상황을 바탕으로 빠르게 움직이는지, 계산하는지, 멈추는지 같은 위기 대응 방식을 캐릭터로 정리하는 테스트입니다.",
   },
+  {
+    href: "/zombie-type",
+    title: "좀비 세상에서 당신은 어떤 인간일까",
+    summary:
+      "좀비 아포칼립스 설정을 통해 돌파형인지, 전략형인지, 협력형인지, 멘붕형인지 읽는 몰입형 생존 본능 테스트입니다.",
+  },
 ];
 
 export default function TestsPage() {
@@ -131,7 +138,7 @@ export default function TestsPage() {
           <p>
             현재 휴먼덱은 관계와 애착, 인지편향, 도파민 반응, 먹는 습관, 부부 관계, 공포 반응,
             집중과 멀티태스킹, 스트레스 처리, 사회적 페르소나, 음악 사용 패턴, 영화 취향, 야구,
-            위기 대응
+            위기 대응, 좀비 생존
             대화 패턴처럼
             일상에서 자주 마주치는 주제를 중심으로 테스트를 운영하고 있습니다. 서로 다른 테스트를
             이어서 보면 한 사람 안에서 다른 패턴이 어떻게 나타나는지 비교해서 읽어볼 수 있습니다.

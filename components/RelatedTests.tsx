@@ -13,7 +13,8 @@ type TestPath =
   | "/music-type"
   | "/movie-type"
   | "/baseball-type"
-  | "/survival-type";
+  | "/survival-type"
+  | "/zombie-type";
 
 const tests: {
   href: TestPath;
@@ -98,6 +99,12 @@ const tests: {
     badge: "위기 대응",
     title: "당신은 위기 상황에서 어떤 인간일까",
     summary: "빠른 판단형인지, 분석형인지, 회피형인지 읽는 몰입형 생존 대응 테스트",
+  },
+  {
+    href: "/zombie-type",
+    badge: "좀비 생존",
+    title: "좀비 세상에서 당신은 어떤 인간일까",
+    summary: "리더형인지, 생존형인지, 멘붕형인지 읽는 좀비 아포칼립스 대응 테스트",
   },
 ];
 
