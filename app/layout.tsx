@@ -10,9 +10,9 @@ const siteUrl =
     : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  title: "휴먼덱 | 내 인간 캐릭터 테스트",
+  title: "휴먼덱 | 심리테스트·성격테스트 모음",
   description:
-    "연애, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 보는 인간 캐릭터 테스트",
+    "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱",
   applicationName: "휴먼덱",
   authors: [{ name: "테디맨션" }],
   creator: "테디맨션",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "휴먼덱 | 내 인간 캐릭터 테스트",
+    title: "휴먼덱 | 심리테스트·성격테스트 모음",
     description:
-      "연애, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 보는 인간 캐릭터 테스트",
+      "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱",
     url: siteUrl,
     siteName: "휴먼덱",
     locale: "ko_KR",
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "휴먼덱 인간 캐릭터 테스트",
+        alt: "휴먼덱 심리테스트와 성격테스트 모음",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "휴먼덱 | 내 인간 캐릭터 테스트",
+    title: "휴먼덱 | 심리테스트·성격테스트 모음",
     description:
-      "연애, 자극, 생각 습관, 자존감, 의사결정까지 한 번에 보는 인간 캐릭터 테스트",
+      "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 휴먼덱",
     images: ["/twitter-image"],
   },
 };
@@ -77,7 +77,7 @@ export default function RootLayout({
     name: "휴먼덱",
     url: siteUrl,
     description:
-      "관계, 판단, 자극 반응, 생활 습관을 다양한 테스트와 해설 가이드로 읽어보는 콘텐츠형 테스트 서비스",
+      "심리테스트, 성격테스트, 취향 테스트를 통해 관계, 판단, 자극 반응, 생활 습관을 읽어보는 콘텐츠형 테스트 서비스",
     inLanguage: "ko-KR",
     publisher: {
       "@type": "Organization",

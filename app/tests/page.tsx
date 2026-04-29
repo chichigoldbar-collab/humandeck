@@ -4,14 +4,16 @@ import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { buildBreadcrumbList, buildCollectionPage, buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "테스트 모아보기 | 휴먼덱",
+  title: "심리테스트 모음 | 성격테스트 모음 | 휴먼덱",
   description:
-    "관계, 판단, 자극 반응, 생활 습관, 취향 패턴을 정리하는 휴먼덱의 테스트와 설명형 콘텐츠를 한눈에 볼 수 있습니다.",
+    "심리테스트, 성격테스트, 취향 테스트를 한곳에서 볼 수 있는 휴먼덱 테스트 모음 페이지입니다.",
   path: "/tests",
   keywords: [
     "성향 테스트 모음",
     "심리 테스트 모음",
     "성격 테스트 모음",
+    "심리테스트",
+    "성격테스트",
     "휴먼덱 테스트",
   ],
 });
@@ -149,7 +151,8 @@ export default function TestsPage() {
           <h1>휴먼덱 테스트 모아보기</h1>
           <p>
             휴먼덱은 짧은 질문을 통해 사용자의 반응 패턴을 캐릭터와 해설 형태로 정리하는
-            테스트형 콘텐츠 서비스를 제공합니다. 아래 페이지에서 현재 공개된 테스트를 한눈에
+            테스트형 콘텐츠 서비스를 제공합니다. 심리테스트와 성격테스트를 찾는 이용자가
+            아래 페이지에서 현재 공개된 테스트를 한눈에
             확인하고, 보고 싶은 주제부터 바로 시작할 수 있습니다.
           </p>
 

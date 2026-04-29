@@ -17,6 +17,8 @@ const routes = [
   "/articles/stress-habits",
   "/contact",
   "/faq",
+  "/psychology-tests",
+  "/personality-tests",
   "/privacy",
   "/terms",
   "/tests",

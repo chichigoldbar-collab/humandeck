@@ -16,6 +16,8 @@ export function SiteFooter() {
       </div>
       <div className="footer-links">
         <a href="/tests">테스트 모아보기</a>
+        <a href="/psychology-tests">심리테스트 모음</a>
+        <a href="/personality-tests">성격테스트 모음</a>
         <a href="/guides">해설 가이드</a>
         <a href="/articles">읽을거리</a>
         <a href="/about">서비스 소개</a>
