@@ -1,0 +1,22 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="927" cy="173" r="170" fill="#F3F7FF" fill-opacity=".28"/>
+  <circle cx="225" cy="745" r="230" fill="#D8E2FF" fill-opacity=".24"/>
+  <path d="M392 771C392 595 482 375 612 375C742 375 832 595 832 771H392Z" fill="#5E73B5"/>
+  <path d="M443 392L565 220L604 420L443 392Z" fill="#6F86C9"/>
+  <path d="M780 392L659 220L619 420L780 392Z" fill="#6F86C9"/>
+  <ellipse cx="611" cy="538" rx="208" ry="176" fill="#7389C8"/>
+  <path d="M612 520L724 644H500L612 520Z" fill="#EEF3FF"/>
+  <circle cx="536" cy="538" r="24" fill="#1C2240"/>
+  <circle cx="687" cy="538" r="24" fill="#1C2240"/>
+  <path d="M611 583L651 631H571L611 583Z" fill="#22315B"/>
+  <path d="M518 688C568 720 655 719 705 688" stroke="#526AAE" stroke-width="22" stroke-linecap="round"/>
+  <text x="86" y="140" fill="#243357" font-family="Arial, sans-serif" font-size="68" font-weight="700">주도형 늑대</text>
+  <text x="88" y="208" fill="#4B6092" font-family="Arial, sans-serif" font-size="32">답답하면 내가 하는 타입</text>
+  <defs>
+    <linearGradient id="bg" x1="92" y1="51" x2="1080" y2="844" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F7FF"/>
+      <stop offset="1" stop-color="#E1E8FF"/>
+    </linearGradient>
+  </defs>
+</svg>

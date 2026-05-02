@@ -1,0 +1,23 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="924" cy="172" r="175" fill="#FAF2FF" fill-opacity=".28"/>
+  <circle cx="222" cy="764" r="236" fill="#EAD6FF" fill-opacity=".24"/>
+  <path d="M396 738C396 623 488 530 603 530H619C734 530 826 623 826 738H396Z" fill="#9363D8"/>
+  <ellipse cx="611" cy="520" rx="188" ry="154" fill="#9E6DF0"/>
+  <circle cx="539" cy="520" r="58" fill="#FFF8FF"/>
+  <circle cx="683" cy="520" r="58" fill="#FFF8FF"/>
+  <circle cx="539" cy="520" r="26" fill="#362351"/>
+  <circle cx="683" cy="520" r="26" fill="#362351"/>
+  <path d="M611 566L655 613H567L611 566Z" fill="#4E2F84"/>
+  <path d="M437 738C437 702 470 679 503 679C536 679 565 705 565 738" stroke="#A47AE8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M555 738C555 702 588 679 621 679C654 679 683 705 683 738" stroke="#A47AE8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M674 738C674 702 707 679 740 679C773 679 802 705 802 738" stroke="#A47AE8" stroke-width="28" stroke-linecap="round"/>
+  <text x="86" y="140" fill="#4D3477" font-family="Arial, sans-serif" font-size="68" font-weight="700">멘붕형 문어</text>
+  <text x="88" y="208" fill="#7653A7" font-family="Arial, sans-serif" font-size="32">상황 많아지면 뇌 정지 오는 타입</text>
+  <defs>
+    <linearGradient id="bg" x1="92" y1="56" x2="1086" y2="844" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF5FF"/>
+      <stop offset="1" stop-color="#EFDEFF"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="950" cy="182" r="170" fill="#FFF6ED" fill-opacity=".28"/>
+  <circle cx="230" cy="760" r="210" fill="#EBD7C9" fill-opacity=".28"/>
+  <ellipse cx="611" cy="666" rx="256" ry="154" fill="#8B624B"/>
+  <circle cx="496" cy="421" r="82" fill="#9D7258"/>
+  <circle cx="723" cy="421" r="82" fill="#9D7258"/>
+  <ellipse cx="611" cy="545" rx="226" ry="205" fill="#A5785D"/>
+  <ellipse cx="611" cy="633" rx="136" ry="116" fill="#F6E9DD"/>
+  <circle cx="534" cy="553" r="24" fill="#2A211E"/>
+  <circle cx="689" cy="553" r="24" fill="#2A211E"/>
+  <ellipse cx="611" cy="610" rx="39" ry="29" fill="#402C24"/>
+  <path d="M525 690C573 724 648 724 696 690" stroke="#805842" stroke-width="22" stroke-linecap="round"/>
+  <text x="86" y="140" fill="#4B3428" font-family="Arial, sans-serif" font-size="68" font-weight="700">버티기 곰</text>
+  <text x="88" y="208" fill="#7A5B49" font-family="Arial, sans-serif" font-size="32">일단 참고 버티는 타입</text>
+  <defs>
+    <linearGradient id="bg" x1="115" y1="65" x2="1046" y2="829" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCF7F3"/>
+      <stop offset="1" stop-color="#EEDFD4"/>
+    </linearGradient>
+  </defs>
+</svg>

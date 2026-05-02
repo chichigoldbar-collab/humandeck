@@ -14,7 +14,8 @@ type TestPath =
   | "/movie-type"
   | "/baseball-type"
   | "/survival-type"
-  | "/zombie-type";
+  | "/zombie-type"
+  | "/company-type";
 
 const tests: {
   href: TestPath;
@@ -99,6 +100,12 @@ const tests: {
     badge: "위기 대응",
     title: "당신은 위기 상황에서 어떤 인간일까",
     summary: "빠른 판단형인지, 분석형인지, 회피형인지 읽는 몰입형 생존 대응 테스트",
+  },
+  {
+    href: "/company-type",
+    badge: "회사 생존",
+    title: "회사에서 당신은 어떤 인간일까",
+    summary: "눈치, 버티기, 주도권, 멘붕처럼 회사 안에서 드러나는 생존 패턴 테스트",
   },
   {
     href: "/zombie-type",

@@ -1,0 +1,21 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="929" cy="180" r="170" fill="#F0F6FF" fill-opacity=".28"/>
+  <circle cx="223" cy="758" r="228" fill="#DCEBFF" fill-opacity=".22"/>
+  <ellipse cx="611" cy="689" rx="254" ry="142" fill="#6D88B5"/>
+  <path d="M419 558C419 443 504 359 611 359C718 359 803 443 803 558V671H419V558Z" fill="#6F8AB8"/>
+  <circle cx="528" cy="518" r="72" fill="#F7FBFF"/>
+  <circle cx="694" cy="518" r="72" fill="#F7FBFF"/>
+  <circle cx="528" cy="518" r="30" fill="#1F2E4A"/>
+  <circle cx="694" cy="518" r="30" fill="#1F2E4A"/>
+  <path d="M612 557L664 611H560L612 557Z" fill="#E6A845"/>
+  <ellipse cx="612" cy="643" rx="130" ry="36" fill="#F1F7FF"/>
+  <text x="86" y="140" fill="#2B405E" font-family="Arial, sans-serif" font-size="68" font-weight="700">분석형 부엉이</text>
+  <text x="88" y="208" fill="#52708F" font-family="Arial, sans-serif" font-size="32">감정보다 구조 먼저 보는 타입</text>
+  <defs>
+    <linearGradient id="bg" x1="100" y1="54" x2="1083" y2="846" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F8FF"/>
+      <stop offset="1" stop-color="#E0ECFF"/>
+    </linearGradient>
+  </defs>
+</svg>

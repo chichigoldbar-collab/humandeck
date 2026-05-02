@@ -1666,6 +1666,12 @@ button {
     linear-gradient(135deg, #183122 0%, #456c42 100%);
 }
 
+.company-result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(111, 144, 255, 0.24), transparent 28%),
+    linear-gradient(135deg, #1b2446 0%, #4f66c1 100%);
+}
+
 .zombie-result-hero {
   background:
     radial-gradient(circle at top right, rgba(119, 220, 129, 0.2), transparent 28%),
@@ -1705,6 +1711,11 @@ button {
 .survival-progress-bar,
 .survival-dimension-bar {
   background: linear-gradient(90deg, #5ea86e 0%, #9fd26d 100%);
+}
+
+.company-progress-bar,
+.company-dimension-bar {
+  background: linear-gradient(90deg, #6d85ff 0%, #78c4ff 100%);
 }
 
 .zombie-progress-bar,
@@ -1782,6 +1793,69 @@ button {
   background:
     radial-gradient(circle at top right, rgba(121, 181, 214, 0.18), transparent 38%),
     linear-gradient(180deg, #f2fbff 0%, #dff3ff 100%);
+}
+
+.company-fox {
+  background:
+    radial-gradient(circle at top right, rgba(255, 153, 106, 0.22), transparent 38%),
+    linear-gradient(180deg, #fff7f2 0%, #ffe5d6 100%);
+}
+
+.company-bear {
+  background:
+    radial-gradient(circle at top right, rgba(167, 138, 120, 0.18), transparent 38%),
+    linear-gradient(180deg, #fbf7f2 0%, #efe1d6 100%);
+}
+
+.company-wolf {
+  background:
+    radial-gradient(circle at top right, rgba(109, 133, 255, 0.2), transparent 38%),
+    linear-gradient(180deg, #f3f6ff 0%, #e1e8ff 100%);
+}
+
+.company-rabbit {
+  background:
+    radial-gradient(circle at top right, rgba(255, 176, 206, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff6fb 0%, #ffe5f1 100%);
+}
+
+.company-owl {
+  background:
+    radial-gradient(circle at top right, rgba(101, 136, 188, 0.18), transparent 38%),
+    linear-gradient(180deg, #f3f8ff 0%, #e1edff 100%);
+}
+
+.company-monkey {
+  background:
+    radial-gradient(circle at top right, rgba(255, 193, 119, 0.2), transparent 38%),
+    linear-gradient(180deg, #fff9f1 0%, #ffe8c8 100%);
+}
+
+.company-octopus {
+  background:
+    radial-gradient(circle at top right, rgba(184, 121, 255, 0.2), transparent 38%),
+    linear-gradient(180deg, #faf3ff 0%, #efdeff 100%);
+}
+
+.company-dog {
+  background:
+    radial-gradient(circle at top right, rgba(120, 202, 255, 0.2), transparent 38%),
+    linear-gradient(180deg, #f2fbff 0%, #dcf2ff 100%);
+}
+
+.home-card-company {
+  --card-accent: #4f66c1;
+}
+
+.company-hero-card::after {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(121, 146, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 75%, rgba(111, 209, 255, 0.2), transparent 32%);
+}
+
+.company-preview .preview-card,
+.company-preview .preview-quote {
+  background: rgba(248, 251, 255, 0.92);
 }
 
 .persona-fox {

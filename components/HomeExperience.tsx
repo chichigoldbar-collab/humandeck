@@ -16,7 +16,8 @@ const tests: {
   | "/movie-type"
   | "/baseball-type"
   | "/survival-type"
-  | "/zombie-type";
+  | "/zombie-type"
+  | "/company-type";
   badge: string;
   title: string;
   summary: string;
@@ -142,6 +143,15 @@ const tests: {
     accent: "home-card-survival",
   },
   {
+    href: "/company-type",
+    badge: "신규 테스트",
+    title: "회사에서 당신은 어떤 인간일까",
+    summary: "눈치, 버티기, 주도권, 멘붕처럼 회사 안에서 드러나는 생존 패턴을 보는 테스트",
+    meta: "12문항 · 결과 8개 · 메인 + 서브",
+    pickFor: "회사에서 내 진짜 캐릭터가 궁금할 때",
+    accent: "home-card-company",
+  },
+  {
     href: "/zombie-type",
     badge: "신규 테스트",
     title: "좀비 세상에서 당신은 어떤 인간일까",
@@ -259,6 +269,10 @@ export function HomeExperience() {
           <article className="home-intro-card">
             <strong>위기에서 내 반응이 궁금하다면</strong>
             <p>숲에서 길을 잃은 상황을 통해 판단력과 행동 스타일을 보는 위기 대응 테스트가 잘 맞아요.</p>
+          </article>
+          <article className="home-intro-card">
+            <strong>회사에서 내 캐릭터가 궁금하다면</strong>
+            <p>눈치로 버티는지, 주도권을 잡는지, 멘붕이 오는지 보는 회사 생존 테스트가 잘 맞아요.</p>
           </article>
           <article className="home-intro-card">
             <strong>아포칼립스 설정으로 더 몰입하고 싶다면</strong>

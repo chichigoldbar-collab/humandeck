@@ -33,7 +33,8 @@ const tests: {
   | "/movie-type"
   | "/baseball-type"
   | "/survival-type"
-  | "/zombie-type";
+  | "/zombie-type"
+  | "/company-type";
   title: string;
   summary: string;
 }[] = [
@@ -114,6 +115,12 @@ const tests: {
     title: "당신은 위기 상황에서 어떤 인간일까",
     summary:
       "숲에서 길을 잃은 상황을 바탕으로 빠르게 움직이는지, 계산하는지, 멈추는지 같은 위기 대응 방식을 캐릭터로 정리하는 테스트입니다.",
+  },
+  {
+    href: "/company-type",
+    title: "회사에서 당신은 어떤 인간일까",
+    summary:
+      "회사 안에서 눈치로 적응하는지, 버티는지, 주도권을 잡는지, 멘붕이 오는지 읽어보는 현실형 회사 생존 테스트입니다.",
   },
   {
     href: "/zombie-type",

@@ -47,6 +47,7 @@ const routes = [
   "/movie-type",
   "/baseball-type",
   "/survival-type",
+  "/company-type",
   "/zombie-type",
 ] as const;
 

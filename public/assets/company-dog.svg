@@ -1,0 +1,22 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="926" cy="176" r="170" fill="#EFFBFF" fill-opacity=".28"/>
+  <circle cx="230" cy="750" r="226" fill="#D6F0FF" fill-opacity=".24"/>
+  <ellipse cx="611" cy="688" rx="248" ry="142" fill="#6AA7C8"/>
+  <path d="M432 447C432 382 482 330 547 330H675C740 330 790 382 790 447V604C790 706 707 789 605 789H617C515 789 432 706 432 604V447Z" fill="#77B6D8"/>
+  <path d="M454 412C454 359 497 316 550 316H560V498H550C497 498 454 455 454 402V412Z" fill="#5E99BC"/>
+  <path d="M768 412C768 359 725 316 672 316H662V498H672C725 498 768 455 768 402V412Z" fill="#5E99BC"/>
+  <ellipse cx="611" cy="603" rx="148" ry="128" fill="#F4FBFF"/>
+  <circle cx="536" cy="538" r="22" fill="#28455B"/>
+  <circle cx="685" cy="538" r="22" fill="#28455B"/>
+  <ellipse cx="611" cy="598" rx="18" ry="14" fill="#355D7A"/>
+  <path d="M529 671C575 708 647 708 693 671" stroke="#629FC0" stroke-width="20" stroke-linecap="round"/>
+  <text x="86" y="140" fill="#2B5873" font-family="Arial, sans-serif" font-size="68" font-weight="700">충성형 강아지</text>
+  <text x="88" y="208" fill="#4F7C95" font-family="Arial, sans-serif" font-size="32">시키면 끝까지 하는 타입</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="54" x2="1086" y2="847" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2FBFF"/>
+      <stop offset="1" stop-color="#DCF2FF"/>
+    </linearGradient>
+  </defs>
+</svg>

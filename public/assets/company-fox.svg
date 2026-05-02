@@ -1,0 +1,22 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="910" cy="180" r="170" fill="#FFF2E8" fill-opacity=".32"/>
+  <circle cx="255" cy="732" r="240" fill="#FFCFAF" fill-opacity=".22"/>
+  <path d="M356 650C356 507 468 395 611 395C754 395 866 507 866 650V775H356V650Z" fill="#F36F33"/>
+  <path d="M460 379L551 262L602 424L460 379Z" fill="#FF8D54"/>
+  <path d="M757 379L666 262L615 424L757 379Z" fill="#FF8D54"/>
+  <ellipse cx="611" cy="555" rx="208" ry="191" fill="#F88945"/>
+  <ellipse cx="611" cy="622" rx="132" ry="114" fill="#FFF8F2"/>
+  <circle cx="531" cy="553" r="24" fill="#312321"/>
+  <circle cx="692" cy="553" r="24" fill="#312321"/>
+  <path d="M612 579L661 629H563L612 579Z" fill="#2F2522"/>
+  <path d="M505 667C567 703 658 703 721 667" stroke="#D4632C" stroke-width="22" stroke-linecap="round"/>
+  <text x="86" y="140" fill="#4A2A1E" font-family="Arial, sans-serif" font-size="68" font-weight="700">눈치장인 여우</text>
+  <text x="88" y="208" fill="#7B4C34" font-family="Arial, sans-serif" font-size="32">상황 적응이 제일 빠른 회사 생존형</text>
+  <defs>
+    <linearGradient id="bg" x1="97" y1="64" x2="1071" y2="843" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7F1"/>
+      <stop offset="1" stop-color="#FFE5D7"/>
+    </linearGradient>
+  </defs>
+</svg>
