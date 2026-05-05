@@ -86,6 +86,33 @@ export default function PsychologyTestsPage() {
             </p>
           </div>
 
+          <div className="policy-section">
+            <h2>휴먼덱 심리테스트는 어떤 점이 다른가요?</h2>
+            <p>
+              휴먼덱의 심리테스트는 추상적인 자기평가보다 생활 장면 기반 질문을 더 많이 사용합니다.
+              예를 들어 관계 속 반응, 스트레스를 받을 때의 처리 방식, 자극에 끌리는 패턴처럼 실제로
+              반복되는 행동을 묻기 때문에 결과가 조금 더 현실적으로 느껴질 수 있습니다.
+            </p>
+            <p>
+              또한 각 테스트는 결과 카드만 보여주고 끝나지 않도록, 주요 주제마다 별도의 해설 가이드와
+              읽을거리를 연결하고 있습니다. 테스트를 한 번 하고 끝내기보다, 왜 이런 결과가 나왔는지
+              더 읽어볼 수 있게 설계한 점이 휴먼덱의 특징입니다.
+            </p>
+          </div>
+
+          <div className="policy-section">
+            <h2>심리테스트 결과를 더 잘 읽는 방법</h2>
+            <p>
+              결과 캐릭터 이름만 보기보다, 어떤 질문에서 비슷한 방향으로 답했는지 함께 보는 편이
+              좋습니다. 특히 회피, 과생각, 자극 추구, 관계 반응처럼 반복되는 축은 일상 피로와
+              연결되는 경우가 많아, 결과를 생활 힌트로 활용하기에 좋습니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides">해설 가이드 모아보기</Link>
+              <Link href="/articles/how-to-read-test-results">결과 읽는 법 보기</Link>
+            </div>
+          </div>
+
           <div className="faq-list">
             {psychologyTests.map((test) => (
               <article key={test.href} className="faq-card">

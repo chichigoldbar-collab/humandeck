@@ -85,6 +85,33 @@ export default function PersonalityTestsPage() {
             </p>
           </div>
 
+          <div className="policy-section">
+            <h2>성격테스트를 취향 테스트와 함께 보는 이유</h2>
+            <p>
+              성격은 직접 물으면 방어적으로 답하기 쉽지만, 취향과 습관을 통해 보면 더 자연스럽게
+              드러나는 경우가 많습니다. 그래서 휴먼덱은 먹는 방식, 음악, 영화처럼 가볍게 접근할 수
+              있는 테스트를 성격테스트와 함께 두고, 일상 취향이 어떤 패턴과 이어지는지 보게 합니다.
+            </p>
+            <p>
+              이런 방식은 결과를 단단하게 단정하기보다, 생활 속 반복 반응을 캐릭터처럼 읽어내는 데
+              더 잘 맞습니다. 성격을 한 문장으로 정의하기보다, 어떤 상황에서 어떤 결이 자주 나오는지
+              보는 것이 더 현실적이기 때문입니다.
+            </p>
+          </div>
+
+          <div className="policy-section">
+            <h2>테스트 결과를 더 깊게 보고 싶다면</h2>
+            <p>
+              성격테스트 결과는 단순히 재미로 끝내도 괜찮지만, 비슷한 결과가 반복된다면 해설 가이드와
+              읽을거리까지 함께 보는 것이 좋습니다. 휴먼덱은 주요 테스트마다 결과를 해석하는 페이지를
+              별도로 두고 있어, 왜 이런 문장이 나왔는지 더 자세히 읽어볼 수 있습니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/persona-results">페르소나 테스트 해설</Link>
+              <Link href="/articles/personality-test-why-relatable">왜 잘 맞는지 읽어보기</Link>
+            </div>
+          </div>
+
           <div className="faq-list">
             {personalityTests.map((test) => (
               <article key={test.href} className="faq-card">

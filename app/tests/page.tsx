@@ -183,6 +183,24 @@ export default function TestsPage() {
             </p>
           </div>
 
+          <div className="policy-section">
+            <h2>테스트만 있는 사이트가 아니라, 해설과 읽을거리를 함께 제공합니다</h2>
+            <p>
+              휴먼덱은 단순히 질문 몇 개와 결과 카드만 보여주는 구조를 지향하지 않습니다. 주요
+              테스트마다 별도의 해설 가이드를 두고 있으며, 스트레스, 과생각, 관계 패턴, 취향
+              테스트 해석처럼 결과를 더 깊게 읽는 설명형 원본 글도 함께 제공합니다.
+            </p>
+            <p>
+              그래서 사용자는 테스트를 끝낸 뒤에도 관련 가이드와 읽을거리로 이동해 결과를 생활
+              장면과 연결해서 볼 수 있습니다. 이는 단순한 재미를 넘어서 자기이해형 콘텐츠로
+              활용할 수 있도록 돕기 위한 구성입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides">해설 가이드 보기</Link>
+              <Link href="/articles">읽을거리 보기</Link>
+            </div>
+          </div>
+
           <div className="faq-list">
             {tests.map((test) => (
               <article key={test.href} className="faq-card">
