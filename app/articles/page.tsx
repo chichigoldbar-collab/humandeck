@@ -22,7 +22,10 @@ const articles: {
     | "/articles/how-to-read-test-results"
     | "/articles/taste-tests-and-self-understanding"
     | "/articles/workplace-survival-patterns"
-    | "/articles/relationship-test-reading";
+    | "/articles/relationship-test-reading"
+    | "/articles/psychology-vs-personality-tests"
+    | "/articles/why-situation-based-tests-work"
+    | "/articles/how-to-choose-a-test";
   title: string;
   summary: string;
 }[] = [
@@ -85,6 +88,24 @@ const articles: {
     title: "관계 테스트 결과를 읽을 때 가장 먼저 봐야 할 것",
     summary:
       "메인 캐릭터보다 반복 선택과 관계 맥락을 먼저 봐야 하는 이유를 설명하는 결과 해석 글입니다.",
+  },
+  {
+    href: "/articles/psychology-vs-personality-tests",
+    title: "심리테스트와 성격테스트는 어떻게 다를까",
+    summary:
+      "심리테스트와 성격테스트가 무엇을 다르게 묻고, 어떻게 함께 보면 좋은지 정리한 설명형 글입니다.",
+  },
+  {
+    href: "/articles/why-situation-based-tests-work",
+    title: "상황형 질문 테스트가 더 몰입되는 이유",
+    summary:
+      "행동형·상황형 질문이 왜 더 답하기 쉽고 결과가 더 잘 맞는 것처럼 느껴지는지 설명합니다.",
+  },
+  {
+    href: "/articles/how-to-choose-a-test",
+    title: "나한테 맞는 심리테스트를 고르는 방법",
+    summary:
+      "관계형, 생활 패턴형, 취향형 테스트 중 지금 내 상황에 맞는 주제를 어떻게 고르면 좋은지 정리했습니다.",
   },
 ];
 
