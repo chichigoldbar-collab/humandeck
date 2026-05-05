@@ -6,9 +6,9 @@ import { buildBreadcrumbList, buildCollectionPage, buildPageMetadata } from "@/l
 export const metadata: Metadata = buildPageMetadata({
   title: "읽을거리 | 휴먼덱",
   description:
-    "스트레스, 번아웃, 생활 패턴, 자기이해와 관련된 휴먼덱 설명형 글 모음입니다.",
+    "스트레스, 번아웃, 자기이해, 테스트 해석, 취향과 생활 패턴을 다루는 휴먼덱 설명형 글 모음입니다.",
   path: "/articles",
-  keywords: ["스트레스 관리", "번아웃", "과생각", "회피형 패턴", "자기이해 콘텐츠"],
+  keywords: ["스트레스 관리", "번아웃", "과생각", "회피형 패턴", "자기이해 콘텐츠", "심리테스트 해석", "성격테스트 읽는 법"],
 });
 
 const articles: {
@@ -17,7 +17,12 @@ const articles: {
     | "/articles/burnout-signs"
     | "/articles/avoidance-patterns"
     | "/articles/overthinking-patterns"
-    | "/articles/stress-habits";
+    | "/articles/stress-habits"
+    | "/articles/personality-test-why-relatable"
+    | "/articles/how-to-read-test-results"
+    | "/articles/taste-tests-and-self-understanding"
+    | "/articles/workplace-survival-patterns"
+    | "/articles/relationship-test-reading";
   title: string;
   summary: string;
 }[] = [
@@ -51,6 +56,36 @@ const articles: {
     summary:
       "거창한 계획보다 작은 루틴이 더 효과적인 이유와, 회복 습관을 붙이는 현실적인 방법을 정리했습니다.",
   },
+  {
+    href: "/articles/personality-test-why-relatable",
+    title: "심리테스트 결과가 유난히 잘 맞는 것처럼 느껴지는 이유",
+    summary:
+      "행동 기반 질문, 자기 기억, 반복 패턴이 왜 테스트 결과를 더 현실적으로 느끼게 만드는지 설명합니다.",
+  },
+  {
+    href: "/articles/how-to-read-test-results",
+    title: "성향 테스트 결과를 너무 믿지 않으면서 잘 활용하는 방법",
+    summary:
+      "테스트 결과를 과신하지 않으면서도 생활 힌트로 활용할 수 있는 현실적인 읽는 법을 정리했습니다.",
+  },
+  {
+    href: "/articles/taste-tests-and-self-understanding",
+    title: "취향 테스트가 자기이해에 도움이 되는 이유",
+    summary:
+      "음악, 영화, 음식 같은 취향 테스트가 감정 처리와 생활 습관을 돌아보는 데 왜 유용한지 설명합니다.",
+  },
+  {
+    href: "/articles/workplace-survival-patterns",
+    title: "회사에서 사람마다 버티는 방식이 다른 이유",
+    summary:
+      "같은 회사 생활 안에서도 왜 누군가는 버티고, 누군가는 주도하고, 누군가는 멘붕이 오는지 설명합니다.",
+  },
+  {
+    href: "/articles/relationship-test-reading",
+    title: "관계 테스트 결과를 읽을 때 가장 먼저 봐야 할 것",
+    summary:
+      "메인 캐릭터보다 반복 선택과 관계 맥락을 먼저 봐야 하는 이유를 설명하는 결과 해석 글입니다.",
+  },
 ];
 
 export default function ArticlesPage() {
@@ -80,8 +115,9 @@ export default function ArticlesPage() {
           <h1>휴먼덱 읽을거리</h1>
           <p>
             휴먼덱은 테스트 결과만 제공하는 데서 끝나지 않고, 생활 패턴과 자기이해에 관한
-            설명형 글도 함께 제공합니다. 아래 글은 스트레스, 번아웃, 과생각, 회피 패턴처럼
-            많은 이용자가 궁금해하는 주제를 중심으로 정리한 원본 콘텐츠입니다.
+            설명형 글도 함께 제공합니다. 아래 글은 스트레스, 번아웃, 과생각 같은 생활 패턴뿐
+            아니라 심리테스트를 읽는 법, 취향 테스트가 자기이해에 도움이 되는 이유, 회사와
+            관계 안에서 반복되는 반응 같은 주제를 중심으로 정리한 원본 콘텐츠입니다.
           </p>
 
           <div className="faq-list">

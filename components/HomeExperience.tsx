@@ -384,6 +384,26 @@ export function HomeExperience() {
             </div>
           </article>
           <article className="home-service-card">
+            <strong>회사 생존 테스트 해설</strong>
+            <p>
+              회사에서 왜 누군가는 버티고, 누군가는 주도하고, 누군가는 멘붕이 오는지
+              직장 생존 패턴 관점에서 정리한 가이드입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/company-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
+            <strong>위기 대응 테스트 해설</strong>
+            <p>
+              숲에서 길을 잃는 설정으로 본 판단, 행동, 멈춤 패턴을 현실 장면으로
+              풀어보는 설명형 가이드입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/guides/survival-results">가이드 읽기</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
             <strong>음악 성향 테스트 해설</strong>
             <p>
               플레이리스트를 감정 정리용으로 쓰는지, 집중 배경으로 쓰는지, 습관처럼 두는지
@@ -394,10 +414,21 @@ export function HomeExperience() {
             </div>
           </article>
           <article className="home-service-card">
+            <strong>심리테스트를 읽는 법</strong>
+            <p>
+              테스트 결과가 왜 잘 맞는 것처럼 느껴지는지, 너무 믿지 않으면서도 어떻게
+              생활 힌트로 활용하면 좋은지 정리한 설명형 글 모음입니다.
+            </p>
+            <div className="content-link-row">
+              <Link href="/articles/personality-test-why-relatable">글 읽기</Link>
+              <Link href="/articles/how-to-read-test-results">결과 읽는 법</Link>
+            </div>
+          </article>
+          <article className="home-service-card">
             <strong>스트레스와 번아웃 읽을거리</strong>
             <p>
               스트레스 반응이 왜 다르게 나타나는지, 회피와 과생각이 왜 피로를 키우는지
-              설명형 글로 정리한 읽을거리 모음입니다.
+              설명형 글로 정리한 읽을거리 허브입니다.
             </p>
             <div className="content-link-row">
               <Link href="/articles">글 보러가기</Link>

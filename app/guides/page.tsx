@@ -14,6 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
 const guides: {
   href:
     | "/guides/character-results"
+    | "/guides/company-results"
     | "/guides/judgment-results"
     | "/guides/stimulation-results"
     | "/guides/focus-results"
@@ -22,8 +23,11 @@ const guides: {
     | "/guides/music-results"
     | "/guides/movie-results"
     | "/guides/eat-results"
+    | "/guides/baseball-results"
     | "/guides/couple-results"
-    | "/guides/ghost-results";
+    | "/guides/ghost-results"
+    | "/guides/survival-results"
+    | "/guides/zombie-results";
   title: string;
   summary: string;
 }[] = [
@@ -32,6 +36,12 @@ const guides: {
     title: "인간 캐릭터 테스트는 무엇을 보는 걸까",
     summary:
       "애착, 자극, 생각 습관, 자존감, 의사결정을 함께 보는 이유와 결과를 읽을 때 참고하면 좋은 포인트를 정리했습니다.",
+  },
+  {
+    href: "/guides/company-results",
+    title: "회사 생존 테스트는 어떤 패턴을 읽는 걸까",
+    summary:
+      "눈치, 버티기, 주도권, 멘탈 반응이 회사 안에서 어떻게 다르게 드러나는지 설명하는 직장 패턴 가이드입니다.",
   },
   {
     href: "/guides/judgment-results",
@@ -82,6 +92,12 @@ const guides: {
       "음식 선택 장면이 왜 일상 의사결정과 연결되는지 가볍고 현실적인 예시로 설명합니다.",
   },
   {
+    href: "/guides/baseball-results",
+    title: "야구 팬 패턴 테스트는 무엇을 보여줄까",
+    summary:
+      "아는 척형, 진짜 분석형, 감정 응원형처럼 스포츠를 이야기하는 태도 차이를 설명하는 가이드입니다.",
+  },
+  {
     href: "/guides/couple-results",
     title: "부부 관계 분석 테스트는 왜 네 축을 함께 볼까",
     summary:
@@ -92,6 +108,18 @@ const guides: {
     title: "공포 반응 테스트는 무엇을 보여주는 걸까",
     summary:
       "감각 민감도, 공포 반응, 상상 개입도가 분위기 자극에 어떻게 작동하는지 정리한 가이드입니다.",
+  },
+  {
+    href: "/guides/survival-results",
+    title: "위기 대응 테스트는 왜 몰입형 질문으로 만들어졌을까",
+    summary:
+      "숲에서 길을 잃는 설정으로 보는 판단, 감정, 행동 반응을 현실 패턴으로 읽는 해설 가이드입니다.",
+  },
+  {
+    href: "/guides/zombie-results",
+    title: "좀비 생존 테스트는 무엇을 재미있게 보여줄까",
+    summary:
+      "리더형, 협력형, 회피형, 멘붕형처럼 극한 상황에서 튀어나오는 생존 본능을 읽는 가이드입니다.",
   },
 ];
 
